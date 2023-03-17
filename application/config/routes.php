@@ -62,7 +62,7 @@ $route['riwayat-deposit'] = 'deposit/depo/riwayat_deposit';
 $route['riwayat-deposit/table'] = 'deposit/depo/view_data_where';
 $route['deposit-delete'] = 'deposit/depo/batalkan_deposit';
 $route['daftar-harga'] = 'harga/harga/list_harga';
-
+$route['get-prepaid'] = 'harga/harga/service_list';
 
 $route['service-prepaid'] = 'server/vip/service_prepaid';
 $route['service-sosmed'] = 'server/vip/service_sosmed';

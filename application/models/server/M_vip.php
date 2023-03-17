@@ -6,6 +6,54 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class M_vip extends CI_Model
 {
 
+    function get_list_name($tipe, $id)
+    {
+        if ($tipe == "prepaid") {
+            $this->db->order_by('price_basic', 'asc');
+            $this->db->where('status', "available");
+            $this->db->like('brand', $id, 'both');
+            return $this->db->get('t_prepaid')->result();
+        } else if ($tipe == "game") {
+            $this->db->order_by('basic_price', 'asc');
+            $this->db->where('status', "available");
+            $this->db->like('game', $id, 'both');
+            return $this->db->get('t_game')->result();
+        } else if ($tipe == "sosmed") {
+            $this->db->order_by('basic_price', 'asc');
+            $this->db->where('status', "available");
+            $this->db->like('category', $id, 'both');
+            return $this->db->get('t_sosmed')->result();
+        } else {
+            return false;
+        }
+    }
+
+
+    function get_list($tipe)
+    {
+        if ($tipe == "prepaid") {
+            $this->db->distinct('brand');
+            $this->db->select("brand");
+            $this->db->order_by('brand', 'asc');
+            $this->db->where('status', "available");
+            return $this->db->get('t_prepaid')->result();
+        } else if ($tipe == "game") {
+            $this->db->distinct('game');
+            $this->db->select("game");
+            $this->db->where('status', "available");
+            return $this->db->get('t_game')->result();
+        } else if ($tipe == "sosmed") {
+            $this->db->distinct('category');
+            $this->db->select("category");
+            $this->db->where('status', "available");
+            $this->db->order_by('category', 'asc');
+            return $this->db->get('t_sosmed')->result();
+        } else {
+            return false;
+        }
+    }
+
+
     function insert_prepaid($data)
     {
 
@@ -19,9 +67,9 @@ class M_vip extends CI_Model
                     // 'code' => $item->code,
                     'name' => $item->name,
                     'note' => $item->note,
-                    'price_basic' => $item->price->basic,
-                    'price_premium' => $item->price->premium,
-                    'price_special' => $item->price->special,
+                    'price_basic' => $item->price->basic + ($item->price->basic * 0.15),
+                    'price_premium' => $item->price->premium + ($item->price->basic * 0.10),
+                    'price_special' => $item->price->special + ($item->price->basic * 0.05),
                     'status' => $item->status,
                     'multi_trx' => $item->multi_trx,
                     'maintenance' => $item->maintenace,
@@ -39,9 +87,9 @@ class M_vip extends CI_Model
                     'code' => $item->code,
                     'name' => $item->name,
                     'note' => $item->note,
-                    'price_basic' => $item->price->basic,
-                    'price_premium' => $item->price->premium,
-                    'price_special' => $item->price->special,
+                    'price_basic' => $item->price->basic + ($item->price->basic * 0.15),
+                    'price_premium' => $item->price->premium + ($item->price->basic * 0.10),
+                    'price_special' => $item->price->special + ($item->price->basic * 0.05),
                     'status' => $item->status,
                     'multi_trx' => $item->multi_trx,
                     'maintenance' => $item->maintenace,
@@ -68,9 +116,9 @@ class M_vip extends CI_Model
                 'code' => $item->code,
                 'name' => $item->name,
                 'note' => $item->note,
-                'price_basic' => $item->price->basic,
-                'price_premium' => $item->price->premium,
-                'price_special' => $item->price->special,
+                'price_basic' => $item->price->basic + ($item->price->basic * 0.15),
+                'price_premium' => $item->price->premium + ($item->price->basic * 0.10),
+                'price_special' => $item->price->special + ($item->price->basic * 0.05),
                 'status' => $item->status,
                 'multi_trx' => $item->multi_trx,
                 'maintenance' => $item->maintenace,
@@ -117,9 +165,9 @@ class M_vip extends CI_Model
                     'min' => $item->min,
                     'max' => $item->max,
                     'speed' => $item->note,
-                    'basic_price' => $item->price->basic,
-                    'premium_price' => $item->price->premium,
-                    'special_price' => $item->price->special
+                    'basic_price' => $item->price->basic + ($item->price->basic * 0.15),
+                    'premium_price' => $item->price->premium + ($item->price->basic * 0.10),
+                    'special_price' => $item->price->special + ($item->price->basic * 0.05)
                 );
 
                 // memasukkan data ke database
@@ -135,9 +183,9 @@ class M_vip extends CI_Model
                     'min' => $item->min,
                     'max' => $item->max,
                     'speed' => $item->note,
-                    'basic_price' => $item->price->basic,
-                    'premium_price' => $item->price->premium,
-                    'special_price' => $item->price->special
+                    'basic_price' => $item->price->basic + ($item->price->basic * 0.15),
+                    'premium_price' => $item->price->premium + ($item->price->basic * 0.10),
+                    'special_price' => $item->price->special + ($item->price->basic * 0.05)
                 );
 
                 // memasukkan data ke database
@@ -162,9 +210,9 @@ class M_vip extends CI_Model
                 'min' => $item->min,
                 'max' => $item->max,
                 'speed' => $item->note,
-                'basic_price' => $item->price->basic,
-                'premium_price' => $item->price->premium,
-                'special_price' => $item->price->special
+                'basic_price' => $item->price->basic + ($item->price->basic * 0.15),
+                'premium_price' => $item->price->premium + ($item->price->basic * 0.10),
+                'special_price' => $item->price->special + ($item->price->basic * 0.05)
             );
 
             // memasukkan data ke database
@@ -200,9 +248,9 @@ class M_vip extends CI_Model
                     'code' => $item->code,
                     'game' => $item->game,
                     'name' => $item->name,
-                    'basic_price' => $item->price->basic,
-                    'premium_price' => $item->price->premium,
-                    'special_price' => $item->price->special,
+                    'basic_price' => $item->price->basic + ($item->price->basic * 0.15),
+                    'premium_price' => $item->price->premium + ($item->price->basic * 0.10),
+                    'special_price' => $item->price->special + ($item->price->basic * 0.05),
                     'server' => $item->server,
                     'status' => $item->status
                 );
@@ -215,9 +263,9 @@ class M_vip extends CI_Model
                     'code' => $item->code,
                     'game' => $item->game,
                     'name' => $item->name,
-                    'basic_price' => $item->price->basic,
-                    'premium_price' => $item->price->premium,
-                    'special_price' => $item->price->special,
+                    'basic_price' => $item->price->basic + ($item->price->basic * 0.15),
+                    'premium_price' => $item->price->premium + ($item->price->basic * 0.10),
+                    'special_price' => $item->price->special + ($item->price->basic * 0.05),
                     'server' => $item->server,
                     'status' => $item->status
                 );
@@ -238,9 +286,9 @@ class M_vip extends CI_Model
                 'code' => $item->code,
                 'game' => $item->game,
                 'name' => $item->name,
-                'basic_price' => $item->price->basic,
-                'premium_price' => $item->price->premium,
-                'special_price' => $item->price->special,
+                'basic_price' => $item->price->basic + ($item->price->basic * 0.15),
+                'premium_price' => $item->price->premium + ($item->price->basic * 0.10),
+                'special_price' => $item->price->special + ($item->price->basic * 0.05),
                 'server' => $item->server,
                 'status' => $item->status
             );

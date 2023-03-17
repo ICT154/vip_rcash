@@ -834,6 +834,7 @@
 <script src="<?= base_url("assets/") ?>js/notifications/toastr/toastr.js"></script>
 <script src="<?= base_url("assets/") ?>js/datagrid/datatables/datatables.bundle.js"></script>
 <script src="<?= base_url("assets/") ?>js/notifications/sweetalert2/sweetalert2.bundle.js"></script>
+<script src="<?= base_url("assets/") ?>js/formplugins/select2/select2.bundle.js"></script>
 </body>
 <!-- END Body -->
 <?= $this->session->flashdata('message'); ?>

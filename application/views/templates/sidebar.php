@@ -80,26 +80,26 @@
             <span class="nav-link-text" data-i18n="nav.pemesanan_ppob">Pemesanan PPOB</span>
         </a>
     </li>
-    <li id="dash" <?php
-                    if ($title == 'RCASH | PEMESANAN SOSIAL MEDIA') {
-                        echo "class='active'";
-                    } else {
-                    } ?>>
+    <!-- <li id="dash" <?php
+                        if ($title == 'RCASH | PEMESANAN SOSIAL MEDIA') {
+                            echo "class='active'";
+                        } else {
+                        } ?>>
         <a href="<?= base_url('dash/pemesanan_otp') ?>" title="pemesanan_otp" data-filter-tags="pemesanan_otp">
             <i class="fas fa-message" aria-hidden="true"></i>
             <span class="nav-link-text" data-i18n="nav.pemesanan_otp">Pemesanan OTP</span>
         </a>
-    </li>
-    <li id="dash" <?php
-                    if ($title == 'RCASH | PEMESANAN SOSIAL MEDIA') {
-                        echo "class='active'";
-                    } else {
-                    } ?>>
+    </li> -->
+    <!-- <li id="dash" <?php
+                        if ($title == 'RCASH | PEMESANAN SOSIAL MEDIA') {
+                            echo "class='active'";
+                        } else {
+                        } ?>>
         <a href="<?= base_url('dash/pemesanan_lain') ?>" title="pemesanan_lain" data-filter-tags="pemesanan_lain">
             <i class="fas fa-boxes-stacked" aria-hidden="true"></i>
             <span class="nav-link-text" data-i18n="nav.pemesanan_lain">Pemesanan Lain Lain</span>
         </a>
-    </li>
+    </li> -->
     <li id="menu_akun" <?php
                         if ($title == 'RCASH | RIWAYAT PEMESANAN') {
                             echo "class='active open'";
@@ -128,11 +128,11 @@
                     <span class="nav-link-text" data-i18n="nav.riwayat_pemesanan_ppob">Riwayat Pemesanan PPOB</span>
                 </a>
             </li>
-            <li id="sub_menu_profile" <?php
-                                        if ($title == 'RCASH | RIWAYAT PEMESANAN OTP') {
-                                            echo "class='active'";
-                                        } else {
-                                        } ?>>
+            <!-- <li id="sub_menu_profile" <?php
+                                            if ($title == 'RCASH | RIWAYAT PEMESANAN OTP') {
+                                                echo "class='active'";
+                                            } else {
+                                            } ?>>
                 <a href="<?= base_url("deposit-baru") ?>" title="riwayat_pemesanan_ppob" data-filter-tags="riwayat_pemesanan_ppob">
                     <span class="nav-link-text" data-i18n="nav.riwayat_pemesanan_ppob">Riwayat Pemesanan OTP</span>
                 </a>
@@ -145,7 +145,7 @@
                 <a href="<?= base_url("deposit-baru") ?>" title="riwayat_pemesanan_ppob" data-filter-tags="riwayat_pemesanan_ppob">
                     <span class="nav-link-text" data-i18n="nav.riwayat_pemesanan_ppob">Riwayat Pemesanan Lain Lain</span>
                 </a>
-            </li>
+            </li> -->
         </ul>
     </li>
     <li class="nav-title">Pusat Bantuan</li>

@@ -10,3 +10,24 @@ ERROR - 2023-03-17 09:55:26 --> 404 Page Not Found: Img/demo
 ERROR - 2023-03-17 10:01:16 --> 404 Page Not Found: Top-user/index
 ERROR - 2023-03-17 10:04:11 --> 404 Page Not Found: Img/demo
 ERROR - 2023-03-17 10:17:21 --> 404 Page Not Found: Img/demo
+ERROR - 2023-03-17 16:29:00 --> Severity: error --> Exception: Unable to locate the model you have specified: Vip C:\xampp\htdocs\mentahan_ci3_smartadmin451\system\core\Loader.php 349
+ERROR - 2023-03-17 10:45:27 --> 404 Page Not Found: Get-prepaid/index
+ERROR - 2023-03-17 10:45:28 --> 404 Page Not Found: Get-prepaid/index
+ERROR - 2023-03-17 10:45:30 --> 404 Page Not Found: Get-prepaid/index
+ERROR - 2023-03-17 10:45:31 --> 404 Page Not Found: Get-prepaid/index
+ERROR - 2023-03-17 10:45:33 --> 404 Page Not Found: Get-prepaid/index
+ERROR - 2023-03-17 10:45:35 --> 404 Page Not Found: Get-prepaid/index
+ERROR - 2023-03-17 10:45:45 --> 404 Page Not Found: Get-prepaid/index
+ERROR - 2023-03-17 10:53:25 --> Severity: error --> Exception: syntax error, unexpected '}' C:\xampp\htdocs\mentahan_ci3_smartadmin451\application\controllers\harga\Harga.php 28
+ERROR - 2023-03-17 10:54:25 --> 404 Page Not Found: harga/Harga/service_prepaid_list
+ERROR - 2023-03-17 10:55:16 --> 404 Page Not Found: harga/Harga/service_prepaid_list
+ERROR - 2023-03-17 10:55:18 --> 404 Page Not Found: harga/Harga/service_prepaid_list
+ERROR - 2023-03-17 17:17:37 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\mentahan_ci3_smartadmin451\application\models\M_gzl.php 103
+ERROR - 2023-03-17 17:17:37 --> Severity: Warning --> number_format() expects parameter 2 to be int, string given C:\xampp\htdocs\mentahan_ci3_smartadmin451\application\models\M_gzl.php 105
+ERROR - 2023-03-17 17:17:37 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\mentahan_ci3_smartadmin451\application\models\M_gzl.php 103
+ERROR - 2023-03-17 17:17:37 --> Severity: Warning --> number_format() expects parameter 2 to be int, string given C:\xampp\htdocs\mentahan_ci3_smartadmin451\application\models\M_gzl.php 105
+ERROR - 2023-03-17 17:17:37 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\mentahan_ci3_smartadmin451\application\models\M_gzl.php 103
+ERROR - 2023-03-17 17:17:37 --> Severity: Warning --> number_format() expects parameter 2 to be int, string given C:\xampp\htdocs\mentahan_ci3_smartadmin451\application\models\M_gzl.php 105
+ERROR - 2023-03-17 17:54:59 --> Severity: Notice --> Undefined property: stdClass::$note C:\xampp\htdocs\mentahan_ci3_smartadmin451\application\controllers\harga\Harga.php 41
+ERROR - 2023-03-17 17:54:59 --> Severity: Notice --> Undefined property: stdClass::$note C:\xampp\htdocs\mentahan_ci3_smartadmin451\application\controllers\harga\Harga.php 41
+ERROR - 2023-03-17 12:34:56 --> 404 Page Not Found: Dash/pemesanan_sosmed

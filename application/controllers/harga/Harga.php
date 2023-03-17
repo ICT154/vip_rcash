@@ -14,12 +14,52 @@ class Harga extends CI_Controller
         $this->load->model('deposit/M_deposit', "depo");
         $this->load->model('M_log');
         $this->load->model('M_gzl', 'GZL');
-        $this->load->model('Server/Vip', 'vip');
+        $this->load->model('Server/M_vip', 'vip');
         $this->load->model('M_datatables_v2', 'dt_v2');
     }
 
     public function index()
     {
+    }
+
+    function service_list()
+    {
+        $id = htmlspecialchars($this->input->post('selected_option', true));
+        $type = htmlspecialchars($this->input->post('selected_type', true));
+        if ($this->GZL->dekrip($id) != NULL and $this->GZL->dekrip($type) != NULL) {
+            $type = $this->GZL->dekrip($type);
+            if ($type == "prepaid") {
+                $data = $this->vip->get_list_name("prepaid", $this->GZL->dekrip($id));
+                $no  = 1;
+                foreach ($data as $key) {
+                    echo "<tr><td>" . $no++ . "</td><td>" . $key->name . "</td><td>" . $key->note . "</td><td>Rp. " . $this->GZL->number_format($key->price_basic, 0, ",", ".") . "</td><td>Rp. " . $this->GZL->number_format($key->price_premium, 0, ",", ".") . "</td><td class='text-center text-success'><i class='far fa-check-circle'></i></td> </tr>";
+                }
+            } else if ($type == "game") {
+                $data = $this->vip->get_list_name("game", $this->GZL->dekrip($id));
+                $no  = 1;
+                foreach ($data as $key) {
+                    if ($key->status != "available") {
+                        $status = "<td class='text-center text-danger'><i class='far fa-times-circle'></i></td>";
+                    } else {
+                        $status = "<td class='text-center text-success'><i class='far fa-check-circle'></i></td>";
+                    }
+                    echo "<tr><td>" . $no++ . "</td><td>" . $key->name . "</td><td>Rp. " . $this->GZL->number_format($key->basic_price, 0, ",", ".") . "</td><td>Rp. " . $this->GZL->number_format($key->premium_price, 0, ",", ".") . "</td>$status </tr>";
+                }
+            } else if ($type == "sosmed") {
+                $data = $this->vip->get_list_name("sosmed", $this->GZL->dekrip($id));
+                $no  = 1;
+                foreach ($data as $key) {
+                    if ($key->status != "available") {
+                        $status = "<td class='text-center text-danger'><i class='far fa-times-circle'></i></td>";
+                    } else {
+                        $status = "<td class='text-center text-success'><i class='far fa-check-circle'></i></td>";
+                    }
+                    echo "<tr><td>" . $no++ . "</td><td>" . $key->name . "</td><td>" . $key->min . "</td><td>" . $key->max . "</td><td>Rp. " . $this->GZL->number_format($key->basic_price, 0, ",", ".") . "</td><td>Rp. " . $this->GZL->number_format($key->premium_price, 0, ",", ".") . "</td>$status </tr>";
+                }
+            }
+        } else {
+            echo "<tr><td colspan='5' class='text-center'>Terjadi kesalahan.</td><td class='text-center text-danger'><i class='far fa-times-circle'></i></td> </tr>";
+        }
     }
 
     function list_harga()
