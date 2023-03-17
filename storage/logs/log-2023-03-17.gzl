@@ -1,0 +1,12 @@
+ERROR - 2023-03-17 15:00:47 --> Severity: Notice --> Trying to get property 'category' of non-object C:\xampp\htdocs\mentahan_ci3_smartadmin451\application\controllers\server\Vip.php 74
+ERROR - 2023-03-17 15:00:47 --> Severity: Notice --> Trying to get property 'category' of non-object C:\xampp\htdocs\mentahan_ci3_smartadmin451\application\controllers\server\Vip.php 74
+ERROR - 2023-03-17 15:00:47 --> Severity: Notice --> Trying to get property 'category' of non-object C:\xampp\htdocs\mentahan_ci3_smartadmin451\application\controllers\server\Vip.php 74
+ERROR - 2023-03-17 15:01:09 --> Severity: Notice --> Undefined index: category C:\xampp\htdocs\mentahan_ci3_smartadmin451\application\controllers\server\Vip.php 74
+ERROR - 2023-03-17 15:01:09 --> Severity: Warning --> Illegal string offset 'category' C:\xampp\htdocs\mentahan_ci3_smartadmin451\application\controllers\server\Vip.php 74
+ERROR - 2023-03-17 15:01:37 --> Severity: Notice --> Undefined index: category C:\xampp\htdocs\mentahan_ci3_smartadmin451\application\controllers\server\Vip.php 74
+ERROR - 2023-03-17 15:01:37 --> Severity: Warning --> Illegal string offset 'category' C:\xampp\htdocs\mentahan_ci3_smartadmin451\application\controllers\server\Vip.php 74
+ERROR - 2023-03-17 09:55:17 --> 404 Page Not Found: Img/svg
+ERROR - 2023-03-17 09:55:26 --> 404 Page Not Found: Img/demo
+ERROR - 2023-03-17 10:01:16 --> 404 Page Not Found: Top-user/index
+ERROR - 2023-03-17 10:04:11 --> 404 Page Not Found: Img/demo
+ERROR - 2023-03-17 10:17:21 --> 404 Page Not Found: Img/demo
