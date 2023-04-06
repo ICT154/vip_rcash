@@ -70,7 +70,7 @@
             <span class="nav-link-text" data-i18n="nav.pemesanan_sosmed">Pemesanan Sosial Media</span>
         </a>
     </li>
-    <li id="dash" <?php
+    <!-- <li id="dash" <?php
                     if ($title == 'RCASH | PEMESANAN SOSIAL MEDIA') {
                         echo "class='active'";
                     } else {
@@ -79,7 +79,7 @@
             <i class="fas fa-money-bill-trend-up" aria-hidden="true"></i>
             <span class="nav-link-text" data-i18n="nav.pemesanan_ppob">Pemesanan PPOB</span>
         </a>
-    </li>
+    </li> -->
     <!-- <li id="dash" <?php
                         if ($title == 'RCASH | PEMESANAN SOSIAL MEDIA') {
                             echo "class='active'";
@@ -119,7 +119,7 @@
                     <span class="nav-link-text" data-i18n="nav.riwayat_pemesanan_sosial_media">Riwayat Pemesanan Sosial Media</span>
                 </a>
             </li>
-            <li id="sub_menu_profile" <?php
+            <!-- <li id="sub_menu_profile" <?php
                                         if ($title == 'RCASH | RIWAYAT PEMESANAN PPOB') {
                                             echo "class='active'";
                                         } else {
@@ -127,7 +127,7 @@
                 <a href="<?= base_url("deposit-baru") ?>" title="riwayat_pemesanan_ppob" data-filter-tags="riwayat_pemesanan_ppob">
                     <span class="nav-link-text" data-i18n="nav.riwayat_pemesanan_ppob">Riwayat Pemesanan PPOB</span>
                 </a>
-            </li>
+            </li> -->
             <!-- <li id="sub_menu_profile" <?php
                                             if ($title == 'RCASH | RIWAYAT PEMESANAN OTP') {
                                                 echo "class='active'";

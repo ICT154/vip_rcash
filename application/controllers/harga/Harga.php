@@ -14,7 +14,7 @@ class Harga extends CI_Controller
         $this->load->model('deposit/M_deposit', "depo");
         $this->load->model('M_log');
         $this->load->model('M_gzl', 'GZL');
-        $this->load->model('Server/M_vip', 'vip');
+        $this->load->model('server/M_vip', 'vip');
         $this->load->model('M_datatables_v2', 'dt_v2');
     }
 
@@ -73,15 +73,12 @@ class Harga extends CI_Controller
             'bc_1' => "Daftar Harga",
             'bc_2' => "Daftar Harga Layanan RCASH Tersedia Disini",
             'title' => "RCASH | DAFTAR HARGA",
-            'prepaid_categori' => $this->vip->get_list("prepaid"),
-            'game_categori' => $this->vip->get_list("game"),
-            'sosmed_categori' => $this->vip->get_list("sosmed"),
         );
 
         $this->load->view('templates/header', $data);
-        $this->load->view('member/harga/index');
+        $this->load->view('member/harga/index_v2');
         $this->load->view('templates/footer');
-        $this->load->view('member/harga/index-js');
+        $this->load->view('member/harga/index-js_v2');
     }
 }
 

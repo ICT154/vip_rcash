@@ -67,3 +67,5 @@ $route['get-prepaid'] = 'harga/harga/service_list';
 $route['service-prepaid'] = 'server/vip/service_prepaid';
 $route['service-sosmed'] = 'server/vip/service_sosmed';
 $route['service-game'] = 'server/vip/service_game';
+
+$route['get-layanan-smm'] = 'server/medanpedia/get_layanan';

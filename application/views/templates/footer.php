@@ -829,8 +829,8 @@
 						+ waves.js (extension)
 						+ smartpanels.js (extension)
 						+ src/../jquery-snippets.js (core) -->
-<script src="<?= base_url("assets/") ?>js/vendors.bundle.js"></script>
-<script src="<?= base_url("assets/") ?>js/app.bundle.js"></script>
+<script src="<?= base_url("assets/") ?>js/vendors.bundle.min.js"></script>
+<script src="<?= base_url("assets/") ?>js/app.bundle.min.js"></script>
 <script src="<?= base_url("assets/") ?>js/notifications/toastr/toastr.js"></script>
 <script src="<?= base_url("assets/") ?>js/datagrid/datatables/datatables.bundle.js"></script>
 <script src="<?= base_url("assets/") ?>js/notifications/sweetalert2/sweetalert2.bundle.js"></script>

@@ -141,10 +141,11 @@ class Depo extends CI_Controller
 
                 $nominal = $this->GZL->filter_input_data($this->input->post("nominal_deposit"));
                 $metode = $this->GZL->filter_input_data($this->input->post("metode_pembayaran"));
+                $nominal = str_replace(".", "", $nominal);
 
                 if ($this->GZL->is_numeric_value($nominal) != FALSE) {
                     if ($this->depo->cek_depo_methode($metode) != FALSE) {
-                        if (str_replace(",", "", $nominal) < 10000) {
+                        if (str_replace(",", ".", $nominal) < 10000) {
                             $this->M_log->show_msg("error", "NOMINAL DEPOSIT MINIMAL Rp. 10.000 !");
                             $this->M_log->log_in("NOMINAL DEPOSIT MINIMAL Rp. 10.000", "Gagal", "deposit_baru_sv");
                             redirect(base_url('deposit-baru'));

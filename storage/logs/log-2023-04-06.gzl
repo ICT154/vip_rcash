@@ -1,0 +1,73 @@
+ERROR - 2023-04-06 01:30:04 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) /home/rcashme/public_html/system/database/drivers/mysqli/mysqli_driver.php 211
+ERROR - 2023-04-06 01:30:04 --> Unable to connect to the database
+ERROR - 2023-04-06 01:30:04 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/rcashme/public_html/system/core/Exceptions.php:272) /home/rcashme/public_html/system/core/Common.php 571
+ERROR - 2023-04-06 02:18:34 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) /home/rcashme/public_html/system/database/drivers/mysqli/mysqli_driver.php 211
+ERROR - 2023-04-06 02:18:34 --> Unable to connect to the database
+ERROR - 2023-04-06 02:18:34 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/rcashme/public_html/system/core/Exceptions.php:272) /home/rcashme/public_html/system/core/Common.php 571
+ERROR - 2023-04-06 02:39:37 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) /home/rcashme/public_html/system/database/drivers/mysqli/mysqli_driver.php 211
+ERROR - 2023-04-06 02:39:37 --> Unable to connect to the database
+ERROR - 2023-04-06 02:39:37 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/rcashme/public_html/system/core/Exceptions.php:272) /home/rcashme/public_html/system/core/Common.php 571
+ERROR - 2023-04-06 03:11:44 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) /home/rcashme/public_html/system/database/drivers/mysqli/mysqli_driver.php 211
+ERROR - 2023-04-06 03:11:44 --> Unable to connect to the database
+ERROR - 2023-04-06 03:11:44 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/rcashme/public_html/system/core/Exceptions.php:272) /home/rcashme/public_html/system/core/Common.php 571
+ERROR - 2023-04-06 01:20:43 --> 404 Page Not Found: Robotstxt/index
+ERROR - 2023-04-06 08:20:43 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) /home/rcashme/public_html/system/database/drivers/mysqli/mysqli_driver.php 211
+ERROR - 2023-04-06 08:20:43 --> Unable to connect to the database
+ERROR - 2023-04-06 08:20:43 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/rcashme/public_html/system/core/Exceptions.php:272) /home/rcashme/public_html/system/core/Common.php 571
+ERROR - 2023-04-06 03:29:42 --> 404 Page Not Found: Robotstxt/index
+ERROR - 2023-04-06 03:54:42 --> 404 Page Not Found: Robotstxt/index
+ERROR - 2023-04-06 10:31:17 --> 404 Page Not Found: Robotstxt/index
+ERROR - 2023-04-06 17:31:18 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) /home/rcashme/public_html/system/database/drivers/mysqli/mysqli_driver.php 211
+ERROR - 2023-04-06 17:31:18 --> Unable to connect to the database
+ERROR - 2023-04-06 17:31:18 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/rcashme/public_html/system/core/Exceptions.php:272) /home/rcashme/public_html/system/core/Common.php 571
+ERROR - 2023-04-06 17:35:52 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) /home/rcashme/public_html/system/database/drivers/mysqli/mysqli_driver.php 211
+ERROR - 2023-04-06 17:35:52 --> Unable to connect to the database
+ERROR - 2023-04-06 17:35:52 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/rcashme/public_html/system/core/Exceptions.php:272) /home/rcashme/public_html/system/core/Common.php 571
+ERROR - 2023-04-06 19:38:46 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) /home/rcashme/public_html/system/database/drivers/mysqli/mysqli_driver.php 211
+ERROR - 2023-04-06 19:38:46 --> Unable to connect to the database
+ERROR - 2023-04-06 19:38:46 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/rcashme/public_html/system/core/Exceptions.php:272) /home/rcashme/public_html/system/core/Common.php 571
+ERROR - 2023-04-06 12:55:10 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 12:55:17 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 12:59:45 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 13:12:28 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 13:14:48 --> 404 Page Not Found: Img/demo
+ERROR - 2023-04-06 20:16:02 --> Query error: Table 'rcashme_radenpay.t_prepaid' doesn't exist - Invalid query: SELECT DISTINCT `brand`
+FROM `t_prepaid`
+WHERE `status` = 'available'
+ORDER BY `brand` ASC
+ERROR - 2023-04-06 13:22:03 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 13:22:03 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 13:24:18 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 13:25:25 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 13:25:25 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 13:28:53 --> 404 Page Not Found: Robotstxt/index
+ERROR - 2023-04-06 13:29:15 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 14:05:34 --> 404 Page Not Found: Img/demo
+ERROR - 2023-04-06 14:47:07 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 14:47:10 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 14:47:13 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 14:47:17 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 14:47:21 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 14:47:23 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 14:47:25 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 14:47:29 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 14:47:33 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 14:47:35 --> 404 Page Not Found: Wwwgoogle-analyticscom/analytics.js
+ERROR - 2023-04-06 14:47:35 --> 404 Page Not Found: Auth/img
+ERROR - 2023-04-06 14:47:38 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 14:47:42 --> 404 Page Not Found: Wwwgoogle-analyticscom/analytics.js
+ERROR - 2023-04-06 14:47:42 --> 404 Page Not Found: Auth/img
+ERROR - 2023-04-06 14:48:04 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 14:48:07 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 14:48:19 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 14:48:44 --> 404 Page Not Found: Img/demo
+ERROR - 2023-04-06 14:50:29 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 14:56:57 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 14:57:03 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 14:57:05 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 17:09:07 --> 404 Page Not Found: Img/svg
+ERROR - 2023-04-06 17:11:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-04-06 22:30:24 --> Query error: Table 'db_radenpay.t_prepaid' doesn't exist - Invalid query: SELECT DISTINCT `brand`
+FROM `t_prepaid`
+WHERE `status` = 'available'
+ORDER BY `brand` ASC

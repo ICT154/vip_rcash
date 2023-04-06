@@ -5,16 +5,79 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Medanpedia extends CI_Controller
 {
+    private $api_url = 'https://api.medanpedia.co.id/';
+    private $api_id = '13646'; // ganti dengan API ID Anda
+    private $api_key = '372529-5eab8c-d5a5c9-0f8fd6-2203a2'; // ganti dengan API KEY Anda
+
+
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('M_medanpedia', 'mp');
+        $this->load->model('server/M_Medan', 'mp');
+        $this->load->model('M_log');
     }
 
-    public function get_layanan_smm()
+    function get_layanan()
     {
-        $data = $this->mp->get_layanan_smm();
-        echo json_encode($data);
+        $res = $this->call_api(array(), 'services');
+        if ($res != false) {
+            $data = json_decode($res);
+            if ($data->status != false) {
+                $this->mp->add_layanan($res);
+            } else {
+                $this->M_log->log_in("Gagal Mendapat Layanan SOSIAL MEDIA - API FAIL $data->data ", "Gagal", "get_layanan");
+                echo "Gagal Mendapat Layanan Prepaid - API FAIL $data->data ";
+                return false;
+            }
+        } else {
+            $this->M_log->log_in("Gagal Mendapat Layanan Prepaid - CURL FAIL", "Gagal", "get_layanan");
+            return false;
+        }
+    }
+
+
+    private function call_api($data_post = array(), $api)
+    {
+        try {
+
+            if (!empty($data_post)) {
+                $api_url = $this->api_url . $api;
+
+                // set API key and signature in data
+                $data = array_merge($data_post, array(
+                    'api_id' => $this->api_id,
+                    'api_key' => $this->api_key,
+                ));
+
+                // call API
+                $ch = curl_init($api_url);
+                curl_setopt($ch, CURLOPT_POST, true);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                $response = curl_exec($ch);
+                curl_close($ch);
+
+                return $response;
+            } else {
+                $api_url = $this->api_url . $api;
+
+                // set API key and signature in data
+                $data['api_id'] = $this->api_id;
+                $data['api_key'] = $this->api_key;
+
+                // call API
+                $ch = curl_init($api_url);
+                curl_setopt($ch, CURLOPT_POST, true);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                $response = curl_exec($ch);
+                curl_close($ch);
+
+                return $response;
+            }
+        } catch (Exception $e) {
+            return false;
+        }
     }
 }
 

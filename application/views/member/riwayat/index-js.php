@@ -3,7 +3,7 @@
     $(document).ready(function() {
         tabel = $('#table-riwayat-deposit').DataTable({
             "processing": true,
-            // "responsive": true,
+            "responsive": true,
             "serverSide": true,
             "ordering": true,
             "fixedHeader": true,

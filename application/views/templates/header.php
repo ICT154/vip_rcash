@@ -30,14 +30,15 @@
     <!-- Remove Tap Highlight on Windows Phone IE -->
     <meta name="msapplication-tap-highlight" content="no">
     <!-- base css -->
-    <link id="vendorsbundle" rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/vendors.bundle.css">
-    <link id="appbundle" rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/app.bundle.css">
+    <link id="vendorsbundle" rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/vendors.bundle.min.css">
+    <link id="appbundle" rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/app.bundle.min.css">
     <link id="mytheme" rel="stylesheet" media="screen, print" href="#">
     <link id="myskin" rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/skins/skin-master.css">
     <!-- Place favicon.ico in the root directory -->
     <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url("assets/") ?>img/rcash.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url("assets/") ?>img/rcash.svg">
     <link rel="mask-icon" href="<?= base_url("assets/") ?>img/rcash.svg" color="#5bbad5">
+    <meta name="theme-color" content="#8268a8">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/notifications/toastr/toastr.css">
@@ -208,17 +209,17 @@
                     <!-- DOC: nav menu layout change shortcut -->
                     <div class="hidden-md-down dropdown-icon-menu position-relative">
                         <a href="#" class="header-btn btn js-waves-off" data-action="toggle" data-class="nav-function-hidden" title="Hide Navigation">
-                            <i class="ni ni-menu"></i>
+                            <i class="fa fa-bars"></i>
                         </a>
                         <ul>
                             <li>
                                 <a href="#" class="btn js-waves-off" data-action="toggle" data-class="nav-function-minify" title="Minify Navigation">
-                                    <i class="ni ni-minify-nav"></i>
+                                    <i class="fa-solid fa-bars-staggered"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="btn js-waves-off" data-action="toggle" data-class="nav-function-fixed" title="Lock Navigation">
-                                    <i class="ni ni-lock-nav"></i>
+                                    <i class="fa fa-lock"></i>
                                 </a>
                             </li>
                         </ul>
@@ -226,7 +227,7 @@
                     <!-- DOC: mobile button appears during mobile width -->
                     <div class="hidden-lg-up">
                         <a href="#" class="header-btn btn press-scale-down" data-action="toggle" data-class="mobile-nav-on">
-                            <i class="ni ni-menu"></i>
+                            <i class="fa fa-bars"></i>
                         </a>
                     </div>
                     <div class="search">

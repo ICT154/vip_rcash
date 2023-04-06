@@ -29,8 +29,8 @@
     <!-- Remove Tap Highlight on Windows Phone IE -->
     <meta name="msapplication-tap-highlight" content="no">
     <!-- base css -->
-    <link id="vendorsbundle" rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/vendors.bundle.css">
-    <link id="appbundle" rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/app.bundle.css">
+    <link id="vendorsbundle" rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/vendors.bundle.min.css">
+    <link id="appbundle" rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/app.bundle.min.css">
     <link id="mytheme" rel="stylesheet" media="screen, print" href="#">
     <link id="myskin" rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/skins/skin-master.css">
     <!-- Place favicon.ico in the root directory -->
@@ -296,8 +296,8 @@
 						+ waves.js (extension)
 						+ smartpanels.js (extension)
 						+ src/../jquery-snippets.js (core) -->
-    <script src="<?= base_url("assets/") ?>js/vendors.bundle.js"></script>
-    <script src="<?= base_url("assets/") ?>js/app.bundle.js"></script>
+    <script src="<?= base_url("assets/") ?>js/vendors.bundle.min.js"></script>
+    <script src="<?= base_url("assets/") ?>js/app.bundle.min.js"></script>
     <script src="<?= base_url("assets/") ?>js/notifications/toastr/toastr.js"></script>
     <script>
         $("#js-login-btn").click(function(event) {
