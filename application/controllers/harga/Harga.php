@@ -15,11 +15,52 @@ class Harga extends CI_Controller
         $this->load->model('M_log');
         $this->load->model('M_gzl', 'GZL');
         $this->load->model('server/M_vip', 'vip');
+        $this->load->model('server/M_Medan', 'mp');
         $this->load->model('M_datatables_v2', 'dt_v2');
     }
 
     public function index()
     {
+    }
+
+    function get_harga()
+    {
+        $id = htmlspecialchars($this->input->post('selected_option', true));
+        // $type = htmlspecialchars($this->input->post('selected_type', true));
+        if ($this->GZL->dekrip($id) != NULL) {
+            $id = $this->GZL->dekrip($id);
+            $data = $this->mp->get_list_name($id);
+            $data = array('harga' => $data,);
+            $this->load->view('member/harga/form/harga', $data);
+        } else {
+            $data = $this->mp->get_list_name();
+        }
+    }
+
+    function load_kategori()
+    {
+        if ($this->input->post('fav') != NULL) {
+            $id = htmlspecialchars($this->input->post('fav', true));
+        } else {
+        }
+        if (!empty($id)) {
+            $id = $this->GZL->dekrip($id);
+            if ($id != NULL) {
+                $data = array(
+                    'kategori' => $this->mp->load_kategori($id),
+                );
+            } else {
+                $data = array(
+                    'kategori' => $this->mp->load_kategori("all"),
+                );
+            }
+            $this->load->view('member/harga/form/kategori', $data);
+        } else {
+            $data = array(
+                'kategori' => $this->mp->load_kategori("all"),
+            );
+            $this->load->view('member/harga/form/kategori', $data);
+        }
     }
 
     function service_list()

@@ -1,5 +1,24 @@
 <script>
+    function load_kategori_fav(fav) {
+        $("#load_kategori").show();
+        $.ajax({
+            url: "<?= base_url("load_kategori") ?>",
+            type: "post",
+            data: {
+                fav: fav
+            },
+            success: function(data) {
+                $("#load_kategori").hide();
+                $(".kategori_show").html(data);
+            },
+            error: function() {
+                $("#load_kategori").hide();
+                $(".kategori_show").html("<div class='text-center mt-3 mb-3 text-danger'>Terjadi kesalahan.<i class='far fa-times-circle'></i></div>");
+            }
+        });
+    }
     $(document).ready(function() {
+        load_kategori();
         $(function() {
             $('.select2').select2();
         });
@@ -24,5 +43,24 @@
                 }
             });
         });
+
+
+
+
+        function load_kategori() {
+            $("#load_kategori").show();
+            $.ajax({
+                url: "<?= base_url("load_kategori") ?>",
+                type: "post",
+                success: function(data) {
+                    $("#load_kategori").hide();
+                    $(".kategori_show").html(data);
+                },
+                error: function() {
+                    $("#load_kategori").hide();
+                    $(".kategori_show").html("<div class='text-center mt-3 mb-3 text-danger'>Terjadi kesalahan.<i class='far fa-times-circle'></i></div>");
+                }
+            });
+        }
     });
 </script>

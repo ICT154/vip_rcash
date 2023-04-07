@@ -12,7 +12,7 @@
         height: 50px;
     } */
 
-    /* .btn-sm {
+    /* .btn-md {
         padding: 0.5rem 1rem;
         font-size: 1.25rem;
         line-height: 1.5;
@@ -77,88 +77,64 @@
         box-shadow: 0px 0px 15px gold;
     }
 </style>
-<div class="social-buttons container mb-3 text-">
-    <div class="row">
-        <div class="col">
-            <button class="btn btn-outline-primary btn-sm instagram text-light">
-                <i class="fab fa-instagram"></i>
-                <span class="button-label">Instagram</span>
-            </button>
-        </div>
-        <div class="col">
-            <button class="btn btn-outline-primary btn-sm facebook text-light">
-                <i class="fab fa-facebook"></i>
-                <span class="button-label">Facebook</span>
-            </button>
-        </div>
-        <div class="col">
-            <button class="btn btn-outline-primary btn-sm twitter text-light">
-                <i class="fab fa-twitter"></i>
-                <span class="button-label">Twitter</span>
-            </button>
-        </div>
-        <div class="col">
-            <button class="btn btn-outline-primary btn-sm youtube text-light">
-                <i class="fab fa-youtube"></i>
-                <span class="button-label">Youtube</span>
-            </button>
-        </div>
-        <div class="col">
-            <button class="btn btn-outline-primary btn-sm tiktok">
-                <i class="fab fa-tiktok"></i>
-                <span class="button-label">Tiktok</span>
-            </button>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <button class="btn btn-outline-primary btn-sm telegram">
-                <i class="fab fa-telegram"></i>
-                <span class="button-label">Telegram</span>
-            </button>
-        </div>
-        <div class="col">
-            <button class="btn btn-outline-primary btn-sm twitch">
-                <i class="fab fa-twitch"></i>
-                <span class="button-label">Twitch</span>
-            </button>
-        </div>
-        <div class="col">
-            <button class="btn btn-outline-primary btn-sm discord">
-                <i class="fab fa-discord"></i>
-                <span class="button-label">Discord</span>
-            </button>
-        </div>
-        <div class="col">
-            <button class="btn btn-outline-primary btn-sm spotify">
-                <i class="fab fa-spotify"></i>
-                <span class="button-label">Spotify</span>
-            </button>
-        </div>
-        <div class="col">
-            <button class="btn btn-outline-primary btn-sm web-traffic text-light">
-                <i class="fas fa-dollar-sign"></i>
-                <span class="button-label">Promo</span>
-            </button>
-        </div>
+<div class="alert alert-success" role="alert">
+    <strong>Kategori Favorit !</strong> Silahkan Pilih Salah Satu Kategori Layanan Sosial Media Dibawah Ini Untuk Memudahkan Kamu Memilih Produk Yang Akan Kamu Pesan. <br>
+    <div class="mt-3">
+        <button class="btn btn-outline-primary btn-md instagram text-light" onclick="load_kategori_fav('<?= $this->GZL->enkrip('instagram') ?>')">
+            <i class="fab fa-instagram"></i>
+            <span class="button-label">Instagram</span>
+        </button>
+        <button class="btn btn-outline-primary btn-md facebook text-light" onclick="load_kategori_fav('<?= $this->GZL->enkrip('facebook') ?>')">
+            <i class="fab fa-facebook"></i>
+            <span class="button-label">Facebook</span>
+        </button> <button class="btn btn-outline-primary btn-md twitter text-light" onclick="load_kategori_fav('<?= $this->GZL->enkrip('twitter') ?>')">
+            <i class="fab fa-twitter"></i>
+            <span class="button-label">Twitter</span>
+        </button> <button class="btn btn-outline-primary btn-md youtube text-light" onclick="load_kategori_fav('<?= $this->GZL->enkrip('youtube') ?>')">
+            <i class="fab fa-youtube"></i>
+            <span class="button-label">Youtube</span>
+        </button> <button class="btn btn-outline-primary btn-md tiktok" onclick="load_kategori_fav('<?= $this->GZL->enkrip('tiktok') ?>')">
+            <i class="fab fa-tiktok"></i>
+            <span class="button-label">Tiktok</span>
+        </button> <button class="btn btn-outline-primary btn-md telegram" onclick="load_kategori_fav('<?= $this->GZL->enkrip('Telegram') ?>')">
+            <i class="fab fa-telegram"></i>
+            <span class="button-label">Telegram</span>
+        </button> <button class="btn btn-outline-primary btn-md twitch" onclick="load_kategori_fav('<?= $this->GZL->enkrip('Twitch') ?>')">
+            <i class=" fab fa-twitch"></i>
+            <span class="button-label">Twitch</span>
+        </button> <button class="btn btn-outline-primary btn-md discord" onclick="load_kategori_fav('<?= $this->GZL->enkrip('Discord') ?>')">
+            <i class=" fab fa-discord"></i>
+            <span class="button-label">Discord</span>
+        </button> <button class="btn btn-outline-primary btn-md spotify" onclick="load_kategori_fav('<?= $this->GZL->enkrip('Spotify') ?>')">
+            <i class="fab fa-spotify"></i>
+            <span class="button-label">Spotify</span>
+        </button> <button class="btn btn-outline-primary btn-md web-traffic text-light" onclick="load_kategori_fav('<?= $this->GZL->enkrip('Promo') ?>')">
+            <i class="fas fa-dollar-sign"></i>
+            <span class="button-label">Promo</span>
+        </button>
     </div>
 </div>
-<div class="col-xl-12">
-    <div id="panel-1" class="panel">
-        <div class="panel-hdr">
-            <h2>
-                Daftar <span class="fw-300"><i>Harga</i></span>
-            </h2>
-            <div class="panel-toolbar">
-                <button class="btn btn-panel waves-effect waves-themed" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
-                <button class="btn btn-panel waves-effect waves-themed" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
-                <button class="btn btn-panel waves-effect waves-themed" data-action="panel-close" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></button>
+
+<div id="panel-1" class="panel">
+    <div class="panel-hdr">
+        <h2>
+            Daftar <span class="fw-300"><i>Harga</i></span>
+        </h2>
+        <div class="panel-toolbar">
+            <button class="btn btn-panel waves-effect waves-themed" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
+            <button class="btn btn-panel waves-effect waves-themed" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
+            <button class="btn btn-panel waves-effect waves-themed" data-action="panel-close" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></button>
+        </div>
+    </div>
+    <div class="show mt-3 text-truncate">
+
+
+        <div class="load_kategori text-center mb-3" id="load_kategori" style="display:none;">
+            <div class="spinner-border text-success" role="status">
+                <span class="sr-only">Loading...</span>
             </div>
         </div>
-        <div class="show mt-3 text-truncate">
 
-
-            <div class="table-show-here"></div>
-        </div>
+        <div class="kategori_show mb-3"></div>
     </div>
 </div>

@@ -69,3 +69,5 @@ $route['service-sosmed'] = 'server/vip/service_sosmed';
 $route['service-game'] = 'server/vip/service_game';
 
 $route['get-layanan-smm'] = 'server/medanpedia/get_layanan';
+$route['load_kategori'] = 'harga/harga/load_kategori';
+$route['get-harga'] = 'harga/harga/get_harga';

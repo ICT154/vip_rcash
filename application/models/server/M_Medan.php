@@ -5,6 +5,41 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class M_Medan extends CI_Model
 {
+
+    function get_list_name($id)
+    {
+        if (!empty($id)) {
+            $this->db->like('category', $id, 'both');
+            $this->db->order_by('price_sell', 'asc');
+            return $this->db->get('t_sosmed_v2')->result();
+        } else {
+            $this->db->order_by('price_sell', 'asc');
+            return $this->db->get('t_sosmed_v2')->result();
+        }
+    }
+    function load_kategori($data)
+    {
+        if (!empty($data)) {
+            if ($data == "all") {
+                $this->db->distinct();
+                $this->db->select('category');
+                $this->db->order_by('category', 'asc');
+                return $this->db->get('t_sosmed_v2')->result();
+            } else {
+                $this->db->distinct();
+                $this->db->like("category", $data, "both");
+                $this->db->select('category');
+                $this->db->order_by('category', 'asc');
+                return $this->db->get('t_sosmed_v2')->result();
+            }
+        } else {
+            $this->db->distinct();
+            $this->db->select('category');
+            $this->db->order_by('category', 'asc');
+            return $this->db->get('t_sosmed_v2')->result();
+        }
+    }
+
     function add_layanan($data)
     {
 
