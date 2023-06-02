@@ -91,15 +91,24 @@ class M_log extends CI_Model
 
     function log_in($ngapain = "", $tipe = "", $pesan = "")
     {
+        // $data = array(
+        //     'id_log' => "LOG" . rand() . "",
+        //     'log_name' => strtoupper($ngapain) . "|" . $tipe . "|" . $pesan,
+        //     'username' => $this->session->userdata('user'),
+        //     'ip' => $_SERVER['REMOTE_ADDR'],
+        //     'device' => $_SERVER['HTTP_USER_AGENT'],
+        //     'time' => date("Y-m-d H:i:s"),
+        // );
+        // $this->db->insert('t_log_history', $data);
+
         $data = array(
-            'id_log' => "LOG" . rand() . "",
-            'log_name' => strtoupper($ngapain) . "|" . $tipe . "|" . $pesan,
-            'username' => $this->session->userdata('user'),
+            'log_type' => $tipe,
+            'log_message' => $ngapain,
+            'log_timestamp' => date("Y-m-d H:i:s"),
             'ip' => $_SERVER['REMOTE_ADDR'],
             'device' => $_SERVER['HTTP_USER_AGENT'],
-            'time' => date("Y-m-d H:i:s"),
         );
-        $this->db->insert('t_log_history', $data);
+        $this->db->insert('systemlog', $data);
     }
 
     function log_in_auth($ngapain, $user, $pass)

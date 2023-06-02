@@ -23,6 +23,23 @@ class Harga extends CI_Controller
     {
     }
 
+    function get_detail_layanan()
+    {
+        $id = htmlspecialchars($this->input->post('prod', true));
+        if ($this->GZL->dekrip($id) != NULL) {
+            $id = $this->GZL->dekrip($id);
+            $data = $this->mp->get_detail_layanan($id);
+            if ($data != false) {
+                $data = array('detail' => $data,);
+                $this->load->view('member/harga/form/detail', $data);
+            } else {
+                echo "Terjadi kesalahan";
+            }
+        } else {
+            echo "Terjadi kesalahan";
+        }
+    }
+
     function get_harga()
     {
         $id = htmlspecialchars($this->input->post('selected_option', true));

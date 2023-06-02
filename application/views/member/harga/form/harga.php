@@ -4,13 +4,11 @@
         <table class="table table-bordered table-hover table-striped" id="<?= $table_name ?>">
             <thead class="bg-warning">
                 <tr>
-                    <!-- <th class="">No</th> -->
+                    <th class="">No</th>
                     <th class="">Nama</th>
                     <th class="">Harga</th>
-                    <th class="">Min Pesan</th>
-                    <th class="">Max Pesan</th>
-                    <th class="">Keterangan</th>
-                    <th class="">Waktu Proses</th>
+                    <th class="">Min/Max Pesan</th>
+                    <th class="">Detail</th>
                 </tr>
             </thead>
             <tbody>
@@ -19,14 +17,13 @@
                 foreach ($harga as $key) {
                 ?>
                     <tr>
-                        <!-- <td class=""><?= $no++ ?></td> -->
+                        <td class=""><?= $no++ ?></td>
                         <td class=""><?= $key->name ?></td>
-                        <td class=""><?= $key->price_sell ?></td>
-                        <td class=""><?= $this->GZL->number_format($key->min, 0, "", ".") ?></td>
-                        <td class=""><?= $this->GZL->number_format($key->max, 0, "", ".") ?></td>
-                        <td class=""><?= $key->description ?></td>
+                        <td class="">Rp. <?= $this->GZL->number_format($key->price_sell, 0, "", ".") ?></td>
+                        <td class=""><?= $this->GZL->number_format($key->min, 0, "", ".") ?> / <?= $this->GZL->number_format($key->max, 0, "", ".") ?></td>
+                        <!-- <td class=""><?= $this->GZL->number_format($key->max, 0, "", ".") ?></td> -->
                         <td class="">
-                            <?= $key->average_time ?>
+                            <button class="btn btn-outline-primary btn-sm" onclick="load_detail_prod('<?= $this->GZL->enkrip($key->id) ?>')"><i class="fa fa-search"></i></button>
                         </td>
                     </tr>
                 <?php } ?>
@@ -35,22 +32,65 @@
     </div>
 </div>
 
+<div class="modal fade default-example-modal-right-lg" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true" id="mod_det_prod">
+    <div class="modal-dialog modal-dialog-right modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title h4">Detail Layanan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fal fa-times"></i></span>
+                </button>
+            </div>
+            <div class="modal-body" id="">
+                <div id="det_prod_show_here"></div>
+                <div class="load_det_prod text-center mb-3" id="load_det_prod" style="display:none;">
+                    <div class="spinner-border text-success" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary waves-effect waves-themed" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
-    var tabel = null;
-    $(document).ready(function() {
-        tabel = $('#<?= $table_name ?>').DataTable({
-            "order": [
-                [1, "asc"]
-            ],
-            "orderData": [1, 0],
-            "columnDefs": [{
-                "targets": 1,
-                "render": function(data, type, row) {
-                    var price = parseFloat(data.replace(/\./g, '').replace(',', '.')).toFixed(2);
-                    return 'Rp. ' + price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-                }
-            }],
-            "scrollX": true
+    function load_detail_prod(fav) {
+        $("#mod_det_prod").modal('show');
+        $("load_det_prod").show();
+        $.ajax({
+            url: "<?= base_url("load-detail-prod") ?>",
+            type: "post",
+            data: {
+                prod: fav
+            },
+            success: function(data) {
+                $("#load_det_prod").hide();
+                $("#det_prod_show_here").html(data);
+            },
+            error: function() {
+                $("#load_det_prod").hide();
+                $("#det_prod_show_here").html("<div class='text-center mt-3 mb-3 text-danger'>Terjadi kesalahan.<i class='far fa-times-circle'></i></div>");
+            }
         });
-    });
+    }
+    // var tabel = null;
+    // $(document).ready(function() {
+    //     tabel = $('#<?= $table_name ?>').DataTable({
+    //         "order": [
+    //             [0, "asc"]
+    //         ],
+    //         "orderData": [0, 0],
+    //         "columnDefs": [{
+    //             "targets": 2,
+    //             "render": function(data, type, row) {
+    //                 var price = parseFloat(data.replace(/\./g, '').replace(',', '.')).toFixed(2);
+    //                 return 'Rp. ' + price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    //             }
+    //         }],
+    //         "scrollX": true
+    //     });
+    // });
 </script>

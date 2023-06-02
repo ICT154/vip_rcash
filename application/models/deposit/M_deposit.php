@@ -83,7 +83,7 @@ class M_deposit extends CI_Model
         return $this->db->get('t_deposit_method');
     }
 
-    function generate_depo_code($length = 6)
+    function generate_depo_code($length = 6, $kode = 'R')
     {
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'; // karakter yang digunakan untuk membuat kode
         $code = ''; // variabel untuk menyimpan kode
@@ -93,7 +93,7 @@ class M_deposit extends CI_Model
             $code .= $characters[rand(0, strlen($characters) - 1)]; // tambahkan karakter acak ke dalam kode
         }
 
-        return "R" . $code; // kembalikan kode
+        return "$kode" . $code; // kembalikan kode
     }
 }
 

@@ -15,24 +15,71 @@ class Auth extends CI_Controller
 
     function index()
     {
+
         if ($this->session->userdata('user') != '') {
             redirect('dashboard');
         }
+
         $data = array('title' => "RCASH | LOGIN",);
         $this->load->view('layout_outside/page_login', $data);
     }
 
     function register()
     {
+        $this->load->library('form_validation');
         if ($this->session->userdata('user') != '') {
             redirect('dashboard');
         }
-        $data = array('title' => "RCASH | REGISTER",);
-        $this->load->view('layout_outside/page_register', $data);
+        $config = array(
+            array(
+                'field' => 'username_regist',
+                'label' => 'Username',
+                'rules' => 'required|trim|min_length[5]|max_length[12]|is_unique[t_member.username]',
+            ),
+            array(
+                'field' => 'email_regist',
+                'label' => 'Email',
+                'rules' => 'required|trim|valid_email|is_unique[t_member.email]'
+            ),
+            array(
+                'field' => 'password_regist',
+                'label' => 'Password',
+                'rules' => 'required|trim|min_length[5]'
+            )
+        );
+        $this->form_validation->set_rules($config);
+        if ($this->form_validation->run() == FALSE) {
+            $data = array('title' => "RCASH | REGISTER",);
+            $this->load->view('layout_outside/page_register', $data);
+        } else {
+            $data = array(
+                'id_member' => "RMEM" . rand() . "PAY",
+                'username' => htmlspecialchars($this->input->post('username_regist')),
+                'password' => $this->M_gzl->encode($this->input->post('password_regist')),
+                'email' => htmlspecialchars($this->input->post('email_regist')),
+                'status' => "0",
+                'status_ket' => "Under Maintenance",
+                'verif' => "0",
+                'level' => "basic",
+                'register' => date("Y-m-d H:i:s")
+            );
+            $this->db->insert('t_member', $data);
+
+
+            // if ($this->db->affected_rows() > 0) {
+
+            //     $this->M_log->show_msg("success", "Pendaftaran Berhasil");
+            //     redirect(base_url());
+            // } else {
+            //     $this->M_log->show_msg("error", "Error System !");
+            //     redirect(base_url());
+            // }
+        }
     }
 
     function register_ex()
     {
+
         if (htmlspecialchars($this->input->post('username_regist'))) {
 
 
@@ -130,7 +177,7 @@ class Auth extends CI_Controller
                 // $this->M_log->log_in_auth('SUKSES LOGIN', $user, $password);
                 // $this->updt_last_log($user);
 
-                $this->session->set_flashdata('message', '<script>toastr["success"]("Welcome to Dashboard BLUD UPTD PALD KOTA BEKASI ' . $user . ' Have A Nice Day :) ")
+                $this->session->set_flashdata('message', '<script>toastr["success"]("Welcome to Dashboard RCASH SMM & PPOB ' . $user . ' Have A Nice Day :) ")
                 toastr.options = {
                     "closeButton": false,
                     "debug": false,

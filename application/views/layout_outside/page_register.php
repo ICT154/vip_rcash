@@ -157,43 +157,46 @@
                                     <!-- <div class="alert alert-primary text-dark" role="alert">
                                         <strong>Heads Up!</strong> Due to server maintenance from 9:30GTA to 12GTA, the verification emails could be delayed by up to 10 minutes.
                                     </div> -->
-                                    <form id="js-login" novalidate="" action="<?= base_url("auth/register_ex") ?>" method="post">
-                                        <div class="form-group">
-                                            <label class="form-label" for="username">Email</label>
-                                            <input autocomplete="off" type="email" id="email" class="form-control form-control-lg" placeholder="your email" required name="email_regist">
-                                            <div class="invalid-feedback">No, you missed this one.</div>
-                                            <div class="help-block">Your unique email to app</div>
+                                    <?php echo form_open('auth/register'); ?>
+                                    <div class="form-group">
+                                        <label class="form-label" for="username">Email</label>
+                                        <input autocomplete="off" type="email" id="email" class="form-control form-control-lg" placeholder="your email" required name="email_regist" value="<?php echo set_value('Email'); ?>">
+                                        <div class="invalid-feedback">No, you missed this one.</div>
+                                        <div class="help-block">Your unique email to app</div>
+                                        <?php echo form_error('Email', '<div class="invalid-feedback">', '</div>'); ?>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="username">Username</label>
+                                        <input autocomplete="off" type="username" id="username" class="form-control form-control-lg" placeholder="your username" required name="username_regist" value="<?php echo set_value('Username'); ?>">
+                                        <div class="invalid-feedback">No, you missed this one.</div>
+                                        <div class="help-block">Your unique username to app</div>
+                                        <?php echo form_error('Username', '<div class="invalid-feedback">', '</div>'); ?>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="password">Password</label>
+                                        <input type="password" id="password" class="form-control form-control-lg" placeholder="password" required name="password_regist">
+                                        <div class="invalid-feedback">Sorry, you missed this one.</div>
+                                        <div class="help-block">Your password</div>
+                                        <?php echo form_error('Password', '<div class="invalid-feedback">', '</div>'); ?>
+                                    </div>
+                                    <div class="form-group text-left">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="rememberme" checked readonly onclick="return false;">
+                                            <label class="custom-control-label" for="rememberme"> Dengan mendaftar anda setuju dengan <a href="<?= base_url("page/term_of_service") ?>">Term Of Service</a>, <a href="<?= base_url("page/privacy_policy") ?>">Privacy Policy</a> dan <a href="<?= base_url("page/disclaimer") ?>">Disclaimer</a></label>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="form-label" for="username">Username</label>
-                                            <input autocomplete="off" type="username" id="username" class="form-control form-control-lg" placeholder="your username" required name="username_regist">
-                                            <div class="invalid-feedback">No, you missed this one.</div>
-                                            <div class="help-block">Your unique username to app</div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="form-label" for="password">Password</label>
-                                            <input type="password" id="password" class="form-control form-control-lg" placeholder="password" required name="password_regist">
-                                            <div class="invalid-feedback">Sorry, you missed this one.</div>
-                                            <div class="help-block">Your password</div>
-                                        </div>
-                                        <div class="form-group text-left">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="rememberme" checked readonly onclick="return false;">
-                                                <label class="custom-control-label" for="rememberme"> Dengan mendaftar anda setuju dengan <a href="<?= base_url("page/term_of_service") ?>">Term Of Service</a>, <a href="<?= base_url("page/privacy_policy") ?>">Privacy Policy</a> dan <a href="<?= base_url("page/disclaimer") ?>">Disclaimer</a></label>
-                                            </div>
-                                        </div>
-                                        <div class="row no-gutters">
-                                            <!-- <div class="col-lg-6 pr-lg-1 my-2">
+                                    </div>
+                                    <div class="row no-gutters">
+                                        <!-- <div class="col-lg-6 pr-lg-1 my-2">
                                                 <button type="submit" class="btn btn-info btn-block btn-lg">Sign in with
                                                     <i class="fab fa-google"></i></button>
                                             </div> -->
-                                            <div class="col-lg-6 pl-lg-1 my-2">
-                                                <button id="js-login-btn" type="submit" class="btn btn-danger btn-block btn-lg">Secure Register</button>
-                                            </div>
-                                            <div class="col-lg-6 pl-lg-1 my-2">
-                                                <a href="<?= base_url("auth/") ?>" class="btn btn-info btn-block btn-lg">Login</a>
-                                            </div>
+                                        <div class="col-lg-6 pl-lg-1 my-2">
+                                            <button id="js-login-btn" type="submit" class="btn btn-danger btn-block btn-lg">Secure Register</button>
                                         </div>
+                                        <div class="col-lg-6 pl-lg-1 my-2">
+                                            <a href="<?= base_url("auth/") ?>" class="btn btn-info btn-block btn-lg">Login</a>
+                                        </div>
+                                    </div>
                                     </form>
                                 </div>
                             </div>

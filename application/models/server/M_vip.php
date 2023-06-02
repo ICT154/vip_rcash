@@ -6,6 +6,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class M_vip extends CI_Model
 {
 
+    public function __construct()
+    {
+        parent::__construct();
+        ini_set('max_execution_time', 500);
+    }
+
+
     function get_list_name($tipe, $id)
     {
         if ($tipe == "prepaid") {
@@ -153,43 +160,74 @@ class M_vip extends CI_Model
     {
         foreach ($data->data as $item) {
             // membuat array untuk dimasukkan ke database
-            $this->db->where('id', $item->id);
-            $cek = $this->db->get('t_sosmed', 1);
+            $this->db->where('product_id_api', $item->id);
+            $cek = $this->db->get('socialmedia', 1);
             if ($cek->num_rows() > 0) {
-                $update_data = array(
-                    'id' => $item->id,
-                    'name' => $item->name,
-                    'category' => $item->category,
-                    'status' => $item->status,
-                    'note' => $item->note,
-                    'min' => $item->min,
-                    'max' => $item->max,
-                    'speed' => $item->note,
-                    'basic_price' => $item->price->basic + ($item->price->basic * 0.15),
-                    'premium_price' => $item->price->premium + ($item->price->basic * 0.10),
-                    'special_price' => $item->price->special + ($item->price->basic * 0.05)
-                );
+                try {
+                    $update_data = array(
+                        'product_id_api' => $item->id,
+                        'product_name' => $item->name,
+                        'category' => $item->category,
+                        'status' => $item->status,
+                        'note' => $item->note,
+                        'min_quantity' => $item->min,
+                        'max_quantity' => $item->max,
+                        'basic_price' => $item->price->basic + ($item->price->basic * 0.08),
+                        'premium_price' => $item->price->basic + ($item->price->basic * 0.05),
+                        'special_price' => $item->price->basic + ($item->price->basic * 0.02),
+                        'real_price' => $item->price->basic,
+                        'provider' => "VIPRESELLER",
+                        'link_api' => "https://vip-reseller.co.id/api/social-media",
+                        'date_registered' => date("Y-m-d H:i:s"),
+                    );
 
-                // memasukkan data ke database
-                $this->db->where('id', $item->id);
-                $this->db->update('t_sosmed', $update_data);
+                    // memasukkan data ke database
+                    $this->db->where('product_id_api', $item->id);
+                    $this->db->update('socialmedia', $update_data);
+                } catch (Exception $th) {
+                    $this->M_log->log_in("Gagal Mengupdate Layanan Sosmed - Error Sistem $th", "Gagal", "service_sosmed");
+                }
             } else {
-                $insert_data = array(
-                    'id' => $item->id,
-                    'name' => $item->name,
-                    'category' => $item->category,
-                    'status' => $item->status,
-                    'note' => $item->note,
-                    'min' => $item->min,
-                    'max' => $item->max,
-                    'speed' => $item->note,
-                    'basic_price' => $item->price->basic + ($item->price->basic * 0.15),
-                    'premium_price' => $item->price->premium + ($item->price->basic * 0.10),
-                    'special_price' => $item->price->special + ($item->price->basic * 0.05)
-                );
+                try {
+                    $insert_data = array(
+                        "product_id" => $this->GZL->gen_code("5", "RSM"),
+                        'product_id_api' => $item->id,
+                        'product_name' => $item->name,
+                        'category' => $item->category,
+                        'status' => $item->status,
+                        'note' => $item->note,
+                        'min_quantity' => $item->min,
+                        'max_quantity' => $item->max,
+                        'basic_price' => $item->price->basic + ($item->price->basic * 0.08),
+                        'premium_price' => $item->price->basic + ($item->price->basic * 0.05),
+                        'special_price' => $item->price->basic + ($item->price->basic * 0.02),
+                        'real_price' => $item->price->basic,
+                        'provider' => "VIPRESELLER",
+                        'link_api' => "https://vip-reseller.co.id/api/social-media",
+                        'date_registered' => date("Y-m-d H:i:s")
+                    );
 
-                // memasukkan data ke database
-                $this->db->insert('t_sosmed', $insert_data);
+                    // memasukkan data ke database
+                    $this->db->insert('socialmedia', $insert_data);
+                } catch (Exception $th) {
+                    $this->M_log->log_in("Gagal Memasukan Layanan Sosmed - Error Sistem $th", "Gagal", "service_sosmed");
+                }
+            }
+
+            try {
+                $price_history = array(
+                    'entity_type' => "socialmedia",
+                    'product_id' => $item->id,
+                    'price_type' => "",
+                    'price' => $item->price->basic,
+                    'change_date' => date("Y-m-d H:i:s"),
+                    'basic_price' => $item->price->basic + ($item->price->basic * 0.08),
+                    'premium_price' => $item->price->basic + ($item->price->basic * 0.05),
+                    'special_price' => $item->price->basic + ($item->price->basic * 0.02),
+                );
+                $this->db->insert('pricehistory', $price_history);
+            } catch (Exception $th) {
+                $this->M_log->log_in("Gagal Memasukan Riwayat Harga - Error Sistem $th", "Gagal", "service_sosmed");
             }
         }
         $this->send_truncate_sosmed($data);
@@ -198,39 +236,48 @@ class M_vip extends CI_Model
 
     function send_truncate_sosmed($data)
     {
-        $this->db->truncate('t_sosmed_temp');
+        $this->db->truncate('socialmediatemp');
         foreach ($data->data as $item) {
-            // membuat array untuk dimasukkan ke database
-            $insert_data = array(
-                'id' => $item->id,
-                'name' => $item->name,
-                'category' => $item->category,
-                'status' => $item->status,
-                'note' => $item->note,
-                'min' => $item->min,
-                'max' => $item->max,
-                'speed' => $item->note,
-                'basic_price' => $item->price->basic + ($item->price->basic * 0.15),
-                'premium_price' => $item->price->premium + ($item->price->basic * 0.10),
-                'special_price' => $item->price->special + ($item->price->basic * 0.05)
-            );
-
-            // memasukkan data ke database
-            $this->db->insert('t_sosmed_temp', $insert_data);
+            try {
+                $insert_data = array(
+                    "product_id" => $this->GZL->gen_code("5", "RSM"),
+                    'product_id_api' => $item->id,
+                    'product_name' => $item->name,
+                    'category' => $item->category,
+                    'status' => $item->status,
+                    'note' => $item->note,
+                    'min_quantity' => $item->min,
+                    'max_quantity' => $item->max,
+                    'basic_price' => $item->price->basic + ($item->price->basic * 0.08),
+                    'premium_price' => $item->price->basic + ($item->price->basic * 0.05),
+                    'special_price' => $item->price->basic + ($item->price->basic * 0.02),
+                    'real_price' => $item->price->basic,
+                    'provider' => "VIPRESELLER",
+                    'link_api' => "https://vip-reseller.co.id/api/social-media",
+                    'date_registered' => date("Y-m-d H:i:s")
+                );
+                $this->db->insert('socialmediatemp', $insert_data);
+            } catch (Exception $th) {
+                $this->M_log->log_in("Gagal Memasukan Layanan Sosmed - Error Sistem $th", "Gagal", "service_sosmed");
+            }
         }
-        $this->db->select("id");
-        $data_server_utama = $this->db->get('t_sosmed')->result();
+        $this->db->select("product_id_api");
+        $data_server_utama = $this->db->get('socialmedia')->result();
         foreach ($data_server_utama as $key) {
-            $this->db->where('id', $key->id);
-            $cek_data = $this->db->get('t_sosmed_temp', 1);
+            $this->db->where('product_id_api', $key->product_id_api);
+            $cek_data = $this->db->get('socialmediatemp', 1);
             if ($cek_data->num_rows() > 0) {
             } else {
-                $this->db->where('id', $key->code);
-                $this->db->delete('t_sosmed');
-                if ($this->db->affected_rows() > 0) {
-                    echo "SUKSES DELETE TO DATABASE <br>";
-                } else {
-                    echo "FAIL DELETE TO DATABASE <br>";
+                try {
+                    $this->db->where('product_id_api', $key->product_id_api);
+                    $this->db->delete('socialmedia');
+                    if ($this->db->affected_rows() > 0) {
+                        echo "SUKSES DELETE TO DATABASE <br>";
+                    } else {
+                        echo "FAIL DELETE TO DATABASE <br>";
+                    }
+                } catch (Exception $th) {
+                    $this->M_log->log_in("Gagal Menghapus Layanan Sosmed - Error Sistem $th", "Gagal", "service_sosmed");
                 }
             }
         }

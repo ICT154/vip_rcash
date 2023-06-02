@@ -14,6 +14,19 @@ class M_gzl extends CI_Model
     {
     }
 
+    function gen_code($length = 6, $kode = 'R')
+    {
+        $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'; // karakter yang digunakan untuk membuat kode
+        $code = ''; // variabel untuk menyimpan kode
+
+        // loop sebanyak $length kali untuk membuat kode dengan panjang $length
+        for ($i = 0; $i < $length; $i++) {
+            $code .= $characters[rand(0, strlen($characters) - 1)]; // tambahkan karakter acak ke dalam kode
+        }
+
+        return "$kode" . $code; // kembalikan kode
+    }
+
     function format_tanggal_indonesia($tanggal)
     {
         // Ubah format tanggal menjadi timestamp

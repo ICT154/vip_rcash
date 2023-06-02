@@ -6,6 +6,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class M_Medan extends CI_Model
 {
 
+
+    function get_detail_layanan($id)
+    {
+        if (!empty($id)) {
+            $this->db->where('id', $id);
+            return $this->db->get('t_sosmed_v2')->row_array();
+        } else {
+            return false;
+        }
+    }
+
     function get_list_name($id)
     {
         if (!empty($id)) {

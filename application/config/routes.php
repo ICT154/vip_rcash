@@ -53,21 +53,39 @@ $route['default_controller'] = 'auth';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['get-layanan-smm'] = 'server/medanpedia/get_layanan_smm';
+
+
+////// MEMBER //////
 $route['dashboard'] = 'member/dashboard/dashboard';
 $route['logout'] = 'member/dashboard/logout';
+
+////// DEPOSIT //////
 $route['deposit-baru'] = 'deposit/depo/deposit_baru';
 $route['deposit-baru-sv'] = 'deposit/depo/deposit_baru_sv';
 $route['riwayat-deposit'] = 'deposit/depo/riwayat_deposit';
 $route['riwayat-deposit/table'] = 'deposit/depo/view_data_where';
 $route['deposit-delete'] = 'deposit/depo/batalkan_deposit';
-$route['daftar-harga'] = 'harga/harga/list_harga';
-$route['get-prepaid'] = 'harga/harga/service_list';
 
+
+////// SERVER //////
 $route['service-prepaid'] = 'server/vip/service_prepaid';
 $route['service-sosmed'] = 'server/vip/service_sosmed';
 $route['service-game'] = 'server/vip/service_game';
-
 $route['get-layanan-smm'] = 'server/medanpedia/get_layanan';
+$route['get-layanan-smm'] = 'server/medanpedia/get_layanan_smm';
+
+////// HARGA //////
 $route['load_kategori'] = 'harga/harga/load_kategori';
 $route['get-harga'] = 'harga/harga/get_harga';
+$route['load-detail-prod'] = 'harga/harga/get_detail_layanan';
+$route['daftar-harga'] = 'harga/harga/list_harga';
+$route['get-prepaid'] = 'harga/harga/service_list';
+
+////// PEMESANAN //////
+$route['pemesanan-sosmed'] = 'pemesanan/pesan/pesanan';
+$route['get-layanan'] = 'pemesanan/pesan/layanan';
+$route['get-layanan-detail'] = 'pemesanan/pesan/layanan_detail';
+
+
+///// MIGRASI DATA /////
+$route['_migrate_user'] = 'migrate_data/migrate/users';
