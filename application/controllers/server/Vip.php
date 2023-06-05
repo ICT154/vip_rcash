@@ -78,10 +78,14 @@ class Vip extends CI_Controller
             'type' => 'services',
         );
         $response = $this->call_api($data, $this->api_url_game);
+
         if ($response == false) {
             $this->M_log->log_in("Gagal Mendapat Layanan Game - CURL FAIL", "Gagal", "service_game");
             return false;
         } else {
+
+
+
             $data = json_decode($response);
             if ($data->result == false) {
                 $this->M_log->log_in("Gagal Mendapat Layanan Game - API FAIL $data->message ", "Gagal", "service_game");
@@ -89,6 +93,10 @@ class Vip extends CI_Controller
                 return false;
             } else {
                 $this->M_log->log_in("Berhasil Mendapat Layanan Game", "Berhasil", "service_game");
+
+                // echo "<pre>";
+                // print_r($data);
+                // echo "</pre>";
 
                 $this->vip->insert_game($data);
             }

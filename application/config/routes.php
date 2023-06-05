@@ -65,6 +65,7 @@ $route['deposit-baru-sv'] = 'deposit/depo/deposit_baru_sv';
 $route['riwayat-deposit'] = 'deposit/depo/riwayat_deposit';
 $route['riwayat-deposit/table'] = 'deposit/depo/view_data_where';
 $route['deposit-delete'] = 'deposit/depo/batalkan_deposit';
+$route['deposit-send'] = 'deposit/depo/detail_send_bukti';
 
 
 ////// SERVER //////

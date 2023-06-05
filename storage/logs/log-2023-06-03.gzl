@@ -1,0 +1,17 @@
+ERROR - 2023-06-03 15:23:27 --> 404 Page Not Found: Img/svg
+ERROR - 2023-06-03 20:23:31 --> Query error: Table 'db_rcash.t_member' doesn't exist - Invalid query: SELECT *
+FROM `t_member`
+WHERE username =  'adminos'
+OR `email` = 'adminos'
+ LIMIT 1
+ERROR - 2023-06-03 20:55:22 --> Severity: Notice --> Trying to get property 'result' of non-object C:\xampp_74\htdocs\rcash\application\controllers\server\Vip.php 86
+ERROR - 2023-06-03 20:55:22 --> Severity: Notice --> Trying to get property 'message' of non-object C:\xampp_74\htdocs\rcash\application\controllers\server\Vip.php 87
+ERROR - 2023-06-03 20:55:22 --> Severity: Notice --> Trying to get property 'message' of non-object C:\xampp_74\htdocs\rcash\application\controllers\server\Vip.php 88
+ERROR - 2023-06-03 20:56:49 --> Query error: Table 'db_rcash.t_game' doesn't exist - Invalid query: SELECT *
+FROM `t_game`
+WHERE `code` = 'AMZPRIME1P1U-S1'
+ LIMIT 1
+ERROR - 2023-06-03 20:56:49 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\xampp_74\htdocs\rcash\application\controllers\server\Vip.php:83) C:\xampp_74\htdocs\rcash\system\core\Common.php 571
+ERROR - 2023-06-03 20:58:41 --> Severity: Notice --> Trying to get property 'result' of non-object C:\xampp_74\htdocs\rcash\application\controllers\server\Vip.php 91
+ERROR - 2023-06-03 20:58:41 --> Severity: Notice --> Trying to get property 'message' of non-object C:\xampp_74\htdocs\rcash\application\controllers\server\Vip.php 92
+ERROR - 2023-06-03 20:58:41 --> Severity: Notice --> Trying to get property 'message' of non-object C:\xampp_74\htdocs\rcash\application\controllers\server\Vip.php 93

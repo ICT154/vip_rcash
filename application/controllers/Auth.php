@@ -10,6 +10,7 @@ class Auth extends CI_Controller
         parent::__construct();
         $this->load->model('M_log');
         $this->load->model('M_gzl');
+        $this->load->model('M_gzl', 'GZL');
     }
 
 
@@ -33,18 +34,27 @@ class Auth extends CI_Controller
         $config = array(
             array(
                 'field' => 'username_regist',
-                'label' => 'Username',
-                'rules' => 'required|trim|min_length[5]|max_length[12]|is_unique[t_member.username]',
+                'label' => 'Username_regist',
+                'rules' => 'required|trim|min_length[5]|max_length[12]|is_unique[users.username]',
+                'errors' => array(
+                    'is_unique' => 'Username Telah terdaftar, silahkan gunakan username lain.'
+                )
             ),
             array(
                 'field' => 'email_regist',
-                'label' => 'Email',
-                'rules' => 'required|trim|valid_email|is_unique[t_member.email]'
+                'label' => 'Email_regist',
+                'rules' => 'required|trim|valid_email|is_unique[users.email]',
+                'errors' => array(
+                    'is_unique' => 'Email Telah terdaftar, silahkan gunakan email lain.'
+                )
             ),
             array(
                 'field' => 'password_regist',
-                'label' => 'Password',
-                'rules' => 'required|trim|min_length[5]'
+                'label' => 'Password_regist',
+                'rules' => 'required|trim|min_length[5]',
+                'errors' => array(
+                    'min_length' => 'Password Minimal 5 Karakter'
+                )
             )
         );
         $this->form_validation->set_rules($config);
@@ -52,28 +62,34 @@ class Auth extends CI_Controller
             $data = array('title' => "RCASH | REGISTER",);
             $this->load->view('layout_outside/page_register', $data);
         } else {
-            $data = array(
-                'id_member' => "RMEM" . rand() . "PAY",
-                'username' => htmlspecialchars($this->input->post('username_regist')),
-                'password' => $this->M_gzl->encode($this->input->post('password_regist')),
-                'email' => htmlspecialchars($this->input->post('email_regist')),
-                'status' => "0",
-                'status_ket' => "Under Maintenance",
-                'verif' => "0",
-                'level' => "basic",
-                'register' => date("Y-m-d H:i:s")
-            );
-            $this->db->insert('t_member', $data);
+            try {
+                $data = array(
+                    'user_id' => $this->GZL->gen_code(5, "RU"),
+                    'username' => htmlspecialchars($this->input->post('username_regist')),
+                    'password' => $this->M_gzl->encode($this->input->post('password_regist')),
+                    'email' => htmlspecialchars($this->input->post('email_regist')),
+                    'status' => "0",
+                    // 'status_ket' => "Under Maintenance",
+                    // 'verif' => "0",
+                    'level' => "basic",
+                    'tanggal_pendaftaran' => date("Y-m-d H:i:s")
+                );
+                $this->db->insert('users', $data);
 
 
-            // if ($this->db->affected_rows() > 0) {
+                if ($this->db->affected_rows() > 0) {
 
-            //     $this->M_log->show_msg("success", "Pendaftaran Berhasil");
-            //     redirect(base_url());
-            // } else {
-            //     $this->M_log->show_msg("error", "Error System !");
-            //     redirect(base_url());
-            // }
+                    $this->M_log->show_msg("success", "Pendaftaran Berhasil");
+                    redirect(base_url());
+                } else {
+                    $this->M_log->show_msg("error", "Error System !");
+                    redirect(base_url());
+                }
+            } catch (\Throwable $th) {
+                $this->M_log->log_in($th, "register", "Auth.php");
+                $this->M_log->show_msg("error", "Error System !");
+                redirect(base_url());
+            }
         }
     }
 
@@ -250,7 +266,7 @@ class Auth extends CI_Controller
 
             $this->db->where('username', "'" . htmlspecialchars($this->input->post('email_username_login')) . "'", FALSE);
             $this->db->or_where('email',  htmlspecialchars($this->input->post('email_username_login')));
-            $cek_usrname = $this->db->get('t_member', 1);
+            $cek_usrname = $this->db->get('users', 1);
             if ($cek_usrname->num_rows() > 0) {
                 $data = $cek_usrname->row_array();
 

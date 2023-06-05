@@ -37,7 +37,7 @@
         <div class="p-3 bg-info-200 rounded overflow-hidden position-relative text-white mb-g">
             <div class="">
                 <h3 class="display-4 d-block l-h-n m-0 fw-500">
-                    Rp. <?= $this->gzl->number_format($tot_depo['jumlah_transfer'], 2, ",", ".") ?>
+                    Rp. <?= $this->gzl->number_format($tot_depo['jumlah_didapat'], 2, ",", ".") ?>
                     <small class="m-0 l-h-n">Total Deposit</small>
                 </h3>
             </div>
@@ -48,12 +48,7 @@
         <div class="p-3 bg-success-200 rounded overflow-hidden position-relative text-white mb-g">
             <div class="">
                 <h3 class="display-4 d-block l-h-n m-0 fw-500">
-                    <?php
-                    $this->db->where('id_member', $user['id_member']);
-                    $this->db->where_in('status', array("Success"));
-                    $tot_pesan_sosmed_all = $this->db->get('t_sosmed_order')->num_rows();
-                    ?>
-                    <?= $tot_pesan_sosmed_all ?>
+                    <?= $tot_trx_success['total'] ?>
                     <small class="m-0 l-h-n">Total Pemesanan Sukses</small>
                 </h3>
             </div>
@@ -65,12 +60,7 @@
         <div class="p-3 bg-danger-200 rounded overflow-hidden position-relative text-white mb-g">
             <div class="">
                 <h3 class="display-4 d-block l-h-n m-0 fw-500">
-                    <?php
-                    $this->db->where('id_member', $user['id_member']);
-                    $this->db->where_in('status', array("Error"));
-                    $tot_pesan_sosmed_all = $this->db->get('t_sosmed_order')->num_rows();
-                    ?>
-                    <?= $tot_pesan_sosmed_all ?>
+                    <?= $tot_trx_error['total'] ?>
                     <small class="m-0 l-h-n">Total Pemesanan Gagal</small>
                 </h3>
             </div>
@@ -81,12 +71,7 @@
         <div class="p-3 bg-warning-200 rounded overflow-hidden position-relative text-white mb-g">
             <div class="">
                 <h3 class="display-4 d-block l-h-n m-0 fw-500">
-                    <?php
-                    $this->db->where('id_member', $user['id_member']);
-                    $this->db->where_in('status', array("In progress", "Pending"));
-                    $tot_pesan_sosmed_all = $this->db->get('t_sosmed_order')->num_rows();
-                    ?>
-                    <?= $tot_pesan_sosmed_all ?>
+                    <?= $tot_trx_pending['total'] ?>
                     <small class="m-0 l-h-n">Total Pemesanan Pending</small>
                 </h3>
             </div>

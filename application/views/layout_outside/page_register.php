@@ -157,13 +157,16 @@
                                     <!-- <div class="alert alert-primary text-dark" role="alert">
                                         <strong>Heads Up!</strong> Due to server maintenance from 9:30GTA to 12GTA, the verification emails could be delayed by up to 10 minutes.
                                     </div> -->
+
+                                    <?= form_error("email_regist", "<div class='alert alert-danger'>", "</div>"); ?>
+                                    <?php echo form_error('username_regist'); ?>
                                     <?php echo form_open('auth/register'); ?>
                                     <div class="form-group">
                                         <label class="form-label" for="username">Email</label>
-                                        <input autocomplete="off" type="email" id="email" class="form-control form-control-lg" placeholder="your email" required name="email_regist" value="<?php echo set_value('Email'); ?>">
+                                        <input autocomplete="off" type="email" id="email" class="form-control form-control-lg" placeholder="your email" required name="email_regist" value="<?php echo set_value('email_regist'); ?>">
                                         <div class="invalid-feedback">No, you missed this one.</div>
                                         <div class="help-block">Your unique email to app</div>
-                                        <?php echo form_error('Email', '<div class="invalid-feedback">', '</div>'); ?>
+                                        <?php echo form_error('Email_regist', '<div class="invalid-feedback">', '</div>'); ?>
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label" for="username">Username</label>

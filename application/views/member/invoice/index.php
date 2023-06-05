@@ -143,7 +143,7 @@
                     INVOICE
                 </h3>
                 <div class="text-dark fw-700 h1 mb-g keep-print-font">
-                    # <?= $data_depo['kode_deposit'] ?>
+                    # <?= $data_depo['deposit_id'] ?>
                 </div>
             </div>
         </div>
@@ -157,7 +157,7 @@
                                     Tanggal Deposit :
                                 </td>
                                 <td>
-                                    <?= $this->GZL->format_tanggal_indonesia($data_depo['date_depo']) ?>
+                                    <?= $this->GZL->format_tanggal_indonesia($data_depo['tanggal_deposit']) ?>
                                 </td>
                             </tr>
                             <tr>
@@ -165,7 +165,7 @@
                                     Provider:
                                 </td>
                                 <td>
-                                    <?= $data_depo['provider'] ?>
+                                    <?= $data_depo['payment_method_id'] ?>
                                 </td>
                             </tr>
                             <tr class="text-danger text-strong">
@@ -173,7 +173,7 @@
                                     CATATAN :
                                 </td>
                                 <td>
-                                    <?= $data_depo['kode_deposit'] ?>
+                                    <?= $data_depo['deposit_id'] ?>
                                 </td>
                             </tr>
                         </tbody>
@@ -192,13 +192,13 @@
                             <tr>
                                 <td class="text-danger">
 
-                                    <strong><?= $data_depo['provider'] ?></strong>
+                                    <strong><?= $method_depo['payment_method_name'] ?></strong>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="text-danger">
 
-                                    <strong><?= $data_depo['tujuan'] ?></strong>
+                                    <strong><?= $method_depo['payment_method_id'] ?></strong>
                                 </td>
                             </tr>
 
@@ -224,7 +224,7 @@
                                 <td class="text-center fw-700">1</td>
                                 <td class="text-left strong">Deposit</td>
                                 <td class="text-left">Penambahan Saldo</td>
-                                <td class="text-right">Rp. <?= $this->GZL->number_format($data_depo['jumlah_transfer'], 0, ",", ".") ?></td>
+                                <td class="text-right">Rp. <?= $this->GZL->number_format($data_depo['jumlah'], 0, ",", ".") ?></td>
                             </tr>
                         </tbody>
                     </table>
@@ -240,11 +240,12 @@
                     Silahkan bayar supaya anda dapat segera bertransaksi.
                 </h4>
                 <p class="mt-2 text-muted mb-0">
-                    Invoice Pembayaran : <?= $data_depo['kode_deposit'] ?>
+                    Invoice Pembayaran : <?= $data_depo['deposit_id'] ?>
                 </p>
             </div>
         </div>
     </div>
-
+    <button class="btn btn-info" data-toggle="modal" data-target="#default-example-modal-lg-center">KIRIM BUKTI TRANSFER <?php if ($cek_bukti > 0) { ?> <span class="badge badge-icon bg-success" data-toggle="tooltip" data-placement="auto" title="" data-original-title="Anda sudah mengirim bukti transfer, tapi anda bisa mengirim lagi jika yang sebelumnya belum lengkap ( bukti transfer yang sudah anda kirim sebelumnya akan hilang )"><i class="fa fa-check"></i></span>
+        <?php } ?> </button>
     <button class="btn btn-danger" id="btn-cancel-deposit">BATALKAN DEPOSIT</button>
 </div>

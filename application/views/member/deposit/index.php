@@ -60,7 +60,7 @@
                                 <option value="">-- Pilih Metode Pembayaran --</option>
                                 <?php
                                 foreach ($method_depo as $row) { ?>
-                                    <option value="<?= $row->id ?>"><?= $row->nama ?></option>
+                                    <option value="<?= $row->payment_method_id ?>"><?= $row->payment_method_name ?> - <?= $row->account_number ?></option>
                                 <?php } ?>
                             </select>
                         </div>

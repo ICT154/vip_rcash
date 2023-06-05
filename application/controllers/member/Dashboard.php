@@ -8,7 +8,13 @@ class Dashboard extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        if ($this->session->userdata('user') == '' or $this->session->userdata('user') == null) {
+        try {
+            if ($this->session->userdata('user') == '' or $this->session->userdata('user') == null) {
+                redirect('auth');
+            }
+        } catch (Exception $e) {
+            $this->session->unset_userdata(array('user' => ''));
+            $this->session->sess_destroy();
             redirect('auth');
         }
         $this->load->model('member/M_member', "member");
@@ -16,7 +22,7 @@ class Dashboard extends CI_Controller
 
     function index()
     {
-        echo "ok";
+        // echo "ok";
     }
 
     function dashboard()
@@ -33,6 +39,15 @@ class Dashboard extends CI_Controller
             'tot_pesan_smm' => $this->member->get_tot_smm_by_ses(),
             'tot_depo' => $this->member->get_tot_depo_by_ses(),
             'file_js' => "laporan_rkat_return",
+            'tot_trx' => $this->member->get_count_trx_by_ses(''),
+            'tot_trx_success' => $this->member->get_count_trx_by_ses('Success'),
+            'tot_trx_pending' => $this->member->get_count_trx_by_ses('Pending'),
+            // 'tot_trx_processing' => $this->member->get_count_trx_by_ses('Processing'),
+            // 'tot_trx_partial' => $this->member->get_count_trx_by_ses('Partial'),
+            // 'tot_trx_failed' => $this->member->get_count_trx_by_ses('Failed'),
+            // 'tot_trx_refund' => $this->member->get_count_trx_by_ses('Refund'),
+            // 'tot_trx_cancel' => $this->member->get_count_trx_by_ses('Cancel'),
+            'tot_trx_error' => $this->member->get_count_trx_by_ses('Error'),
         );
 
 

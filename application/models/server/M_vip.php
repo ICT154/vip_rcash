@@ -9,7 +9,7 @@ class M_vip extends CI_Model
     public function __construct()
     {
         parent::__construct();
-        ini_set('max_execution_time', 500);
+        ini_set('max_execution_time', 300); // 5 minutes
     }
 
 
@@ -288,37 +288,48 @@ class M_vip extends CI_Model
     {
         foreach ($data->data as $item) {
             // membuat array untuk dimasukkan ke database
-            $this->db->where('code', $item->code);
-            $cek = $this->db->get('t_game', 1);
+            $this->db->where('game_id_api', $item->code);
+            $cek = $this->db->get('game', 1);
             if ($cek->num_rows() > 0) {
-                $update_data = array(
-                    'code' => $item->code,
-                    'game' => $item->game,
-                    'name' => $item->name,
-                    'basic_price' => $item->price->basic + ($item->price->basic * 0.15),
-                    'premium_price' => $item->price->premium + ($item->price->basic * 0.10),
-                    'special_price' => $item->price->special + ($item->price->basic * 0.05),
-                    'server' => $item->server,
-                    'status' => $item->status
-                );
+                try {
+                    $update_data = array(
+                        // 'game_id' => $this->GZL->gen_code("5", "RGM"),
+                        'game_id_api' => $item->code,
+                        'game_name' => $item->name,
+                        'code' => $item->code,  'price' => $item->price->basic,
+                        'basic_price' => $item->price->basic + ($item->price->basic * 0.05),
+                        'premium_price' => $item->price->basic + ($item->price->basic * 0.03),
+                        'special_price' => $item->price->basic + ($item->price->basic * 0.02),
+                        'server' => $item->server,
+                        'status' => $item->status,
+                        'date_registered' => date("Y-m-d H:i:s")
+                    );
 
-                // memasukkan data ke database
-                $this->db->where('code', $item->code);
-                $this->db->update('t_game', $update_data);
+                    $this->db->where('game_id_api', $item->code);
+                    $this->db->update('game', $update_data);
+                } catch (\Throwable $th) {
+                    $this->M_log->log_in("Gagal Mengupdate Layanan Game - Error Sistem $th", "Gagal", "service_game");
+                }
             } else {
                 $insert_data = array(
+                    'game_id' => $this->GZL->gen_code("5", "RGM"),
+                    'game_id_api' => $item->code,
+                    'game_name' => $item->name,  'price' => $item->price->basic,
                     'code' => $item->code,
-                    'game' => $item->game,
-                    'name' => $item->name,
-                    'basic_price' => $item->price->basic + ($item->price->basic * 0.15),
-                    'premium_price' => $item->price->premium + ($item->price->basic * 0.10),
-                    'special_price' => $item->price->special + ($item->price->basic * 0.05),
+                    'basic_price' => $item->price->basic + ($item->price->basic * 0.05),
+                    'premium_price' => $item->price->basic + ($item->price->basic * 0.03),
+                    'special_price' => $item->price->basic + ($item->price->basic * 0.02),
                     'server' => $item->server,
-                    'status' => $item->status
+                    'status' => $item->status,
+                    'date_registered' => date("Y-m-d H:i:s")
                 );
 
                 // memasukkan data ke database
-                $this->db->insert('t_game', $insert_data);
+                try {
+                    $this->db->insert('game', $insert_data);
+                } catch (Exception $th) {
+                    $this->M_log->log_in("Gagal Memasukan Layanan Game - Error Sistem $th", "Gagal", "service_game");
+                }
             }
         }
         $this->send_truncate_game($data);
@@ -326,32 +337,35 @@ class M_vip extends CI_Model
 
     function send_truncate_game($data)
     {
-        $this->db->truncate('t_game_temp');
+        $this->db->truncate('gametemp');
         foreach ($data->data as $item) {
             // membuat array untuk dimasukkan ke database
             $insert_data = array(
+                'game_id' => $this->GZL->gen_code("5", "RGM"),
+                'game_id_api' => $item->code,
+                'game_name' => $item->name,
                 'code' => $item->code,
-                'game' => $item->game,
-                'name' => $item->name,
-                'basic_price' => $item->price->basic + ($item->price->basic * 0.15),
-                'premium_price' => $item->price->premium + ($item->price->basic * 0.10),
-                'special_price' => $item->price->special + ($item->price->basic * 0.05),
+                'price' => $item->price->basic,
+                'basic_price' => $item->price->basic + ($item->price->basic * 0.05),
+                'premium_price' => $item->price->basic + ($item->price->basic * 0.03),
+                'special_price' => $item->price->basic + ($item->price->basic * 0.02),
                 'server' => $item->server,
-                'status' => $item->status
+                'status' => $item->status,
+                'date_registered' => date("Y-m-d H:i:s")
             );
 
             // memasukkan data ke database
-            $this->db->insert('t_game_temp', $insert_data);
+            $this->db->insert('gametemp', $insert_data);
         }
-        $this->db->select("code");
-        $data_server_utama = $this->db->get('t_game')->result();
+        $this->db->select("game_id_api");
+        $data_server_utama = $this->db->get('game')->result();
         foreach ($data_server_utama as $key) {
-            $this->db->where('code', $key->code);
-            $cek_data = $this->db->get('t_game_temp', 1);
+            $this->db->where('game_id_api', $key->game_id_api);
+            $cek_data = $this->db->get('gametemp', 1);
             if ($cek_data->num_rows() > 0) {
             } else {
-                $this->db->where('code', $key->code);
-                $this->db->delete('t_game');
+                $this->db->where('game_id_api', $key->game_id_api);
+                $this->db->delete('game');
                 if ($this->db->affected_rows() > 0) {
                     echo "SUKSES DELETE TO DATABASE <br>";
                 } else {

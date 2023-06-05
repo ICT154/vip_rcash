@@ -20,7 +20,33 @@ class Depo extends CI_Controller
 
     function index()
     {
-        echo "ok";
+        // echo "ok";
+    }
+
+    function detail_send_bukti()
+    {
+        $id = $this->input->post('id');
+        $bukti_tf = $this->input->post('bukti_tf');
+        if ($id == null or $bukti_tf == null) {
+            $this->M_log->show_msg("error", "ID Deposit Tidak Ditemukan");
+            $this->M_log->log_in("ID Deposit Tidak Ditemukan", "Gagal", "detail_send_bukti");
+        } else {
+            if ($this->GZL->dekrip($id) == null) {
+                $this->M_log->show_msg("error", "ID Deposit Tidak Ditemukan");
+                $this->M_log->log_in("ID Deposit Tidak Ditemukan ( GAGAL DEKRIP )", "Gagal", "detail_send_bukti");
+            } else {
+                $id = $this->GZL->dekrip($id);
+                $data = $this->depo->get_deposit_by_id($id);
+                if ($data < 1) {
+                    $this->M_log->show_msg("error", "ID Deposit Tidak Ditemukan");
+                    $this->M_log->log_in("ID Deposit Tidak Ditemukan ( DATA NULL ) $id", "Gagal", "detail_send_bukti");
+                } else {
+                    $this->depo->send_bukti_tf($id, $bukti_tf);
+                    $this->M_log->show_msg("success", "Bukti Transfer Berhasil Dikirim");
+                    $this->M_log->log_in("Bukti Transfer Berhasil Dikirim", "Sukses", "detail_send_bukti");
+                }
+            }
+        }
     }
 
     function batalkan_deposit()
@@ -65,12 +91,15 @@ class Depo extends CI_Controller
     {
 
 
-        $query  = "SELECT * FROM t_deposit";
+        $query  = "SELECT d.deposit_id, d.jumlah_didapat, pm.payment_method_name AS provider, d.tanggal_deposit, d.status, d.payment_method_id
+        FROM deposits AS d
+        JOIN paymentmethod AS pm ON d.payment_method_id = pm.payment_method_id";
         $search = array(
-            'date_depo', 'kode_deposit', 'date_depo', 'provider', 'get_saldo', 'status', 'username'
+            'd.tanggal_deposit', 'd.deposit_id', 'd.tanggal_deposit', 'd.jumlah_didapat', 'd.status',
         );
         // $where = null;
-        $where  = array('username' => 'raden');
+        $res = $this->member->get_user_by_ses();
+        $where  = array('user_id' => $res['user_id']);
         $where_in = array();
         // jika memakai IS NULL pada where sql
         $isWhere = null;
@@ -190,13 +219,16 @@ class Depo extends CI_Controller
             'user' => $this->member->get_user_by_ses(),
             'sidebar_one' => "RCASH",
             'sidebar_two' => "Deposit",
-            'breadcrumb' => "INVOICE " . $data_depo['kode_deposit'] . "",
+            'breadcrumb' => "INVOICE " . $data_depo['deposit_id'] . "",
             'icon_subheader' => "subheader-icon fal fa-file-invoice",
-            'bc_1' => "INVOICE " . $data_depo['kode_deposit'] . "",
+            'bc_1' => "INVOICE " . $data_depo['deposit_id'] . "",
             'bc_2' => "Disini akan muncul informasi cara pembayaran deposit kamu",
             'title' => "RCASH | DEPOSIT BARU",
             'data_depo' => $this->member->get_data_depo_by_ses()->row_array(),
+            'method_depo' => $this->depo->get_method_depo($data_depo['payment_method_id']),
+            'cek_bukti' => $this->depo->cek_bukti($data_depo['deposit_id']),
         );
+
 
         $this->load->view('templates/header', $data);
         $this->load->view('member/invoice/index');
