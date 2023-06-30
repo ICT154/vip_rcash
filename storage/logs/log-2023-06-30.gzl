@@ -1,0 +1,13 @@
+ERROR - 2023-06-30 14:09:05 --> 404 Page Not Found: Img/svg
+ERROR - 2023-06-30 14:10:29 --> 404 Page Not Found: Img/svg
+ERROR - 2023-06-30 14:10:34 --> 404 Page Not Found: Img/svg
+ERROR - 2023-06-30 14:10:36 --> 404 Page Not Found: Auth/img
+ERROR - 2023-06-30 14:10:41 --> 404 Page Not Found: Auth/img
+ERROR - 2023-06-30 14:10:55 --> 404 Page Not Found: Auth/img
+ERROR - 2023-06-30 14:11:00 --> 404 Page Not Found: Auth/img
+ERROR - 2023-06-30 14:11:02 --> 404 Page Not Found: Auth/img
+ERROR - 2023-06-30 19:11:04 --> Severity: Notice --> Undefined index: verif C:\xampp_74\htdocs\rcash\application\controllers\Auth.php 283
+ERROR - 2023-06-30 19:11:05 --> Severity: Notice --> Undefined index: saldo_ppob C:\xampp_74\htdocs\rcash\application\views\member\dashboard\index.php 17
+ERROR - 2023-06-30 19:11:05 --> Severity: Notice --> Undefined index: saldo_ppob C:\xampp_74\htdocs\rcash\application\views\member\dashboard\index.php 17
+ERROR - 2023-06-30 19:11:49 --> Severity: Notice --> Undefined index: saldo_ppob C:\xampp_74\htdocs\rcash\application\views\member\dashboard\index.php 17
+ERROR - 2023-06-30 19:11:49 --> Severity: Notice --> Undefined index: saldo_ppob C:\xampp_74\htdocs\rcash\application\views\member\dashboard\index.php 17
