@@ -1,0 +1,15 @@
+ERROR - 2023-07-08 21:01:54 --> Query error: Table 'db_rcash.t_sosmed_v2' doesn't exist - Invalid query: SELECT DISTINCT `category`
+FROM `t_sosmed_v2`
+ORDER BY `category` ASC
+ERROR - 2023-07-08 21:01:55 --> Query error: Table 'db_rcash.t_sosmed_v2' doesn't exist - Invalid query: SELECT DISTINCT `category`
+FROM `t_sosmed_v2`
+WHERE `category` LIKE '%instagram%' ESCAPE '!'
+ORDER BY `category` ASC
+ERROR - 2023-07-08 21:02:01 --> Query error: Table 'db_rcash.t_sosmed_v2' doesn't exist - Invalid query: SELECT DISTINCT `category`
+FROM `t_sosmed_v2`
+WHERE `category` LIKE '%instagram%' ESCAPE '!'
+ORDER BY `category` ASC
+ERROR - 2023-07-08 21:02:14 --> Query error: Table 'db_rcash.t_sosmed_v2' doesn't exist - Invalid query: SELECT DISTINCT `category`
+FROM `t_sosmed_v2`
+WHERE `category` LIKE '%facebook%' ESCAPE '!'
+ORDER BY `category` ASC

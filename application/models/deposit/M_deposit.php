@@ -17,10 +17,10 @@ class M_deposit extends CI_Model
     function cek_bukti($id)
     {
         try {
+            $id = $this->db->escape_str($id);
             $this->db->where('deposit_id', $id);
-            $this->db->where('bukti_tf !=', null);
-            $this->db->where('bukti_tf !=', '');
-            $res = $this->db->get('deposits', 1)->row_array();
+            $this->db->where_not_in('bukti_tf', ['']);
+            $res = $this->db->get_where('deposits', ['deposit_id' => $id])->row_array();
             return $res;
         } catch (Exception $e) {
             $this->M_log->log_in($e->getMessage(), "cek_bukti", "");
@@ -109,8 +109,8 @@ class M_deposit extends CI_Model
                 "jumlah_didapat" => $nominal,
                 "status" => "Pending",
                 // "tanggal_update"=>
-                'ip' => $_SERVER['REMOTE_ADDR'],
-                "device" => $_SERVER['HTTP_USER_AGENT'],
+                'ip' => $this->input->ip_address(),
+                "device" => $this->input->user_agent(),
             );
             $this->db->insert('deposits', $data);
             if ($this->db->affected_rows() > 0) {
@@ -154,15 +154,12 @@ class M_deposit extends CI_Model
 
     function generate_depo_code($length = 6, $kode = 'R')
     {
-        $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'; // karakter yang digunakan untuk membuat kode
-        $code = ''; // variabel untuk menyimpan kode
-
-        // loop sebanyak $length kali untuk membuat kode dengan panjang $length
+        $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $code = '';
         for ($i = 0; $i < $length; $i++) {
-            $code .= $characters[rand(0, strlen($characters) - 1)]; // tambahkan karakter acak ke dalam kode
+            $code .= $characters[random_int(0, strlen($characters) - 1)];
         }
-
-        return "$kode" . $code; // kembalikan kode
+        return "$kode" . $code;
     }
 }
 

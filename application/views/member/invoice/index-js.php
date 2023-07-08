@@ -46,11 +46,25 @@
             </div>
             <div class="modal-body">
 
-                <div class="alert alert-info">
-                    <p>Silahkan Isi Form Ini Dengan Detail Transfer Anda Seperti Yang Sudah Dicontohkan</p>
-                </div>
+                <?php if ($cek_bukti > 0) { ?>
+                    <div class="alert alert-success">
+                        <p>Terima Kasih, Bukti Transfer Anda Sudah Kami Terima, Silahkan Tunggu Konfirmasi Dari Kami</p>
+                    </div>
+                <?php } else { ?>
 
-                <div id="form_bukti_tf"><b>Bank/E-Wallet Pengirim : <br> Nama Rekening Pengirim : <br> Nomor Rekening Pengirim : <br> Screenshoot Transfer </b></div>
+                    <div class="alert alert-danger">
+                        <p>Silahkan Isi Form Ini Dengan Detail Transfer Anda Seperti Yang Sudah Dicontohkan</p>
+                    </div>
+                <?php } ?>
+
+                <div id="form_bukti_tf">
+                    <p><b>
+                            <font color="#ff0000">HARAP PASTIKAN REKENING TUJUAN SUDAH SESUAI !</font>
+                        </b></p>
+                    <p><b>Bank/E-Wallet Pengirim : <br> Nama Rekening Pengirim : <br> Nomor Rekening Pengirim : <br> Screenshoot Transfer</b></p>
+                    <p><b><br></b></p>
+                    <p><b> </b></p>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary waves-effect waves-themed" data-dismiss="modal">Close</button>
@@ -65,6 +79,9 @@
     $("#btn-trx-send").on("click", function() {
         $("#default-example-modal-lg-center").modal("hide");
         var bukti_tf = $('#form_bukti_tf').summernote('code');
+        var enkripsi = btoa(bukti_tf);
+        // console.log(enkripsi);
+        // console.log(bukti_tf);
 
         var id = "<?= $this->GZL->enkrip($data_depo['deposit_id']); ?>";
         Swal.fire({
@@ -81,10 +98,26 @@
                     type: "POST",
                     data: {
                         id: id,
-                        bukti_tf: bukti_tf
+                        bukti_tf: enkripsi
                     },
                     success: function(response) {
+                        Swal.fire({
+                            title: "Berhasil!",
+                            text: "Bukti transfer berhasil dikirim!",
+                            icon: "success",
+                            showCancelButton: false,
+                            confirmButtonText: "OK",
+                        });
                         location.reload();
+                    },
+                    error: function(xhr, ajaxOptions, thrownError) {
+                        Swal.fire({
+                            title: "Gagal!",
+                            text: "Terjadi kesalahan saat mengirim bukti transfer!",
+                            icon: "error",
+                            showCancelButton: false,
+                            confirmButtonText: "OK",
+                        });
                     }
                 });
             }

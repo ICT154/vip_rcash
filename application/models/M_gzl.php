@@ -16,15 +16,19 @@ class M_gzl extends CI_Model
 
     function gen_code($length = 6, $kode = 'R')
     {
-        $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'; // karakter yang digunakan untuk membuat kode
-        $code = ''; // variabel untuk menyimpan kode
-
-        // loop sebanyak $length kali untuk membuat kode dengan panjang $length
+        // Fungsi ini digunakan untuk menghasilkan kod acak dengan panjang tertentu. 
+        // Parameter pertama ($length) adalah panjang kod yang ingin dihasilkan, dengan nilai default 6. 
+        // Parameter kedua ($kode) adalah awalan kod yang ingin digunakan, dengan nilai default 'R'. 
+        // Fungsi ini menghasilkan kod dengan kombinasi angka dan huruf besar. 
+        // Kod dihasilkan dengan memilih karakter acak dari string karakter yang tersedia. 
+        // Setiap karakter dipilih dengan menggunakan fungsi random_int() dengan rentang dari 0 hingga panjang string karakter dikurangi 1. 
+        // Kod akhirnya dikembalikan dengan menggabungkan awalan kod dengan kod yang dihasilkan.
+        $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $code = '';
         for ($i = 0; $i < $length; $i++) {
-            $code .= $characters[rand(0, strlen($characters) - 1)]; // tambahkan karakter acak ke dalam kode
+            $code .= $characters[random_int(0, strlen($characters) - 1)];
         }
-
-        return "$kode" . $code; // kembalikan kode
+        return "$kode" . $code;
     }
 
     function format_tanggal_indonesia($tanggal)
@@ -128,14 +132,20 @@ class M_gzl extends CI_Model
 
     function id_unik()
     {
-        $tanggal = explode("-", date("Y-m-d"));
-        // 'id_agenda' => "IDAGD" . $tanggal['0'] . "" . $tanggal['1'] . "" . $tanggal['2'] . "" . rand(),
-        $string = "" . $tanggal['0'] . "" . $tanggal['1'] . "" . $tanggal['2'] . "" . rand() . "";
+        // Fungsi ini digunakan untuk menghasilkan ID unik dengan menggabungkan tanggal saat ini dan uniqid. 
+        // Fungsi ini mengembalikan string ID unik yang terdiri dari tanggal dalam format Ymd dan uniqid.
+        $tanggal = date("Ymd");
+        $string = $tanggal . uniqid();
         return $string;
     }
 
     function tgl_indo($tanggal)
     {
+        // Fungsi ini digunakan untuk mengubah format tanggal dari format yyyy-mm-dd menjadi format dd bulan yyyy dalam bahasa Indonesia.
+        // Parameter $tanggal adalah tanggal yang akan diubah formatnya.
+        // Variabel $bulan adalah array yang berisi nama-nama bulan dalam bahasa Indonesia.
+        // Variabel $pecahkan digunakan untuk memecah tanggal menjadi tiga bagian yaitu tanggal, bulan, dan tahun.
+        // Pada baris return, kita mengembalikan tanggal yang sudah diubah formatnya dengan menggabungkan tanggal, bulan (dalam bentuk teks sesuai dengan indeks array $bulan), dan tahun.
         $bulan = array(
             1 =>   'Januari',
             'Februari',
@@ -162,16 +172,26 @@ class M_gzl extends CI_Model
 
     public function enkrip($key)
     {
+        // Fungsi ini digunakan untuk melakukan enkripsi pada suatu kunci. 
+        // Kunci yang diberikan akan dienkripsi menggunakan metode base64 encoding tiga kali, kemudian hasilnya akan di-URL encode. 
+        // Fungsi ini mengembalikan kunci yang telah dienkripsi dalam bentuk URL encoded. 
         return urlencode((base64_encode(base64_encode(base64_encode($key)))));
     }
 
+
     public function dekrip($key)
     {
+        /** 
+         * Fungsi ini digunakan untuk mendekripsi kunci yang diberikan. 
+         *  
+         * @param string $key Kunci yang akan didekripsi. 
+         * @return string|null Kunci yang telah didekripsi atau null jika terjadi error. 
+         */
         try {
             return base64_decode(base64_decode(base64_decode(urldecode($key))));
         } catch (\Exception $e) {
-            // tangani pesan error atau exception
-            return null; // atau kembalikan nilai lain sesuai kebutuhan
+            // Tangani pesan error atau exception 
+            return null; // Atau kembalikan nilai lain sesuai kebutuhan 
         }
     }
 

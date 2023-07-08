@@ -69,6 +69,7 @@ $route['deposit-send'] = 'deposit/depo/detail_send_bukti';
 
 
 ////// SERVER //////
+// wget -O /dev/null https://rcash.me/service-prepaid >/dev/null 2>&1
 $route['service-prepaid'] = 'server/vip/service_prepaid';
 $route['service-sosmed'] = 'server/vip/service_sosmed';
 $route['service-game'] = 'server/vip/service_game';
