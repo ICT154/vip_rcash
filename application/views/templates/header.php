@@ -39,6 +39,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url("assets/") ?>img/rcash.svg">
     <link rel="mask-icon" href="<?= base_url("assets/") ?>img/rcash.svg" color="#5bbad5">
     <meta name="theme-color" content="#8268a8">
+    <meta name="csrf-token" content="<?php echo $this->security->get_csrf_hash(); ?>">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/notifications/toastr/toastr.css">

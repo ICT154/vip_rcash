@@ -58,27 +58,81 @@
                     <?php  } else { ?>
 
                         <form action="<?= base_url("deposit-baru-sv") ?>" method="post" class="form-horizontal">
-                            <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
-
-                            <div class="form-group row">
-                                <label class="col-form-label col-12 col-lg-3 form-label text-lg-right">Nominal Deposit </label>
-                                <div class="col-12 col-lg-4">
-                                    <input type="text" class="form-control" name="nominal_deposit" id="nominal_deposit" required autocomplete="off">
-                                </div>
-                            </div>
+                            <input type="hidden" id="<?php echo $this->security->get_csrf_token_name(); ?>" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
 
                             <div class="form-group row">
                                 <label class="col-form-label col-12 col-lg-3 form-label text-lg-right">Metode Pembayaran </label>
-                                <div class="col-12 col-lg-5">
+                                <div class="col-12 col-lg-8">
                                     <select name="metode_pembayaran" id="metode_pembayaran" class="form-control">
                                         <option value="">-- Pilih Metode Pembayaran --</option>
                                         <?php
                                         foreach ($method_depo as $row) { ?>
-                                            <option value="<?= $row->payment_method_id ?>"><?= $row->payment_method_name ?> - <?= $row->account_number ?></option>
+                                            <option value="<?= $this->gzl->enkrip($row->payment_method_id) ?>"><?= $row->payment_method_name ?> - <?= $row->account_number ?></option>
                                         <?php } ?>
                                     </select>
                                 </div>
                             </div>
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-12 col-lg-3 form-label text-lg-right">Tipe Deposit </label>
+                                <div class="col-12 col-lg-4">
+                                    <select name="tipe_deposit" id="tipe_deposit" class="form-control">
+                                        <option value="">-- Pilih Tipe Deposit --</option>
+                                        <option value="<?= $this->gzl->enkrip("SMM") ?>">SMM </option>
+                                        <option value="<?= $this->gzl->enkrip("PPOB") ?>">PPOB </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-12 col-lg-3 form-label text-lg-right text-danger text-bold">Bonus Deposit </label>
+                                <div class="col-12 col-lg-4">
+                                    <div class="input-group">
+
+                                        <input type="text" id="bonus_deposit" class="form-control" placeholder="" readonly>
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">% </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-12 col-lg-3 form-label text-lg-right">Minimal Deposit </label>
+                                <div class="col-12 col-lg-4">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Rp. </span>
+                                        </div>
+                                        <input type="text" id="minimal_deposit" class="form-control" placeholder="" readonly>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-12 col-lg-3 form-label text-lg-right">Jumlah Deposit </label>
+                                <div class="col-12 col-lg-4">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Rp. </span>
+                                        </div>
+                                        <input type="text" class="form-control" name="nominal_deposit" id="nominal_deposit" required autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-12 col-lg-3 form-label text-lg-right">Saldo Diterima </label>
+                                <div class="col-12 col-lg-4">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Rp. </span>
+                                        </div>
+                                        <input type="text" class="form-control" name="saldo_diterima" id="saldo_diterima" readonly autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+
 
 
                             <div class="form-group row">

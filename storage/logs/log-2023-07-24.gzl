@@ -1,0 +1,30 @@
+ERROR - 2023-07-24 13:58:27 --> 404 Page Not Found: Img/svg
+ERROR - 2023-07-24 18:58:35 --> Severity: Notice --> Undefined index: verif C:\xampp_74\htdocs\rcash\application\controllers\Auth.php 283
+ERROR - 2023-07-24 14:04:54 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-24 14:45:35 --> 404 Page Not Found: Media/sound
+ERROR - 2023-07-24 14:53:06 --> 404 Page Not Found: Dash_adm/kelola_data
+ERROR - 2023-07-24 15:26:37 --> 404 Page Not Found: Img/svg
+ERROR - 2023-07-24 20:28:11 --> Severity: Notice --> Undefined index: verif C:\xampp_74\htdocs\rcash\application\controllers\Auth.php 283
+ERROR - 2023-07-24 15:28:18 --> 404 Page Not Found: Img/svg
+ERROR - 2023-07-24 20:29:39 --> Severity: Notice --> Undefined index: verif C:\xampp_74\htdocs\rcash\application\controllers\Auth.php 283
+ERROR - 2023-07-24 22:00:52 --> Severity: Notice --> Trying to access array offset on value of type int C:\xampp_74\htdocs\rcash\application\controllers\deposit\Depo.php 37
+ERROR - 2023-07-24 22:00:52 --> Severity: Notice --> Trying to access array offset on value of type int C:\xampp_74\htdocs\rcash\application\controllers\deposit\Depo.php 37
+ERROR - 2023-07-24 22:00:52 --> Severity: Notice --> Array to string conversion C:\xampp_74\htdocs\rcash\application\controllers\deposit\Depo.php 38
+ERROR - 2023-07-24 22:00:52 --> Severity: Notice --> Trying to access array offset on value of type int C:\xampp_74\htdocs\rcash\application\controllers\deposit\Depo.php 37
+ERROR - 2023-07-24 22:00:52 --> Severity: Notice --> Trying to access array offset on value of type int C:\xampp_74\htdocs\rcash\application\controllers\deposit\Depo.php 37
+ERROR - 2023-07-24 22:00:52 --> Severity: Notice --> Array to string conversion C:\xampp_74\htdocs\rcash\application\controllers\deposit\Depo.php 38
+ERROR - 2023-07-24 22:00:52 --> Severity: Notice --> Trying to access array offset on value of type int C:\xampp_74\htdocs\rcash\application\controllers\deposit\Depo.php 37
+ERROR - 2023-07-24 22:00:52 --> Severity: Notice --> Trying to access array offset on value of type int C:\xampp_74\htdocs\rcash\application\controllers\deposit\Depo.php 37
+ERROR - 2023-07-24 22:00:52 --> Severity: Notice --> Array to string conversion C:\xampp_74\htdocs\rcash\application\controllers\deposit\Depo.php 38
+ERROR - 2023-07-24 22:06:22 --> Severity: Notice --> Array to string conversion C:\xampp_74\htdocs\rcash\application\controllers\deposit\Depo.php 38
+ERROR - 2023-07-24 22:18:15 --> Severity: Warning --> A non-numeric value encountered C:\xampp_74\htdocs\rcash\application\models\deposit\M_deposit.php 30
+ERROR - 2023-07-24 22:18:15 --> Severity: Warning --> A non-numeric value encountered C:\xampp_74\htdocs\rcash\application\models\deposit\M_deposit.php 31
+ERROR - 2023-07-24 22:18:15 --> Severity: Warning --> A non-numeric value encountered C:\xampp_74\htdocs\rcash\application\models\deposit\M_deposit.php 32
+ERROR - 2023-07-24 22:18:16 --> Severity: Warning --> A non-numeric value encountered C:\xampp_74\htdocs\rcash\application\models\deposit\M_deposit.php 30
+ERROR - 2023-07-24 22:18:16 --> Severity: Warning --> A non-numeric value encountered C:\xampp_74\htdocs\rcash\application\models\deposit\M_deposit.php 31
+ERROR - 2023-07-24 22:18:16 --> Severity: Warning --> A non-numeric value encountered C:\xampp_74\htdocs\rcash\application\models\deposit\M_deposit.php 32
+ERROR - 2023-07-24 22:24:30 --> Severity: Notice --> Undefined index: minimal_deposit C:\xampp_74\htdocs\rcash\application\controllers\deposit\Depo.php 34
+ERROR - 2023-07-24 22:24:43 --> Severity: Notice --> Undefined index: minimal_depo C:\xampp_74\htdocs\rcash\application\controllers\deposit\Depo.php 34
+ERROR - 2023-07-24 22:39:20 --> Severity: Warning --> A non-numeric value encountered C:\xampp_74\htdocs\rcash\application\models\deposit\M_deposit.php 30
+ERROR - 2023-07-24 22:39:20 --> Severity: Warning --> A non-numeric value encountered C:\xampp_74\htdocs\rcash\application\models\deposit\M_deposit.php 31
+ERROR - 2023-07-24 22:39:20 --> Severity: Warning --> A non-numeric value encountered C:\xampp_74\htdocs\rcash\application\models\deposit\M_deposit.php 32

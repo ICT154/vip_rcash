@@ -174,7 +174,7 @@
                                     Secure login
                                 </h1>
                                 <div class="card p-4 rounded-plus bg-faded">
-                                    <form id="js-login" novalidate="" method="post" action="<?= base_url("auth/login") ?>">
+                                    <form id="js-login" novalidate="" method="post" action="<?= base_url("auth/login") ?>"><input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                                         <div class="form-group">
                                             <label class="form-label" for="username">Username</label>
                                             <input autocomplete="off" type="username" id="username" class="form-control form-control-lg" placeholder="your username" required name="email_username_login">

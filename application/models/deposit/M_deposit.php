@@ -14,6 +14,25 @@ class M_deposit extends CI_Model
         $this->load->model('M_log');
     }
 
+    function calculateDepositBonus($deposit_amount, $bonus_percentage, $admin_fee_percentage)
+    {
+        /**
+         * Menghitung bonus deposit berdasarkan persentasi.
+         *
+         * Parameters:
+         *     $deposit_amount (float): Jumlah deposit awal.
+         *     $bonus_percentage (float): Persentase bonus deposit.
+         *     $admin_fee_percentage (float): Persentase biaya admin.
+         *
+         * Returns:
+         *     array: Array berisi (bonus, total_deposit).
+         */
+        $bonus = $deposit_amount * ($bonus_percentage / 100);
+        $admin_fee = $deposit_amount * ($admin_fee_percentage / 100);
+        $total_deposit = $deposit_amount + $bonus - $admin_fee;
+        return array('bonus' => $bonus, 'admin_fee' => $admin_fee, 'total_deposit' => $total_deposit);
+    }
+
     function cek_bukti($id)
     {
         try {
@@ -91,6 +110,49 @@ class M_deposit extends CI_Model
         $this->db->where('username', $this->session->userdata('user'));
         $res = $this->db->get('t_member', 1)->row_array();
         return $res;
+    }
+
+    function save_data_v2($nominal, $metode, $tipe)
+    {
+        try {
+            $res = $this->member->get_user_by_ses();
+            $nominal = str_replace(",", "", $nominal);
+            $depo = $this->get_data_methode($metode);
+
+
+            if ($tipe == "SMM") {
+                $cek_depo_nominal = $this->calculateDepositBonus($nominal, $depo['bonus_deposit_smm'], $depo['rate']);
+                $jumlah_didapat = $cek_depo_nominal['total_deposit'];
+            } else if ($tipe == "PPOB") {
+                $cek_depo_nominal = $this->calculateDepositBonus($nominal, $depo['bonus_deposit_ppob'], $depo['rate']);
+                $jumlah_didapat = $cek_depo_nominal['total_deposit'];
+            }
+
+            $data = array(
+                'deposit_id' => $this->generate_depo_code(),
+                'user_id' => $res['user_id'],
+                'payment_method_id' => $depo['payment_method_id'],
+                'tanggal_deposit' => date("Y-m-d H:i:s"),
+                'jumlah' => $nominal + rand(0, 999),
+                "jumlah_didapat" => $jumlah_didapat,
+                "status" => "Pending",
+                // "tanggal_update"=>
+                'ip' => $this->input->ip_address(),
+                "device" => $this->input->user_agent(),
+            );
+            $this->db->insert('deposits', $data);
+            if ($this->db->affected_rows() > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception $e) {
+            $this->session->unset_userdata(array('user' => ''));
+            $this->session->sess_destroy();
+            $this->M_log->show_msg("error", "Error System !");
+            $this->GZL->log_in("M_deposit", "save_data", $e->getMessage());
+            redirect(base_url());
+        }
     }
 
     function save_data($nominal, $metode)

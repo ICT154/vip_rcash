@@ -23,6 +23,88 @@ class Depo extends CI_Controller
         // echo "ok";
     }
 
+    function get_deposit_bonus()
+    {
+        $tipe_deposit = $this->input->post('tipe_deposit');
+        $metode_pembayaran = $this->input->post('metode_pembayaran');
+        try {
+            $tipe_deposit = $this->GZL->dekrip($tipe_deposit);
+            $metode_pembayaran = $this->GZL->dekrip($metode_pembayaran);
+            $cek_metode_pembayaran = $this->depo->cek_depo_methode($metode_pembayaran);
+            if ($cek_metode_pembayaran) {
+                $data_metode_pembayaran = $this->depo->get_method_depo($metode_pembayaran);
+                if ($tipe_deposit == "SMM") {
+                    echo $data_metode_pembayaran['bonus_deposit_smm'];
+                } else if ($tipe_deposit == "PPOB") {
+                    echo $data_metode_pembayaran['bonus_deposit_ppob'];
+                } else {
+                    // echo "gagal";
+                }
+            } else {
+                // echo "gagal";
+            }
+        } catch (\Throwable $th) {
+            $this->M_log->show_msg("error", "METODE DEPOSIT TIDAK DITEMUKAN !");
+            $this->M_log->log_in("METODE DEPOSIT TIDAK DITEMUKAN $th", "Gagal", "hitung_bonus_rate");
+        }
+    }
+
+    function get_deposit_rate()
+    {
+        $metode_pembayaran = $this->input->post('metode_pembayaran');
+        try {
+            $metode_pembayaran = $this->GZL->dekrip($metode_pembayaran);
+            $cek_metode_pembayaran = $this->depo->cek_depo_methode($metode_pembayaran);
+            if ($cek_metode_pembayaran) {
+                $data_metode_pembayaran = $this->depo->get_method_depo($metode_pembayaran);
+                echo $data_metode_pembayaran['min_deposit'];
+            } else {
+                // echo "gagal";
+            }
+        } catch (\Throwable $th) {
+            $this->M_log->show_msg("error", "METODE DEPOSIT TIDAK DITEMUKAN !");
+            $this->M_log->log_in("METODE DEPOSIT TIDAK DITEMUKAN $th", "Gagal", "hitung_bonus_rate");
+        }
+    }
+
+    function hitung_bonus_rate()
+    {
+        $nominal_deposit = $this->input->post('nominal');
+        $nominal_deposit = str_replace(".", "", $nominal_deposit);
+        $metode_pembayaran = $this->input->post('mmetode_pembayaran');
+        $tipe_deposit = $this->input->post('tipe_deposit');
+
+        try {
+            $metode_pembayaran = $this->GZL->dekrip($metode_pembayaran);
+            $tipe_deposit = $this->GZL->dekrip($tipe_deposit);
+
+            if ($tipe_deposit == "SMM") {
+                $cek_metode_pembayaran = $this->depo->cek_depo_methode($metode_pembayaran);
+                if ($cek_metode_pembayaran) {
+                    $data_metode_pembayaran = $this->depo->get_method_depo($metode_pembayaran);
+                    $hasil_depo = $this->depo->calculateDepositBonus($nominal_deposit, $data_metode_pembayaran['bonus_deposit_smm'], $data_metode_pembayaran['rate']);
+                    echo $hasil_depo['total_deposit'];
+                } else {
+                    // echo "gagal";
+                }
+            } else if ($tipe_deposit == "PPOB") {
+                $cek_metode_pembayaran = $this->depo->cek_depo_methode($metode_pembayaran);
+                if ($cek_metode_pembayaran) {
+                    $data_metode_pembayaran = $this->depo->get_method_depo($metode_pembayaran);
+                    $hasil_depo = $this->depo->calculateDepositBonus($nominal_deposit, $data_metode_pembayaran['bonus_deposit_ppob'], $data_metode_pembayaran['rate']);
+                    echo $hasil_depo['total_deposit'];
+                } else {
+                    // echo "gagal";
+                }
+            } else {
+                $this->M_log->show_msg("error", "TIPE DEPOSIT TIDAK DITEMUKAN !");
+            }
+        } catch (\Throwable $th) {
+            $this->M_log->show_msg("error", "METODE DEPOSIT TIDAK DITEMUKAN !");
+            $this->M_log->log_in("METODE DEPOSIT TIDAK DITEMUKAN $th", "Gagal", "hitung_bonus_rate");
+        }
+    }
+
     function detail_send_bukti()
     {
         $id = $this->input->post('id');
@@ -163,6 +245,73 @@ class Depo extends CI_Controller
         $this->load->view('member/riwayat/index-js');
     }
 
+
+    function deposit_baru_sv_v2()
+    {
+        if ($this->input->post("nominal_deposit")) {
+            if ($this->input->post("metode_pembayaran")) {
+
+                $nominal = $this->GZL->filter_input_data($this->input->post("nominal_deposit"));
+                $metode = $this->GZL->filter_input_data($this->input->post("metode_pembayaran"));
+                $nominal = str_replace(".", "", $nominal);
+
+                $metode = $this->GZL->dekrip($metode);
+
+                if ($this->GZL->is_numeric_value($nominal) != FALSE) {
+                    if ($this->depo->cek_depo_methode($metode) != FALSE) {
+                        if (str_replace(",", ".", $nominal) < 10000) {
+                            $this->M_log->show_msg("error", "NOMINAL DEPOSIT MINIMAL Rp. 10.000 !");
+                            $this->M_log->log_in("NOMINAL DEPOSIT MINIMAL Rp. 10.000", "Gagal", "deposit_baru_sv");
+                            redirect(base_url('deposit-baru'));
+                        } else {
+                            if ($this->input->post("tipe_deposit")) {
+                                $tipe_deposit = $this->GZL->filter_input_data($this->input->post("tipe_deposit"));
+
+                                try {
+                                    $tipe_deposit = $this->GZL->dekrip($tipe_deposit);
+
+                                    if ($this->depo->save_data_v2($nominal, $metode, $tipe_deposit) != FALSE) {
+                                        $this->M_log->show_msg("success", "DEPOSIT Rp. $nominal BERHASIL, SILAHKAN SEGERA DIBAYAR");
+                                        $this->M_log->log_in("DEPOSIT ", "Sukses", "deposit_baru_sv");
+                                        redirect(base_url('deposit-baru'));
+                                    } else {
+                                        $this->M_log->show_msg("error", "DEPOSIT ERROR !");
+                                        $this->M_log->log_in("SERVER DEPOSIT ERROR ", "Gagal", "deposit_baru_sv");
+                                        redirect(base_url('deposit-baru'));
+                                    }
+                                } catch (\Throwable $th) {
+                                    $this->M_log->show_msg("error", "TIPE DEPOSIT TIDAK ADA !");
+                                    $this->M_log->log_in("TIPE DEPOSIT TIDAK ADA $th", "Gagal", "deposit_baru_sv");
+                                    redirect(base_url('deposit-baru'));
+                                }
+                            } else {
+                                $this->M_log->show_msg("error", "SILAHKAN ISI DENGAN BENAR !");
+                                $this->M_log->log_in("TIPE DEPOSIT TIDAK ADA ", "Gagal", "deposit_baru_sv");
+                                redirect(base_url('deposit-baru'));
+                            }
+                        }
+                    } else {
+                        $this->M_log->show_msg("error", "METODE DEPOSIT TIDAK ADA !");
+                        $this->M_log->log_in("METODE DEPOSIT TIDAK ADA", "Gagal", "deposit_baru_sv");
+                        redirect(base_url('deposit-baru'));
+                    }
+                } else {
+                    $this->M_log->show_msg("error", "NOMINAL DEPOSIT TIDAK BENAR $nominal !");
+                    $this->M_log->log_in("NOMINAL DEPOSIT BUKAN ANGKA / INTEGER  $nominal", "Gagal", "deposit_baru_sv");
+                    redirect(base_url('deposit-baru'));
+                }
+            } else {
+                $this->M_log->show_msg("error", "SILAHKAN ISI DENGAN BENAR !");
+                $this->M_log->log_in("METODE DEPOSIT TIDAK ADA ", "Gagal", "deposit_baru_sv");
+                redirect(base_url('deposit-baru'));
+            }
+        } else {
+            $this->M_log->show_msg("error", "SILAHKAN ISI DENGAN BENAR !");
+            $this->M_log->log_in("NOMINAL DEPOSIT TIDAK ADA ", "Gagal", "deposit_baru_sv");
+            redirect(base_url('deposit-baru'));
+        }
+    }
+
     function deposit_baru_sv()
     {
         if ($this->input->post("nominal_deposit")) {
@@ -257,9 +406,18 @@ class Depo extends CI_Controller
             );
 
             $this->load->view('templates/header', $data);
-            $this->load->view('member/deposit/index');
-            $this->load->view('member/deposit/index-js');
+
+            //////////// INI DEPO SMM & PPOB DISATUIN ////////////
+            // $this->load->view('member/deposit/index');
+            ///////////////////////////////////////////////////
+
+            ///////////// INI DIPISAH SMM & PPOBNYA  ////////////////////////
+            $this->load->view('member/deposit/index_v2');
+            ////////////////////////////////////////////////
+
+
             $this->load->view('templates/footer');
+            $this->load->view('member/deposit/index-js');
         }
     }
 

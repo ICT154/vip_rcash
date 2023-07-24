@@ -14,6 +14,25 @@ class M_gzl extends CI_Model
     {
     }
 
+    function calculateDepositBonus($deposit_amount, $bonus_percentage, $admin_fee_percentage)
+    {
+        /**
+         * Menghitung bonus deposit berdasarkan persentasi.
+         *
+         * Parameters:
+         *     $deposit_amount (float): Jumlah deposit awal.
+         *     $bonus_percentage (float): Persentase bonus deposit.
+         *     $admin_fee_percentage (float): Persentase biaya admin.
+         *
+         * Returns:
+         *     array: Array berisi (bonus, total_deposit).
+         */
+        $bonus = $deposit_amount * ($bonus_percentage / 100);
+        $admin_fee = $deposit_amount * ($admin_fee_percentage / 100);
+        $total_deposit = $deposit_amount + $bonus - $admin_fee;
+        return array('bonus' => $bonus, 'admin_fee' => $admin_fee, 'total_deposit' => $total_deposit);
+    }
+
     function gen_code($length = 6, $kode = 'R')
     {
         // Fungsi ini digunakan untuk menghasilkan kod acak dengan panjang tertentu. 

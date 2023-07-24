@@ -53,7 +53,8 @@ $route['default_controller'] = 'auth';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-
+///////// CSRF TOKEN REFRESH //////////
+$route['refresh-csrf-token'] = 'server/csrf/refresh_csrf_token';
 
 ////// MEMBER //////
 $route['dashboard'] = 'member/dashboard/dashboard';
@@ -61,11 +62,15 @@ $route['logout'] = 'member/dashboard/logout';
 
 ////// DEPOSIT //////
 $route['deposit-baru'] = 'deposit/depo/deposit_baru';
-$route['deposit-baru-sv'] = 'deposit/depo/deposit_baru_sv';
+// $route['deposit-baru-sv'] = 'deposit/depo/deposit_baru_sv'; /// ini versi smm & ppob disatuin
+$route['deposit-baru-sv'] = 'deposit/depo/deposit_baru_sv_v2'; /// ini versi smm & ppob disatuin
 $route['riwayat-deposit'] = 'deposit/depo/riwayat_deposit';
 $route['riwayat-deposit/table'] = 'deposit/depo/view_data_where';
 $route['deposit-delete'] = 'deposit/depo/batalkan_deposit';
 $route['deposit-send'] = 'deposit/depo/detail_send_bukti';
+$route['hit-depo-bonus-rate'] = 'deposit/depo/hitung_bonus_rate';
+$route['get-deposit-rate'] = 'deposit/depo/get_deposit_rate';
+$route['get-deposit-bonus'] = 'deposit/depo/get_deposit_bonus';
 
 
 ////// SERVER //////

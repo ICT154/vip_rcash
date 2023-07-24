@@ -23,7 +23,8 @@
                     url: "<?= base_url('deposit-delete'); ?>",
                     type: "POST",
                     data: {
-                        id: "<?= $this->GZL->enkrip($data_depo['deposit_id']); ?>"
+                        id: "<?= $this->GZL->enkrip($data_depo['deposit_id']); ?>",
+                        <?php echo $this->security->get_csrf_token_name(); ?>: "<?php echo $this->security->get_csrf_hash(); ?>"
                     },
                     success: function(response) {
                         location.reload();
@@ -98,7 +99,8 @@
                     type: "POST",
                     data: {
                         id: id,
-                        bukti_tf: enkripsi
+                        bukti_tf: enkripsi,
+                        <?php echo $this->security->get_csrf_token_name(); ?>: "<?php echo $this->security->get_csrf_hash(); ?>"
                     },
                     success: function(response) {
                         Swal.fire({
