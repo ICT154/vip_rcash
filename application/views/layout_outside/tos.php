@@ -134,9 +134,7 @@
                             </div>
                         </div>
                         <div class="position-absolute pos-bottom pos-left pos-right p-3 text-center text-white">
-                            <?= date("Y") ?> © RCASH
-
-                            by&nbsp; <a href='#!' class='text-white opacity-40 fw-500' title='rcash' target='_blank'>Raden Dev</a>
+                            2022 - <?= date("Y") ?> © RCASH by&nbsp;<a href='' class='text-white opacity-40 fw-500' title='' target='_blank'>PT RADEN DIGITAL HUB</a>
                         </div>
                     </div>
                 </div>

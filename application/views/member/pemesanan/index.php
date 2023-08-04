@@ -53,8 +53,8 @@
     </div>
     <div class="panel-container show">
         <div class="panel-content">
-            <form action="" method="post" enctype="multipart/form-data">
-
+            <form action="<?= base_url("order-smm-single") ?>" method="post" enctype="multipart/form-data">
+                <input type="hidden" id="<?php echo $this->security->get_csrf_token_name(); ?>" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                 <div class="form-group row">
                     <label class="col-form-label col-12 col-lg-3 form-label text-lg-right">KATEGORI LAYANAN </label>
                     <div class="col-12 col-lg-6">

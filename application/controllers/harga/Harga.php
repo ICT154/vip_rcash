@@ -29,8 +29,10 @@ class Harga extends CI_Controller
         if ($this->GZL->dekrip($id) != NULL) {
             $id = $this->GZL->dekrip($id);
             $data = $this->mp->get_detail_layanan($id);
+
             if ($data != false) {
-                $data = array('detail' => $data,);
+                $data_price_history = $this->mp->get_price_history($data['product_id_api']);
+                $data = array('detail' => $data, 'price_history' => $data_price_history);
                 $this->load->view('member/harga/form/detail', $data);
             } else {
                 echo "Terjadi kesalahan";

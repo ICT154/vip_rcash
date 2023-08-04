@@ -1,0 +1,16 @@
+ERROR - 2023-08-03 06:01:20 --> 404 Page Not Found: Img/svg
+ERROR - 2023-08-03 12:01:31 --> Severity: error --> Exception: Invalid data at path "C:\xampp_74\htdocs\rcash\application\controllers/assets/symfony.png" C:\xampp_74\htdocs\rcash\vendor\endroid\qr-code\src\ImageData\LogoImageData.php 51
+ERROR - 2023-08-03 12:01:55 --> Severity: error --> Exception: Invalid data at path "C:\xampp_74\htdocs\rcash\application\controllers/assets/img/ofb12.png" C:\xampp_74\htdocs\rcash\vendor\endroid\qr-code\src\ImageData\LogoImageData.php 51
+ERROR - 2023-08-03 12:04:20 --> Severity: error --> Exception: Call to undefined method Endroid\QrCode\Builder\Builder::getDataUri() C:\xampp_74\htdocs\rcash\application\controllers\Welcome.php 56
+ERROR - 2023-08-03 12:05:07 --> Severity: error --> Exception: Argument 1 passed to Endroid\QrCode\Writer\PngWriter::write() must implement interface Endroid\QrCode\QrCodeInterface, instance of Endroid\QrCode\Builder\Builder given, called in C:\xampp_74\htdocs\rcash\application\controllers\Welcome.php on line 58 C:\xampp_74\htdocs\rcash\vendor\endroid\qr-code\src\Writer\PngWriter.php 21
+ERROR - 2023-08-03 12:05:27 --> Severity: Notice --> Undefined variable: qrCode C:\xampp_74\htdocs\rcash\application\views\sandbox\tiket.php 22
+ERROR - 2023-08-03 12:05:48 --> Severity: Notice --> Undefined variable: qrCode C:\xampp_74\htdocs\rcash\application\views\sandbox\tiket.php 22
+ERROR - 2023-08-03 12:05:56 --> Severity: Notice --> Undefined variable: qrCode C:\xampp_74\htdocs\rcash\application\views\sandbox\tiket.php 22
+ERROR - 2023-08-03 12:06:48 --> Severity: error --> Exception: Class 'QrCode' not found C:\xampp_74\htdocs\rcash\application\controllers\Welcome.php 38
+ERROR - 2023-08-03 12:07:07 --> Severity: error --> Exception: Invalid data at path "C:\xampp_74\htdocs\rcash\application\controllers/assets/symfony.png" C:\xampp_74\htdocs\rcash\vendor\endroid\qr-code\src\ImageData\LogoImageData.php 51
+ERROR - 2023-08-03 12:07:24 --> Severity: error --> Exception: Please install khanamiryan/qrcode-detector-decoder or disable image validation C:\xampp_74\htdocs\rcash\vendor\endroid\qr-code\src\Writer\PngWriter.php 219
+ERROR - 2023-08-03 12:08:34 --> Severity: error --> Exception: syntax error, unexpected '|', expecting variable (T_VARIABLE) C:\xampp_74\htdocs\rcash\vendor\khanamiryan\qrcode-detector-decoder\lib\QrReader.php 16
+ERROR - 2023-08-03 12:10:04 --> Severity: error --> Exception: syntax error, unexpected '|', expecting variable (T_VARIABLE) C:\xampp_74\htdocs\rcash\vendor\khanamiryan\qrcode-detector-decoder\lib\QrReader.php 16
+ERROR - 2023-08-03 13:19:02 --> Severity: error --> Exception: syntax error, unexpected '|', expecting variable (T_VARIABLE) C:\xampp_74\htdocs\rcash\vendor\khanamiryan\qrcode-detector-decoder\lib\QrReader.php 16
+ERROR - 2023-08-03 08:19:22 --> 404 Page Not Found: Assets/plugin
+ERROR - 2023-08-03 08:19:46 --> 404 Page Not Found: Assets/plugin

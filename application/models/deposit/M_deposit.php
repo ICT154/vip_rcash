@@ -136,6 +136,7 @@ class M_deposit extends CI_Model
                 'jumlah' => $nominal + rand(0, 999),
                 "jumlah_didapat" => $jumlah_didapat,
                 "status" => "Pending",
+                "tipe_deposit" => $tipe,
                 // "tanggal_update"=>
                 'ip' => $this->input->ip_address(),
                 "device" => $this->input->user_agent(),

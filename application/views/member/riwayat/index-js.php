@@ -1,5 +1,19 @@
+<input type="hidden" id="<?php echo $this->security->get_csrf_token_name(); ?>" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
 <script>
+    function refresh_token_csrf() {
+        $.ajax({
+            url: "<?= base_url("refresh-csrf-token") ?>",
+            type: "GET",
+            dataType: "json",
+            success: function(data) {
+                $("#" + "<?php echo $this->security->get_csrf_token_name(); ?>").val(data.token);
+            }
+        });
+    }
+
     $(document).ready(function() {
+        refresh_token_csrf();
+        var token_data = $("#<?php echo $this->security->get_csrf_token_name(); ?>").val();
         var tabel = $('#table-riwayat-deposit').DataTable({
             "processing": true,
             "responsive": true,
@@ -13,7 +27,10 @@
             ],
             "ajax": {
                 "url": "<?= base_url('riwayat-deposit/table'); ?>",
-                "type": "POST"
+                "type": "POST",
+                "data": {
+                    "<?= $this->security->get_csrf_token_name(); ?>": token_data
+                }
             },
             "deferRender": true,
             "aLengthMenu": [

@@ -10,6 +10,142 @@ class M_member extends CI_Model
         $this->load->model('M_gzl', 'GZL');
     }
 
+    function tambah_trx_smm_fail($data_member, $total_harga, $data_layanan, $jumlah_pesanan, $target_pesanan, $id, $price, $note)
+    {
+        try {
+            $data = array(
+                'transaction_id' => $id_trx = "RTRX" . $this->GZL->id_unik(),
+                'trx_id' => $id,
+                'user_id' => $data_member['user_id'],
+                'entity_type' => "SMM",
+                'entity_id' => $data_layanan['product_id'],
+                'data' => $target_pesanan,
+                'service' => $data_layanan['product_name'],
+                'quantity' => $jumlah_pesanan,
+                'status' => "Error",
+                'remain' => $jumlah_pesanan,
+                'count' => 0,
+                'note' => $note,
+                'price' => $total_harga,
+                'transaction_date' => date("Y-m-d H:i:s"),
+                'profit' => $total_harga - $price,
+                'reffund' => 1,
+                'provider' => 'MEDANPEDIA',
+                'refferal_id' => $data_member['refferal_id'],
+                'acc_type' => ''
+            );
+            $this->db->insert('transaction', $data);
+
+            $data_history = array(
+                'transaction_id' => $id_trx,
+                'old_status' => 'Place Order',
+                'new_status' => 'Error',
+                'quantity' => $jumlah_pesanan,
+                'remain' => $jumlah_pesanan,
+                'count' => 0,
+                'change_date' => date("Y-m-d H:i:s")
+            );
+            $this->db->insert('transactionhistory', $data_history);
+        } catch (\Throwable $th) {
+            return false;
+        }
+    }
+
+    function tambah_trx_smm($data_member, $total_harga, $data_layanan, $jumlah_pesanan, $target_pesanan, $id, $price)
+    {
+        try {
+            $data = array(
+                'transaction_id' => $id_trx = "RTRX" . $this->GZL->id_unik(),
+                'trx_id' => $id,
+                'user_id' => $data_member['user_id'],
+                'entity_type' => "SMM",
+                'entity_id' => $data_layanan['product_id'],
+                'data' => $target_pesanan,
+                'service' => $data_layanan['product_name'],
+                'quantity' => $jumlah_pesanan,
+                'status' => "Pending",
+                'remain' => $jumlah_pesanan,
+                'count' => 0,
+                'note' => '',
+                'price' => $total_harga,
+                'transaction_date' => date("Y-m-d H:i:s"),
+                'profit' => $total_harga - $price,
+                'reffund' => 0,
+                'provider' => 'MEDANPEDIA',
+                'refferal_id' => $data_member['refferal_id'],
+                'acc_type' => ''
+            );
+            $this->db->insert('transaction', $data);
+
+            $data_history = array(
+                'transaction_id' => $id_trx,
+                'old_status' => 'Place Order',
+                'new_status' => 'Pending',
+                'quantity' => $jumlah_pesanan,
+                'remain' => $jumlah_pesanan,
+                'count' => 0,
+                'change_date' => date("Y-m-d H:i:s")
+            );
+            $this->db->insert('transactionhistory', $data_history);
+
+            $data_balance_usage = array(
+                'user_id' => $data_member['user_id'],
+                'tanggal_penggunaan' => date("Y-m-d H:i:s"),
+                'transaksi_id' => $id_trx,
+                'jumlah_penggunaan' => $total_harga
+            );
+            $this->db->insert('balanceusage', $data_balance_usage);
+
+            return true;
+        } catch (\Throwable $th) {
+            return false;
+        }
+    }
+
+    function tambah_saldo_smm($id, $nominal)
+    {
+        try {
+            $data_member = $this->db->get_where('users', ['user_id' => $id])->row_array();
+
+            $data_balance_history = array(
+                'user_id' => $id,
+                'tanggal_waktu' => date("Y-m-d H:i:s"),
+                'saldo_sebelum' => $data_member['saldo'],
+                'saldo_sesudah' => $data_member['saldo'] + $nominal
+            );
+            $this->db->insert('balancehistory', $data_balance_history);
+
+            $this->db->set('saldo', 'saldo + ' . $nominal, FALSE);
+            $this->db->where('user_id', $id);
+            $this->db->update('users');
+            return true;
+        } catch (\Throwable $th) {
+            return false;
+        }
+    }
+
+    function potong_saldo_smm($id, $nominal)
+    {
+        try {
+            $data_member = $this->db->get_where('users', ['user_id' => $id])->row_array();
+
+            $data_balance_history = array(
+                'user_id' => $id,
+                'tanggal_waktu' => date("Y-m-d H:i:s"),
+                'saldo_sebelum' => $data_member['saldo'],
+                'saldo_sesudah' => $data_member['saldo'] - $nominal
+            );
+            $this->db->insert('balancehistory', $data_balance_history);
+
+            $this->db->set('saldo', 'saldo-' . $nominal, FALSE);
+            $this->db->where('user_id', $id);
+            $this->db->update('users');
+            return true;
+        } catch (\Throwable $th) {
+            return false;
+        }
+    }
+
 
     function get_count_trx_by_ses($tipe)
     {

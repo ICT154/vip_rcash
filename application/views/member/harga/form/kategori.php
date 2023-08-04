@@ -27,23 +27,29 @@
     });
     $(document).ready(function() {
         $("#kategori_produk").change(function() {
-            $("#load_table").show();
-            var selectedOption = $(this).val();
-            $.ajax({
-                url: "<?= base_url("get-harga") ?>",
-                type: "post",
-                data: {
-                    selected_option: selectedOption,
-                },
-                success: function(data) {
+            refresh_token_csrf()
+                .then((token) => {
+                    var selectedOption = $(this).val();
+                    $("#load_table").show();
+
+                    return $.ajax({
+                        url: "<?= base_url("get-harga") ?>",
+                        type: "post",
+                        data: {
+                            selected_option: selectedOption,
+                            "<?= $this->security->get_csrf_token_name(); ?>": token
+                        }
+                    });
+                })
+                .then((data) => {
                     $("#load_table").hide();
                     $(".table_daftar_harga").html(data);
-                },
-                error: function() {
+                })
+                .catch((error) => {
                     $("#load_table").hide();
                     $(".table_daftar_harga").html("<div class='text-center mt-3 mb-3 text-danger'>Terjadi kesalahan.<i class='far fa-times-circle'></i></div>");
-                }
-            });
+                    console.error("Error getting harga:", error);
+                });
         });
     });
 </script>

@@ -20,6 +20,117 @@ class Pesan extends CI_Controller
         $this->load->model('M_datatables_v2', 'dt_v2');
     }
 
+    function hitung_total_pesanan()
+    {
+        $id = htmlspecialchars($this->input->post('selected_option', true));
+        $totalpesan = htmlspecialchars($this->input->post('total', true));
+        $dekrip_id = $this->GZL->dekrip($id);
+        if ($dekrip_id == NULL) {
+            echo "Rp. 0";
+        } else {
+            $id = $dekrip_id;
+            $data = $this->mp->get_detail_layanan($id);
+            if ($totalpesan != 0 or $totalpesan != null or $totalpesan != '') {
+                $totalpesan = str_replace(".", "", $totalpesan);
+            } else {
+                $totalpesan = 0;
+            }
+            $subtotal = $data['basic_price'] / 1000;
+            $subtotal = $subtotal * $totalpesan;
+            echo "Rp. " . $this->GZL->number_format($subtotal, 0, ",", ".");
+        }
+    }
+
+
+    function order_smm_single()
+    {
+        // Jika input 'target' tidak kosong atau tidak null
+        if ($this->input->post('target') != '' or $this->input->post("target") != null) {
+            $layanan = htmlspecialchars($this->input->post("layanan"));
+            // Jika input 'layanan' tidak kosong atau tidak null
+            if ($layanan != '' or $layanan != null) {
+                // Jika 'layanan' berhasil di-dekripsi
+                if ($this->GZL->dekrip($layanan)) {
+                    $layanan_dekrip = $this->GZL->dekrip($layanan);
+                    // Jika 'layanan' terdapat dalam database
+                    if ($this->mp->check_layanan($layanan_dekrip)) {
+                        $data_layanan = $this->mp->get_data_layanan($layanan_dekrip);
+                        // Jika data layanan ditemukan
+                        if ($data_layanan) {
+                            // Tambahkan kode di sini jika diperlukan
+
+                            // Jika input 'target' berhasil di-dekripsi
+                            // cek saldo member 
+                            $data_member = $this->member->get_user_by_ses();
+                            $jumlah_pesanan = htmlspecialchars($this->input->post("jumlah_pemesanan"));
+
+                            if ($jumlah_pesanan != '' or $jumlah_pesanan != null or $jumlah_pesanan != 0) {
+                                $jumlah_pesanan = str_replace(".", "", $jumlah_pesanan);
+
+                                if ($jumlah_pesanan > $data_layanan['min_quantity'] and $jumlah_pesanan < $data_layanan['max_quantity']) {
+                                    $total_harga = $data_layanan['basic_price'] / 1000;
+                                    $total_harga = $total_harga * $jumlah_pesanan;
+
+                                    if ($data_member['saldo'] >= $total_harga) {
+
+                                        $target_pesanan = htmlspecialchars($this->input->post("target"));
+
+                                        if ($target_pesanan != '' or $target_pesanan != NULL) {
+                                            if ($this->member->potong_saldo_smm($data_member['user_id'], $total_harga)) {
+                                                if ($this->mp->order_smm_single($data_member, $total_harga, $data_layanan, $jumlah_pesanan, $target_pesanan)) {
+                                                } else {
+                                                    $this->M_log->show_msg("error", "GAGAL MEMESAN ! SILAHKAN HUBUNGI ADMIN !");
+                                                    $this->M_log->log_in("GAGAL MEMESAN ! SILAHKAN HUBUNGI ADMIN !", "Gagal", "order_smm_single");
+                                                    redirect(base_url('pemesanan-sosmed'));
+                                                }
+                                            } else {
+                                                $this->M_log->show_msg("error", "GAGAL MENGURANGI SALDO ANDA !");
+                                                $this->M_log->log_in("GAGAL MENGURANGI SALDO ANDA !", "Gagal", "order_smm_single");
+                                                redirect(base_url('pemesanan-sosmed'));
+                                            }
+                                        } else {
+                                            $this->M_log->show_msg("error", "TARGET TIDAK BOLEH KOSONG !");
+                                            $this->M_log->log_in("TARGET TIDAK BOLEH KOSONG !", "Gagal", "order_smm_single");
+                                            redirect(base_url('pemesanan-sosmed'));
+                                        }
+                                    } else {
+                                        $this->M_log->show_msg("error", "SALDO ANDA TIDAK MENCUKUPI !");
+                                        $this->M_log->log_in("SALDO ANDA TIDAK MENCUKUPI", "Gagal", "order_smm_single");
+                                        redirect(base_url('pemesanan-sosmed'));
+                                    }
+                                } else {
+                                    $this->M_log->show_msg("error", "JUMLAH PESANAN TIDAK BOLEH KURANG ATAU LEBIH DARI BATAS MINIMAL DAN MAKSIMAL !");
+                                    $this->M_log->log_in("JUMLAH PESANAN TIDAK BOLEH KURANG ATAU LEBIH DARI BATAS MINIMAL DAN MAKSIMAL !", "Gagal", "order_smm_single");
+                                    redirect(base_url('pemesanan-sosmed'));
+                                }
+                            } else {
+                                $this->M_log->show_msg("error", "JUMLAH PEMESANAN TIDAK BOLEH KOSONG !");
+                                $this->M_log->log_in("JUMLAH PEMESANAN TIDAK BOLEH KOSONG", "Gagal", "order_smm_single");
+                                redirect(base_url('pemesanan-sosmed'));
+                            }
+                        } else {
+                            $this->M_log->show_msg("error", "LAYANAN TIDAK DITEMUKAN !");
+                            $this->M_log->log_in("LAYANAN TIDAK DITEMUKAN", "Gagal", "order_smm_single");
+                            redirect(base_url('pemesanan-sosmed'));
+                        }
+                    } else {
+                        $this->M_log->show_msg("error", "LAYANAN TIDAK DITEMUKAN !");
+                        $this->M_log->log_in("LAYANAN TIDAK DITEMUKAN", "Gagal", "order_smm_single");
+                        redirect(base_url('pemesanan-sosmed'));
+                    }
+                } else {
+                    $this->M_log->show_msg("error", "LAYANAN TIDAK DITEMUKAN !");
+                    $this->M_log->log_in("LAYANAN TIDAK DITEMUKAN", "Gagal", "order_smm_single");
+                    redirect(base_url('pemesanan-sosmed'));
+                }
+            } else {
+                $this->M_log->show_msg("error", "LAYANAN TIDAK DIPILIH !");
+                $this->M_log->log_in("LAYANAN TIDAK DIPILIH", "Gagal", "order_smm_single");
+                redirect(base_url('pemesanan-sosmed'));
+            }
+        }
+    }
+
     function layanan_detail()
     {
         $id = htmlspecialchars($this->input->post('selected_option', true));

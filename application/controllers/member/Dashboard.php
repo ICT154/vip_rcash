@@ -18,6 +18,7 @@ class Dashboard extends CI_Controller
             redirect('auth');
         }
         $this->load->model('member/M_member', "member");
+        $this->load->model('M_log', "LOG");
     }
 
     function index()
@@ -60,6 +61,8 @@ class Dashboard extends CI_Controller
 
     function logout()
     {
+        $data = $this->member->get_user_by_ses();
+        $this->LOG->log_usr($data['user_id'], "LOGOUT SUKSES");
         $this->session->unset_userdata(array('user' => ''));
         $this->session->sess_destroy();
         // $this->M_log->log_in('BERHASIL LOGOUT ');

@@ -388,7 +388,10 @@ $config['encryption_key'] = 'gozalyangbuatXIXIXI';
 |
 */
 $config['sess_driver'] = 'files';
-$config['sess_cookie_name'] = 'ci_session';
+//$config['sess_cookie_name'] = 'ci_session';
+$pattern = '/[^0-9a-z_\-]+/i';
+$ci_session0 = preg_replace($pattern, '_', $config['base_url']);
+$config['sess_cookie_name'] = $ci_session0; //biar otomatis ja, ses name nya :)
 $config['sess_samesite'] = 'Lax';
 $config['sess_expiration'] = 7200;
 $config['sess_save_path'] = NULL;

@@ -3,6 +3,27 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class M_log extends CI_Model
 {
 
+    function log_history($user_id)
+    {
+        $data = array(
+            'user_id' => $user_id,
+            'tanggal_login' => date("Y-m-d H:i:s"),
+            'browser' => $_SERVER['HTTP_USER_AGENT'],
+            'ip_address' => $_SERVER['REMOTE_ADDR'],
+        );
+        $this->db->insert('loginhistory', $data);
+    }
+
+    function log_usr($user_id, $log_name)
+    {
+        $data = array(
+            "user_id" => $user_id,
+            "aktivitas" => "--+ " . $log_name . " +--",
+            "tanggal_waktu" => date("Y-m-d H:i:s")
+        );
+        $this->db->insert("useractivity", $data);
+    }
+
     function log_sitk($username, $log_name)
     {
         $data = array(

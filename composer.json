@@ -13,7 +13,9 @@
 	"require": {
 		"php": ">=5.3.7",
 		"phpmailer/phpmailer": "^6.8",
-		"fzaninotto/faker": "^1.9"
+		"fzaninotto/faker": "^1.9",
+		"endroid/qr-code": "^4.3",
+		"khanamiryan/qrcode-detector-decoder": "^1.0"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"

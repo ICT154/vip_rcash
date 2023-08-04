@@ -1,0 +1,565 @@
+ERROR - 2023-07-27 04:29:20 --> 404 Page Not Found: Img/svg
+ERROR - 2023-07-27 09:29:52 --> Severity: Notice --> Undefined index: verif C:\xampp_74\htdocs\rcash\application\controllers\Auth.php 287
+ERROR - 2023-07-27 04:29:53 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:29:53 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:29:53 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:29:53 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:29:53 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:29:53 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:29:53 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:33:55 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:33:55 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:33:55 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:33:55 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:33:55 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:33:55 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:33:55 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:34:04 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:34:04 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:34:04 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:34:04 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:34:04 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:34:04 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:34:04 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:35:30 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:35:30 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:35:30 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:35:30 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:35:30 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:35:30 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 04:35:30 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:05:37 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:05:37 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:05:37 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:05:37 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:05:37 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:05:37 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:05:37 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:11:33 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:11:33 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:11:33 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:11:33 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:11:33 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:11:33 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:11:33 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:11:53 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:11:53 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:11:53 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:11:53 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:11:53 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:11:53 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:11:53 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:24:15 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:24:15 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:24:15 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:24:15 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:24:15 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:24:15 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:24:15 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:26:09 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:26:09 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:26:09 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:26:09 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:26:09 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:26:09 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:26:09 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 11:26:10 --> Query error: Table 'db_rcash.t_sosmed_v2' doesn't exist - Invalid query: SELECT DISTINCT `category`
+FROM `t_sosmed_v2`
+ORDER BY `category` ASC
+ERROR - 2023-07-27 06:28:14 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:28:14 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:28:14 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:28:14 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:28:14 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:28:14 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:28:14 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:30:20 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:30:20 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:30:20 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:30:20 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:30:20 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:30:20 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:30:20 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:45:55 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:45:55 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:45:55 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:45:55 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:45:55 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:45:55 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:45:55 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:48:17 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:48:17 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:48:17 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:48:17 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:48:17 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:48:17 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:48:17 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:48:21 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:48:21 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:48:21 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:48:21 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:48:21 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:48:21 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:48:21 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:51:41 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:51:41 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:51:41 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:51:41 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:51:41 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:51:41 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 06:51:41 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 11:51:45 --> Query error: Table 'db_rcash.t_sosmed_v2' doesn't exist - Invalid query: SELECT *
+FROM `t_sosmed_v2`
+WHERE `category` LIKE '%Instagram AUTO LIKE INDONESIA%' ESCAPE '!'
+ORDER BY `price_sell` ASC
+ERROR - 2023-07-27 11:54:19 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:19 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:19 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:19 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:19 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:19 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:30 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 21
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$price_sell C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 22
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:54:40 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 26
+ERROR - 2023-07-27 11:55:42 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:55:42 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:55:42 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 11:55:42 --> Severity: Notice --> Undefined property: stdClass::$min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:55:42 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 23
+ERROR - 2023-07-27 11:55:42 --> Severity: Notice --> Undefined property: stdClass::$max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\harga.php 24
+ERROR - 2023-07-27 13:20:29 --> Query error: Table 'db_rcash.t_sosmed_v2' doesn't exist - Invalid query: SELECT *
+FROM `t_sosmed_v2`
+WHERE `id` = 'RSMNNFQK'
+ERROR - 2023-07-27 13:21:05 --> Query error: Unknown column 'id' in 'where clause' - Invalid query: SELECT *
+FROM `socialmedia`
+WHERE `id` = 'RSMNNFQK'
+ERROR - 2023-07-27 13:21:27 --> Severity: Notice --> Undefined index: id C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 7
+ERROR - 2023-07-27 13:21:27 --> Severity: Notice --> Undefined index: name C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 15
+ERROR - 2023-07-27 13:21:27 --> Severity: Notice --> Undefined index: description C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 19
+ERROR - 2023-07-27 13:21:27 --> Severity: Notice --> Undefined index: min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 24
+ERROR - 2023-07-27 13:21:27 --> Severity: Notice --> Undefined index: max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 29
+ERROR - 2023-07-27 13:21:27 --> Severity: Notice --> Undefined index: average_time C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 33
+ERROR - 2023-07-27 13:21:27 --> Severity: Notice --> Undefined index: date_g C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 37
+ERROR - 2023-07-27 13:22:09 --> Severity: Notice --> Undefined index: description C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 19
+ERROR - 2023-07-27 13:22:09 --> Severity: Notice --> Undefined index: min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 24
+ERROR - 2023-07-27 13:22:09 --> Severity: Notice --> Undefined index: max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 29
+ERROR - 2023-07-27 13:22:09 --> Severity: Notice --> Undefined index: average_time C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 33
+ERROR - 2023-07-27 13:22:09 --> Severity: Notice --> Undefined index: date_g C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 37
+ERROR - 2023-07-27 13:22:22 --> Severity: Notice --> Undefined index: min C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 24
+ERROR - 2023-07-27 13:22:22 --> Severity: Notice --> Undefined index: max C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 29
+ERROR - 2023-07-27 13:22:22 --> Severity: Notice --> Undefined index: average_time C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 33
+ERROR - 2023-07-27 13:22:22 --> Severity: Notice --> Undefined index: date_g C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 37
+ERROR - 2023-07-27 13:22:43 --> Severity: Notice --> Undefined index: average_time C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 33
+ERROR - 2023-07-27 13:22:43 --> Severity: Notice --> Undefined index: date_g C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 37
+ERROR - 2023-07-27 13:53:57 --> Severity: Notice --> Undefined index: date_g C:\xampp_74\htdocs\rcash\application\views\member\harga\form\detail.php 37
+ERROR - 2023-07-27 09:33:46 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 09:33:46 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 09:33:46 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 09:33:46 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 09:33:46 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 09:33:46 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 09:33:46 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:04:57 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:04:57 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:04:57 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:04:57 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:04:57 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:04:57 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:04:57 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 15:04:59 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:04:59 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:04:59 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:04:59 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:04:59 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:04:59 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:01 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:05:03 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:06:58 --> Severity: Notice --> Undefined property: CI_Loader::$M_gzl C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:06:58 --> Severity: error --> Exception: Call to a member function number_format() on null C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:06:59 --> Severity: Notice --> Undefined property: CI_Loader::$M_gzl C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:06:59 --> Severity: error --> Exception: Call to a member function number_format() on null C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:07:01 --> Severity: Notice --> Undefined property: CI_Loader::$M_gzl C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:07:01 --> Severity: error --> Exception: Call to a member function number_format() on null C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 10:07:25 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:07:25 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:07:25 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:07:26 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:07:26 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:07:26 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:07:26 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 15:07:41 --> Severity: Notice --> Undefined property: CI_Loader::$M_gzl C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:07:41 --> Severity: error --> Exception: Call to a member function number_format() on null C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga.php 7
+ERROR - 2023-07-27 15:11:40 --> Severity: Notice --> Undefined index: price_sell C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga_detail.php 11
+ERROR - 2023-07-27 15:11:40 --> Severity: Notice --> Undefined index: min C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga_detail.php 15
+ERROR - 2023-07-27 15:11:40 --> Severity: Notice --> Undefined index: max C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga_detail.php 19
+ERROR - 2023-07-27 15:11:40 --> Severity: Notice --> Undefined index: description C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga_detail.php 27
+ERROR - 2023-07-27 15:11:49 --> Severity: Notice --> Undefined index: price_sell C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga_detail.php 11
+ERROR - 2023-07-27 15:11:49 --> Severity: Notice --> Undefined index: min C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga_detail.php 15
+ERROR - 2023-07-27 15:11:49 --> Severity: Notice --> Undefined index: max C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga_detail.php 19
+ERROR - 2023-07-27 15:11:49 --> Severity: Notice --> Undefined index: description C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga_detail.php 27
+ERROR - 2023-07-27 15:12:38 --> Severity: Notice --> Undefined index: description C:\xampp_74\htdocs\rcash\application\views\member\pemesanan\form\harga_detail.php 27
+ERROR - 2023-07-27 10:23:13 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:23:13 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:23:13 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:23:13 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:23:13 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:23:13 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:23:13 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:24:57 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:24:57 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:24:57 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:24:57 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:24:57 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:24:57 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:24:57 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:33:31 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:33:31 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:33:31 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:33:31 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:33:31 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:33:31 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:33:31 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:35:24 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:35:24 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:35:24 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:35:24 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:35:24 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:35:24 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:35:24 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:49:27 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:49:27 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:49:27 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:49:27 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:49:27 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:49:27 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:49:27 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:50:00 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:50:00 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:50:00 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:50:00 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:50:00 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:50:00 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:50:00 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:51:24 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:51:24 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:51:24 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:51:24 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:51:24 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:51:24 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:51:24 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:51:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:51:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:51:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:51:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:51:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:51:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-27 10:51:40 --> 404 Page Not Found: Img/demo

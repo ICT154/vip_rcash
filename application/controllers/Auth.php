@@ -280,6 +280,10 @@ class Auth extends CI_Controller
                         $this->M_log->show_msg("error", "Akun Anda Tidak Aktif !");
                         redirect(base_url());
                     } else {
+
+                        $this->M_log->log_usr($data['user_id'], "LOGIN SUKSES");
+                        $this->M_log->log_history($data['user_id']);
+
                         if ($data['verif'] == 1) {
                             $this->session->set_flashdata('message_login', "<div class='alert alert-danger'>Akun Anda Tidak Aktif <br> Ket : " . $data['status_ket'] . " </div>");
                             $this->M_log->show_msg("error", "Akun Anda Tidak Aktif, Harap Verifikasi Akun Anda !");

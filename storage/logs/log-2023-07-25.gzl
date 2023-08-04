@@ -1,0 +1,93 @@
+ERROR - 2023-07-25 11:03:26 --> Severity: Notice --> Undefined property: Dashboard::$M_log C:\xampp_74\htdocs\rcash\system\core\Model.php 74
+ERROR - 2023-07-25 11:03:26 --> Severity: error --> Exception: Call to a member function show_msg() on null C:\xampp_74\htdocs\rcash\application\models\member\M_member.php 101
+ERROR - 2023-07-25 06:04:04 --> 404 Page Not Found: Img/svg
+ERROR - 2023-07-25 11:05:14 --> Severity: Notice --> Undefined index: verif C:\xampp_74\htdocs\rcash\application\controllers\Auth.php 283
+ERROR - 2023-07-25 06:08:28 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:08:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:08:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:08:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:08:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:08:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:08:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:08:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:08:40 --> 404 Page Not Found: Img/thumbs
+ERROR - 2023-07-25 06:08:40 --> 404 Page Not Found: Img/thumbs
+ERROR - 2023-07-25 06:08:40 --> 404 Page Not Found: Img/thumbs
+ERROR - 2023-07-25 06:08:40 --> 404 Page Not Found: Img/thumbs
+ERROR - 2023-07-25 06:12:09 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:12:09 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:12:09 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:12:09 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:12:09 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:12:09 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:12:09 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:54:28 --> 404 Page Not Found: Img/svg
+ERROR - 2023-07-25 11:54:32 --> Severity: Notice --> Undefined index: verif C:\xampp_74\htdocs\rcash\application\controllers\Auth.php 286
+ERROR - 2023-07-25 06:54:33 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:54:33 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:54:33 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:54:33 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:54:34 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:54:34 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 06:54:34 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 11:54:51 --> Severity: Notice --> Undefined property: Dashboard::$M_log C:\xampp_74\htdocs\rcash\application\controllers\member\Dashboard.php 64
+ERROR - 2023-07-25 11:54:51 --> Severity: error --> Exception: Call to a member function log_usr() on null C:\xampp_74\htdocs\rcash\application\controllers\member\Dashboard.php 64
+ERROR - 2023-07-25 11:55:27 --> Severity: error --> Exception: The model name you are loading is the name of a resource that is already being used: log C:\xampp_74\htdocs\rcash\system\core\Loader.php 276
+ERROR - 2023-07-25 11:55:40 --> Severity: error --> Exception: Call to undefined method CI_Log::log_usr() C:\xampp_74\htdocs\rcash\application\controllers\member\Dashboard.php 65
+ERROR - 2023-07-25 06:56:00 --> 404 Page Not Found: Img/svg
+ERROR - 2023-07-25 12:27:15 --> Severity: Notice --> Undefined index: verif C:\xampp_74\htdocs\rcash\application\controllers\Auth.php 286
+ERROR - 2023-07-25 07:27:16 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 07:27:16 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 07:27:16 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 07:27:16 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 07:27:16 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 07:27:16 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 07:27:16 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 07:37:13 --> 404 Page Not Found: Img/svg
+ERROR - 2023-07-25 12:37:14 --> Severity: Notice --> Undefined index: verif C:\xampp_74\htdocs\rcash\application\controllers\Auth.php 287
+ERROR - 2023-07-25 07:37:15 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 07:37:15 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 07:37:15 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 07:37:15 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 07:37:15 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 07:37:15 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 07:37:15 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 08:35:23 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 08:35:23 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 08:35:23 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 08:35:23 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 08:35:23 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 08:35:23 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 08:35:23 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 08:35:26 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 08:35:26 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 08:35:26 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 08:35:26 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 08:35:26 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 08:35:26 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 08:35:26 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 14:01:52 --> Severity: Notice --> Trying to get property 'category' of non-object C:\xampp_74\htdocs\rcash\application\controllers\server\Medanpedia.php 29
+ERROR - 2023-07-25 14:02:15 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\rcash\application\controllers\server\Medanpedia.php 29
+ERROR - 2023-07-25 14:22:34 --> Severity: Notice --> Undefined property: Medanpedia::$GZL C:\xampp_74\htdocs\rcash\system\core\Model.php 74
+ERROR - 2023-07-25 14:22:34 --> Severity: error --> Exception: Call to a member function gen_code() on null C:\xampp_74\htdocs\rcash\application\models\server\M_Medan.php 43
+ERROR - 2023-07-25 09:58:16 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:58:16 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:58:16 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:58:16 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:58:16 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:58:16 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:58:16 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:58:45 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:58:45 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:58:45 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:58:45 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:58:45 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:58:45 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:58:45 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:59:03 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:59:03 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:59:03 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:59:04 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:59:04 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:59:04 --> 404 Page Not Found: Img/demo
+ERROR - 2023-07-25 09:59:04 --> 404 Page Not Found: Img/demo

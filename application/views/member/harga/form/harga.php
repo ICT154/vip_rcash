@@ -6,7 +6,7 @@
                 <tr>
                     <th class="">No</th>
                     <th class="">Nama</th>
-                    <th class="">Harga</th>
+                    <th class="">Harga Basic</th>
                     <th class="">Min/Max Pesan</th>
                     <th class="">Detail</th>
                 </tr>
@@ -18,12 +18,12 @@
                 ?>
                     <tr>
                         <td class=""><?= $no++ ?></td>
-                        <td class=""><?= $key->name ?></td>
-                        <td class="">Rp. <?= $this->GZL->number_format($key->price_sell, 0, "", ".") ?></td>
-                        <td class=""><?= $this->GZL->number_format($key->min, 0, "", ".") ?> / <?= $this->GZL->number_format($key->max, 0, "", ".") ?></td>
-                        <!-- <td class=""><?= $this->GZL->number_format($key->max, 0, "", ".") ?></td> -->
+                        <td class=""><?= $key->product_name ?></td>
+                        <td class="">Rp. <?= $this->GZL->number_format($key->basic_price, 0, "", ".") ?></td>
+                        <td class=""><?= $this->GZL->number_format($key->min_quantity, 0, "", ".") ?> / <?= $this->GZL->number_format($key->max_quantity, 0, "", ".") ?></td>
+                        <!-- <td class=""><?= $this->GZL->number_format($key->max_quantity, 0, "", ".") ?></td> -->
                         <td class="">
-                            <button class="btn btn-outline-primary btn-sm" onclick="load_detail_prod('<?= $this->GZL->enkrip($key->id) ?>')"><i class="fa fa-search"></i></button>
+                            <button class="btn btn-outline-primary btn-sm" onclick="load_detail_prod('<?= $this->GZL->enkrip($key->product_id) ?>')"><i class="fa fa-search"></i></button>
                         </td>
                     </tr>
                 <?php } ?>
@@ -59,38 +59,44 @@
 <script>
     function load_detail_prod(fav) {
         $("#mod_det_prod").modal('show');
-        $("load_det_prod").show();
-        $.ajax({
-            url: "<?= base_url("load-detail-prod") ?>",
-            type: "post",
-            data: {
-                prod: fav
-            },
-            success: function(data) {
+        $("#load_det_prod").show();
+
+        refresh_token_csrf()
+            .then((token) => {
+                return $.ajax({
+                    url: "<?= base_url("load-detail-prod") ?>",
+                    type: "post",
+                    data: {
+                        prod: fav,
+                        "<?= $this->security->get_csrf_token_name(); ?>": token
+                    }
+                });
+            })
+            .then((data) => {
                 $("#load_det_prod").hide();
                 $("#det_prod_show_here").html(data);
-            },
-            error: function() {
+            })
+            .catch((error) => {
                 $("#load_det_prod").hide();
                 $("#det_prod_show_here").html("<div class='text-center mt-3 mb-3 text-danger'>Terjadi kesalahan.<i class='far fa-times-circle'></i></div>");
-            }
-        });
+                console.error("Error loading detail produk:", error);
+            });
     }
-    // var tabel = null;
-    // $(document).ready(function() {
-    //     tabel = $('#<?= $table_name ?>').DataTable({
-    //         "order": [
-    //             [0, "asc"]
-    //         ],
-    //         "orderData": [0, 0],
-    //         "columnDefs": [{
-    //             "targets": 2,
-    //             "render": function(data, type, row) {
-    //                 var price = parseFloat(data.replace(/\./g, '').replace(',', '.')).toFixed(2);
-    //                 return 'Rp. ' + price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    //             }
-    //         }],
-    //         "scrollX": true
-    //     });
-    // });
+    var tabel = null;
+    $(document).ready(function() {
+        tabel = $('#<?= $table_name ?>').DataTable({
+            // "order": [
+            //     [0, "asc"]
+            // ],
+            // "orderData": [0, 0],
+            // "columnDefs": [{
+            //     "targets": 2,
+            //     "render": function(data, type, row) {
+            //         var price = parseFloat(data.replace(/\./g, '').replace(',', '.')).toFixed(2);
+            //         return 'Rp. ' + price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+            //     }
+            // }],
+            // "scrollX": true
+        });
+    });
 </script>

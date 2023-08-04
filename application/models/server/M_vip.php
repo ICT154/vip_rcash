@@ -10,6 +10,7 @@ class M_vip extends CI_Model
     {
         parent::__construct();
         ini_set('max_execution_time', 300); // 5 minutes
+        $this->load->model('M_gzl', "GZL");
     }
 
 
@@ -107,6 +108,23 @@ class M_vip extends CI_Model
 
                 // memasukkan data ke database
                 $this->db->insert('t_prepaid', $insert_data);
+            }
+
+            try {
+                $price_history = array(
+                    'entity_type' => "prepaid",
+                    'product_id' => $item->id,
+                    'price_type' => "",
+                    'provider' => "VIPRESELLER",
+                    'price' => $item->price->basic,
+                    'change_date' => date("Y-m-d H:i:s"),
+                    'basic_price' => $item->price->basic + ($item->price->basic * 0.08),
+                    'premium_price' => $item->price->basic + ($item->price->basic * 0.05),
+                    'special_price' => $item->price->basic + ($item->price->basic * 0.02),
+                );
+                $this->db->insert('pricehistory', $price_history);
+            } catch (Exception $th) {
+                $this->M_log->log_in("Gagal Memasukan Riwayat Harga - Error Sistem $th", "Gagal", "service_sosmed");
             }
         }
         $this->send_truncate($data);
@@ -219,6 +237,7 @@ class M_vip extends CI_Model
                     'entity_type' => "socialmedia",
                     'product_id' => $item->id,
                     'price_type' => "",
+                    'provider' => "VIPRESELLER",
                     'price' => $item->price->basic,
                     'change_date' => date("Y-m-d H:i:s"),
                     'basic_price' => $item->price->basic + ($item->price->basic * 0.08),
@@ -261,14 +280,17 @@ class M_vip extends CI_Model
                 $this->M_log->log_in("Gagal Memasukan Layanan Sosmed - Error Sistem $th", "Gagal", "service_sosmed");
             }
         }
-        $this->db->select("product_id_api");
+        $this->db->select("product_id_api, provider");
+        $this->db->where('provider', "VIPRESELLER");
         $data_server_utama = $this->db->get('socialmedia')->result();
         foreach ($data_server_utama as $key) {
+            // $this->db->where('provider', "VIPRESELLER");
             $this->db->where('product_id_api', $key->product_id_api);
             $cek_data = $this->db->get('socialmediatemp', 1);
             if ($cek_data->num_rows() > 0) {
             } else {
                 try {
+                    $this->db->where('provider', "VIPRESELLER");
                     $this->db->where('product_id_api', $key->product_id_api);
                     $this->db->delete('socialmedia');
                     if ($this->db->affected_rows() > 0) {
@@ -330,6 +352,23 @@ class M_vip extends CI_Model
                 } catch (Exception $th) {
                     $this->M_log->log_in("Gagal Memasukan Layanan Game - Error Sistem $th", "Gagal", "service_game");
                 }
+            }
+
+            try {
+                $price_history = array(
+                    'entity_type' => "games",
+                    'product_id' => $item->id,
+                    'price_type' => "",
+                    'provider' => "VIPRESELLER",
+                    'price' => $item->price->basic,
+                    'change_date' => date("Y-m-d H:i:s"),
+                    'basic_price' => $item->price->basic + ($item->price->basic * 0.08),
+                    'premium_price' => $item->price->basic + ($item->price->basic * 0.05),
+                    'special_price' => $item->price->basic + ($item->price->basic * 0.02),
+                );
+                $this->db->insert('pricehistory', $price_history);
+            } catch (Exception $th) {
+                $this->M_log->log_in("Gagal Memasukan Riwayat Harga - Error Sistem $th", "Gagal", "service_sosmed");
             }
         }
         $this->send_truncate_game($data);

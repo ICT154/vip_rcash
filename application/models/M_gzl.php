@@ -153,7 +153,7 @@ class M_gzl extends CI_Model
     {
         // Fungsi ini digunakan untuk menghasilkan ID unik dengan menggabungkan tanggal saat ini dan uniqid. 
         // Fungsi ini mengembalikan string ID unik yang terdiri dari tanggal dalam format Ymd dan uniqid.
-        $tanggal = date("Ymd");
+        $tanggal = date("Ymdhis");
         $string = $tanggal . uniqid();
         return $string;
     }

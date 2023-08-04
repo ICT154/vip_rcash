@@ -5,9 +5,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Medanpedia extends CI_Controller
 {
-    private $api_url = 'https://api.medanpedia.co.id/';
+    private $api_url = 'http://api.medanpedia.co.id/';
     private $api_id = '13646'; // ganti dengan API ID Anda
-    private $api_key = '372529-5eab8c-d5a5c9-0f8fd6-2203a2'; // ganti dengan API KEY Anda
+    private $api_key = '154f48-0e4d21-a15eb1-d129eb-2dc832'; // ganti dengan API KEY Anda
+
+    // private $api_id = '14928'; // ganti dengan API ID Anda
+    // private $api_key = '6c6000-e9fccd-c2dd74-b8e3f5-02506b'; // ganti dengan API KEY Anda
 
 
     public function __construct()
@@ -20,19 +23,25 @@ class Medanpedia extends CI_Controller
     function get_layanan()
     {
         $res = $this->call_api(array(), 'services');
-        if ($res != false) {
-            $data = json_decode($res);
-            if ($data->status != false) {
-                $this->mp->add_layanan($res);
-            } else {
-                $this->M_log->log_in("Gagal Mendapat Layanan SOSIAL MEDIA - API FAIL $data->data ", "Gagal", "get_layanan");
-                echo "Gagal Mendapat Layanan Prepaid - API FAIL $data->data ";
-                return false;
-            }
-        } else {
-            $this->M_log->log_in("Gagal Mendapat Layanan Prepaid - CURL FAIL", "Gagal", "get_layanan");
-            return false;
-        }
+
+        echo "<pre>";
+        print_r($res);
+        echo "</pre>";
+
+        // if ($res != false) {
+        //     $data = json_decode($res);
+        //     if ($data->status != false) {
+        //         $this->M_log->log_in("Berhasil Mendapat Layanan SOSMED MEDANPEDIA", "Berhasil", "get_layanan");
+        //         $this->mp->insert_layanan_smm($data);
+        //     } else {
+        //         $this->M_log->log_in("Gagal Mendapat Layanan SOSIAL MEDIA - API FAIL $data->data ", "Gagal", "get_layanan");
+        //         echo "Gagal Mendapat Layanan Prepaid - API FAIL $data->data ";
+        //         return false;
+        //     }
+        // } else {
+        //     $this->M_log->log_in("Gagal Mendapat Layanan Prepaid - CURL FAIL", "Gagal", "get_layanan");
+        //     return false;
+        // }
     }
 
 

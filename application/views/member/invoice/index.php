@@ -109,7 +109,7 @@
         margin-bottom: .5cm;
         -webkit-box-shadow: 0 0 .5cm rgba(0, 0, 0, .5);
         box-shadow: 0 0 .5cm rgba(0, 0, 0, .5);
-        background: url(../img/svg/pattern-1.svg) no-repeat center bottom;
+        background: url('<?= base_url("assets/") ?>/img/svg/pattern-1.svg') no-repeat center bottom;
         background-size: cover;
         padding: 4rem;
         position: relative

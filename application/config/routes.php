@@ -63,7 +63,7 @@ $route['logout'] = 'member/dashboard/logout';
 ////// DEPOSIT //////
 $route['deposit-baru'] = 'deposit/depo/deposit_baru';
 // $route['deposit-baru-sv'] = 'deposit/depo/deposit_baru_sv'; /// ini versi smm & ppob disatuin
-$route['deposit-baru-sv'] = 'deposit/depo/deposit_baru_sv_v2'; /// ini versi smm & ppob disatuin
+$route['deposit-baru-sv'] = 'deposit/depo/deposit_baru_sv_v2'; /// ini versi smm & ppob dipisah
 $route['riwayat-deposit'] = 'deposit/depo/riwayat_deposit';
 $route['riwayat-deposit/table'] = 'deposit/depo/view_data_where';
 $route['deposit-delete'] = 'deposit/depo/batalkan_deposit';
@@ -79,7 +79,7 @@ $route['service-prepaid'] = 'server/vip/service_prepaid';
 $route['service-sosmed'] = 'server/vip/service_sosmed';
 $route['service-game'] = 'server/vip/service_game';
 $route['get-layanan-smm'] = 'server/medanpedia/get_layanan';
-$route['get-layanan-smm'] = 'server/medanpedia/get_layanan_smm';
+// $route['get-layanan-smm'] = 'server/medanpedia/get_layanan_smm';
 
 ////// HARGA //////
 $route['load_kategori'] = 'harga/harga/load_kategori';
@@ -92,6 +92,8 @@ $route['get-prepaid'] = 'harga/harga/service_list';
 $route['pemesanan-sosmed'] = 'pemesanan/pesan/pesanan';
 $route['get-layanan'] = 'pemesanan/pesan/layanan';
 $route['get-layanan-detail'] = 'pemesanan/pesan/layanan_detail';
+$route['order-smm-single'] = 'pemesanan/pesan/order_smm_single';
+$route['hit-total-pesanan'] = 'pemesanan/pesan/hitung_total_pesanan';
 
 
 ///// MIGRASI DATA /////

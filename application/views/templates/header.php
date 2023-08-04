@@ -47,6 +47,7 @@
     <link rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/datagrid/datatables/datatables.bundle.css">
     <link rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/notifications/sweetalert2/sweetalert2.bundle.css">
     <link rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/formplugins/select2/select2.bundle.css">
+    <link rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/statistics/chartjs/chartjs.css">
 </head>
 <!-- BEGIN Body -->
 <!-- Possible Classes

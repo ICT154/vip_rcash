@@ -4,7 +4,7 @@
 <!-- BEGIN Page Footer -->
 <footer class="page-footer" role="contentinfo">
     <div class="d-flex align-items-center flex-1 text-muted">
-        <span class="hidden-md-down fw-700">2022 - <?= date("Y") ?> © RCASH by&nbsp; RADEN DEV</a></span>
+        <span class="hidden-md-down fw-700">2022 - <?= date("Y") ?> © RCASH by&nbsp; PT RADEN DIGITAL HUB</a></span>
     </div>
     <div>
         <ul class="list-table m-0">
@@ -835,6 +835,7 @@
 <script src="<?= base_url("assets/") ?>js/datagrid/datatables/datatables.bundle.js"></script>
 <script src="<?= base_url("assets/") ?>js/notifications/sweetalert2/sweetalert2.bundle.js"></script>
 <script src="<?= base_url("assets/") ?>js/formplugins/select2/select2.bundle.js"></script>
+<script src="<?= base_url("assets/") ?>js/statistics/chartjs/chartjs.bundle.js"></script>
 </body>
 <!-- END Body -->
 <?= $this->session->flashdata('message'); ?>
