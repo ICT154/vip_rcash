@@ -96,6 +96,7 @@
                     });
                 })
                 .then((data) => {
+                    refresh_token_crsf_link();
                     $("#total_harga").val(data);
                 })
                 .catch((error) => {

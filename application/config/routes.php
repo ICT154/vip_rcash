@@ -79,6 +79,9 @@ $route['service-prepaid'] = 'server/vip/service_prepaid';
 $route['service-sosmed'] = 'server/vip/service_sosmed';
 $route['service-game'] = 'server/vip/service_game';
 $route['get-layanan-smm'] = 'server/medanpedia/get_layanan';
+
+////// MEDANPEDIA //////
+$route['check_update_status_medanpedia'] = 'server/medanpedia/get_status_pesanan';
 // $route['get-layanan-smm'] = 'server/medanpedia/get_layanan_smm';
 
 ////// HARGA //////

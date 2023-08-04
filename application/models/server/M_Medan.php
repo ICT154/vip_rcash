@@ -5,6 +5,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class M_Medan extends CI_Model
 {
+    private $api_url = 'https://api.medanpedia.co.id/';
+    // private $api_id = '13646'; // ganti dengan API ID Anda
+    // private $api_key = '681c19-9db872-ed0378-d66525-514239'; // ganti dengan API KEY Anda
+
+    private $api_id = '14928'; // ganti dengan API ID Anda
+    private $api_key = '6c6000-e9fccd-c2dd74-b8e3f5-02506b'; // ganti dengan API KEY Anda
 
     public function __construct()
     {
@@ -12,6 +18,69 @@ class M_Medan extends CI_Model
         ini_set('max_execution_time', 300); // 5 minutes
         $this->load->model('M_gzl', "GZL");
         // $this->load->model('member/M_member', 'member');
+    }
+
+    function insert_status_pesanan($data, $id)
+    {
+
+
+        try {
+            $data_trx = array(
+                // 'transaction_id' => $id_trx = "RTRX" . $this->GZL->id_unik(),
+                // 'trxid' => $id,
+                // 'user_id' => $data_member['user_id'],
+                // 'entity_type' => "SMM",
+                // 'entity_id' => $data_layanan['product_id'],
+                // 'data' => $target_pesanan,
+                // 'service' => $data_layanan['product_name'],
+                // 'quantity' => $jumlah_pesanan,
+                'status' => $data['data']['status'],
+                'remain' =>  $data['data']['remains'],
+                'count' => $data['data']['start_count'],
+                // 'note' => $note,
+                // 'price' => $total_harga,
+                // 'transaction_date' => date("Y-m-d H:i:s"),
+                // 'profit' => $total_harga - $price,
+                // 'reffund' => 1,
+                // 'provider' => 'MEDANPEDIA',
+                // 'refferal_id' => $data_member['refferal_id'],
+                // 'acc_type' => ''
+            );
+            $this->db->where('transaction_id', $id);
+            $this->db->update('transaction', $data_trx);
+
+            $get_last_data_history = $this->db->where("transaction_id", $id)->order_by("change_date", "DESC")->get("transactionhistory", 1)->row_array();
+
+
+
+            $data_history = array(
+                'transaction_id' => $id,
+                'old_status' => $get_last_data_history['new_status'],
+                'new_status' => $data['data']['status'],
+                'quantity' => $get_last_data_history['quantity'],
+                'remain' => $data['data']['remains'],
+                'count' => $data['data']['start_count'],
+                'change_date' => date("Y-m-d H:i:s")
+            );
+            $this->db->insert('transactionhistory', $data_history);
+        } catch (\Throwable $th) {
+            return false;
+        }
+    }
+
+    function get_id_pesanan()
+    {
+        $this->db->select('trxid, provider, transaction_id');
+        $this->db->from('transaction');
+        $this->db->where_in('status', array('Pending', 'Processing'));
+        $this->db->where('provider', 'medanpedia');
+        // $this->db->limit(1);
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+            return $query->result_array();
+        } else {
+            return false;
+        }
     }
 
     function order_smm_single($data_member, $total_harga, $data_layanan, $jumlah_pesanan, $target_pesanan)

@@ -67,7 +67,7 @@ class Pesan extends CI_Controller
                             if ($jumlah_pesanan != '' or $jumlah_pesanan != null or $jumlah_pesanan != 0) {
                                 $jumlah_pesanan = str_replace(".", "", $jumlah_pesanan);
 
-                                if ($jumlah_pesanan > $data_layanan['min_quantity'] and $jumlah_pesanan < $data_layanan['max_quantity']) {
+                                if ($jumlah_pesanan >= $data_layanan['min_quantity'] and $jumlah_pesanan <= $data_layanan['max_quantity']) {
                                     $total_harga = $data_layanan['basic_price'] / 1000;
                                     $total_harga = $total_harga * $jumlah_pesanan;
 
@@ -78,6 +78,9 @@ class Pesan extends CI_Controller
                                         if ($target_pesanan != '' or $target_pesanan != NULL) {
                                             if ($this->member->potong_saldo_smm($data_member['user_id'], $total_harga)) {
                                                 if ($this->mp->order_smm_single($data_member, $total_harga, $data_layanan, $jumlah_pesanan, $target_pesanan)) {
+                                                    $this->M_log->show_msg("success", "PESANAN BERHASIL DIBUAT !");
+                                                    $this->M_log->log_in("PESANAN BERHASIL DIBUAT !", "Berhasil", "order_smm_single");
+                                                    redirect(base_url('pemesanan-sosmed'));
                                                 } else {
                                                     $this->M_log->show_msg("error", "GAGAL MEMESAN ! SILAHKAN HUBUNGI ADMIN !");
                                                     $this->M_log->log_in("GAGAL MEMESAN ! SILAHKAN HUBUNGI ADMIN !", "Gagal", "order_smm_single");

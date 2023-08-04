@@ -30,6 +30,7 @@
                     });
                 })
                 .then((data) => {
+                    refresh_token_crsf_link();
                     $("#detail_form").fadeIn();
                     $("#detail_form").html(data);
                 })

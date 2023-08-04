@@ -4,6 +4,23 @@
         $('.select2').select2();
     });
 
+
+    function refresh_token_crsf_link() {
+        return new Promise((resolve, reject) => {
+            $.ajax({
+                url: "<?= base_url("refresh-csrf-token") ?>",
+                type: "GET",
+                dataType: "json",
+                success: function(data) {
+                    $("#<?php echo $this->security->get_csrf_token_name(); ?>").val(data.token);
+                },
+                error: function(xhr, status, error) {
+                    reject(error); // Reject the promise in case of an error
+                }
+            });
+        });
+    }
+
     function refresh_token_csrf() {
         return new Promise((resolve, reject) => {
             $.ajax({
@@ -37,6 +54,7 @@
                     });
                 })
                 .then((data) => {
+                    refresh_token_crsf_link();
                     $("#layanan_show_here").fadeIn();
                     $("#layanan_show_here").html(data);
                 })

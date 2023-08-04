@@ -15,7 +15,7 @@ class M_member extends CI_Model
         try {
             $data = array(
                 'transaction_id' => $id_trx = "RTRX" . $this->GZL->id_unik(),
-                'trx_id' => $id,
+                'trxid' => $id,
                 'user_id' => $data_member['user_id'],
                 'entity_type' => "SMM",
                 'entity_id' => $data_layanan['product_id'],
@@ -56,7 +56,7 @@ class M_member extends CI_Model
         try {
             $data = array(
                 'transaction_id' => $id_trx = "RTRX" . $this->GZL->id_unik(),
-                'trx_id' => $id,
+                'trxid' => $id,
                 'user_id' => $data_member['user_id'],
                 'entity_type' => "SMM",
                 'entity_id' => $data_layanan['product_id'],
@@ -111,7 +111,7 @@ class M_member extends CI_Model
                 'user_id' => $id,
                 'tanggal_waktu' => date("Y-m-d H:i:s"),
                 'saldo_sebelum' => $data_member['saldo'],
-                'saldo_sesudah' => $data_member['saldo'] + $nominal
+                'saldo_setelah' => $data_member['saldo'] + $nominal
             );
             $this->db->insert('balancehistory', $data_balance_history);
 
@@ -133,7 +133,7 @@ class M_member extends CI_Model
                 'user_id' => $id,
                 'tanggal_waktu' => date("Y-m-d H:i:s"),
                 'saldo_sebelum' => $data_member['saldo'],
-                'saldo_sesudah' => $data_member['saldo'] - $nominal
+                'saldo_setelah' => $data_member['saldo'] - $nominal
             );
             $this->db->insert('balancehistory', $data_balance_history);
 

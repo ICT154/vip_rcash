@@ -460,7 +460,7 @@
                                                 <li class="unread">
                                                     <a href="#" class="d-flex align-items-center">
                                                         <span class="status mr-2">
-                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-c.png')"></span>
+                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('<?= base_url("assets/") ?>img/demo/avatars/avatar-c.png')"></span>
                                                         </span>
                                                         <span class="d-flex flex-column flex-1 ml-1">
                                                             <span class="name">Melissa Ayre <span class="badge badge-primary fw-n position-absolute pos-top pos-right mt-1">INBOX</span></span>
@@ -473,7 +473,7 @@
                                                 <li class="unread">
                                                     <a href="#" class="d-flex align-items-center">
                                                         <span class="status mr-2">
-                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-a.png')"></span>
+                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('<?= base_url("assets/") ?>img/demo/avatars/avatar-a.png')"></span>
                                                         </span>
                                                         <span class="d-flex flex-column flex-1 ml-1">
                                                             <span class="name">Adison Lee</span>
@@ -485,7 +485,7 @@
                                                 <li>
                                                     <a href="#" class="d-flex align-items-center">
                                                         <span class="status status-success mr-2">
-                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-b.png')"></span>
+                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('<?= base_url("assets/") ?>img/demo/avatars/avatar-b.png')"></span>
                                                         </span>
                                                         <span class="d-flex flex-column flex-1 ml-1">
                                                             <span class="name">Oliver Kopyuv</span>
@@ -497,7 +497,7 @@
                                                 <li>
                                                     <a href="#" class="d-flex align-items-center">
                                                         <span class="status status-warning mr-2">
-                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-e.png')"></span>
+                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('<?= base_url("assets/") ?>img/demo/avatars/avatar-e.png')"></span>
                                                         </span>
                                                         <span class="d-flex flex-column flex-1 ml-1">
                                                             <span class="name">Dr. John Cook PhD</span>
@@ -510,7 +510,7 @@
                                                     <a href="#" class="d-flex align-items-center">
                                                         <span class="status status-success mr-2">
                                                             <!-- <img src="img/demo/avatars/avatar-m.png" data-src="img/demo/avatars/avatar-h.png" class="profile-image rounded-circle" alt="Sarah McBrook" /> -->
-                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-h.png')"></span>
+                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('<?= base_url("assets/") ?>img/demo/avatars/avatar-h.png')"></span>
                                                         </span>
                                                         <span class="d-flex flex-column flex-1 ml-1">
                                                             <span class="name">Sarah McBrook</span>
@@ -522,7 +522,7 @@
                                                 <li>
                                                     <a href="#" class="d-flex align-items-center">
                                                         <span class="status status-success mr-2">
-                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-m.png')"></span>
+                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('<?= base_url("assets/") ?>img/demo/avatars/avatar-m.png')"></span>
                                                         </span>
                                                         <span class="d-flex flex-column flex-1 ml-1">
                                                             <span class="name">Anothony Bezyeth</span>
@@ -534,7 +534,7 @@
                                                 <li>
                                                     <a href="#" class="d-flex align-items-center">
                                                         <span class="status status-danger mr-2">
-                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-j.png')"></span>
+                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('<?= base_url("assets/") ?>img/demo/avatars/avatar-j.png')"></span>
                                                         </span>
                                                         <span class="d-flex flex-column flex-1 ml-1">
                                                             <span class="name">Lisa Hatchensen</span>
@@ -585,12 +585,12 @@
                                                                 Troy Norman'<span class="fw-300">s new connections</span>
                                                             </span>
                                                             <div class="fs-sm d-flex align-items-center mt-2">
-                                                                <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-a.png'); background-size: cover;"></span>
-                                                                <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-b.png'); background-size: cover;"></span>
-                                                                <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-c.png'); background-size: cover;"></span>
-                                                                <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-e.png'); background-size: cover;"></span>
+                                                                <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('<?= base_url("assets/") ?>img/demo/avatars/avatar-a.png'); background-size: cover;"></span>
+                                                                <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('<?= base_url("assets/") ?>img/demo/avatars/avatar-b.png'); background-size: cover;"></span>
+                                                                <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('<?= base_url("assets/") ?>img/demo/avatars/avatar-c.png'); background-size: cover;"></span>
+                                                                <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('<?= base_url("assets/") ?>img/demo/avatars/avatar-e.png'); background-size: cover;"></span>
                                                                 <div data-hasmore="+3" class="rounded-circle profile-image-md mr-1">
-                                                                    <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-h.png'); background-size: cover;"></span>
+                                                                    <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('<?= base_url("assets/") ?>img/demo/avatars/avatar-h.png'); background-size: cover;"></span>
                                                                 </div>
                                                             </div>
                                                             <span class="fs-nano text-muted mt-1">55 minutes ago</span>
