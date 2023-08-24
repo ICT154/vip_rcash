@@ -1,0 +1,49 @@
+ERROR - 2023-08-24 06:29:00 --> 404 Page Not Found: Img/svg
+ERROR - 2023-08-24 06:29:05 --> 404 Page Not Found: Img/svg
+ERROR - 2023-08-24 11:29:31 --> Severity: Notice --> Undefined index: verif C:\xampp_74\htdocs\rcash\application\controllers\Auth.php 287
+ERROR - 2023-08-24 11:35:19 --> Severity: error --> Exception: Call to undefined method M_Medan::get_detail_pesanan() C:\xampp_74\htdocs\rcash\application\controllers\pemesanan\Pesan.php 27
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Undefined variable: data_depo C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 185
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Trying to access array offset on value of type null C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 185
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Undefined variable: data_depo C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 199
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Trying to access array offset on value of type null C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 199
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Undefined variable: data_depo C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 207
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Trying to access array offset on value of type null C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 207
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Undefined variable: data_depo C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 215
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Trying to access array offset on value of type null C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 215
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Undefined variable: method_depo C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 234
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Trying to access array offset on value of type null C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 234
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Undefined variable: method_depo C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 240
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Trying to access array offset on value of type null C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 240
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Undefined variable: data_depo C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 266
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Trying to access array offset on value of type null C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 266
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Undefined variable: user C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 277
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Trying to access array offset on value of type null C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 277
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Undefined variable: data_depo C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 282
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Trying to access array offset on value of type null C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 282
+ERROR - 2023-08-24 11:59:05 --> Severity: Notice --> Undefined variable: cek_bukti C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 287
+ERROR - 2023-08-24 15:16:09 --> 404 Page Not Found: Img/svg
+ERROR - 2023-08-24 20:16:30 --> Severity: Notice --> Undefined index: verif C:\xampp_74\htdocs\rcash\application\controllers\Auth.php 287
+ERROR - 2023-08-24 20:26:42 --> Severity: Notice --> Undefined variable: data C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 171
+ERROR - 2023-08-24 20:28:51 --> Severity: Notice --> Undefined variable: data C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 184
+ERROR - 2023-08-24 20:28:51 --> Severity: Notice --> Trying to access array offset on value of type null C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 184
+ERROR - 2023-08-24 20:28:51 --> Severity: Notice --> Undefined variable: data C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 188
+ERROR - 2023-08-24 20:28:57 --> Severity: Notice --> Undefined variable: data C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 188
+ERROR - 2023-08-24 20:37:45 --> Severity: Notice --> Undefined variable: class_bg C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 183
+ERROR - 2023-08-24 20:37:45 --> Severity: Notice --> Undefined variable: class_bg C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 187
+ERROR - 2023-08-24 20:37:45 --> Severity: Notice --> Undefined variable: class_bg C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 191
+ERROR - 2023-08-24 20:37:45 --> Severity: Notice --> Undefined variable: class_bg C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 195
+ERROR - 2023-08-24 20:37:45 --> Severity: Notice --> Undefined variable: class_bg C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 199
+ERROR - 2023-08-24 20:37:45 --> Severity: Notice --> Undefined variable: class_bg C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 203
+ERROR - 2023-08-24 20:37:45 --> Severity: Notice --> Undefined variable: class_bg C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 214
+ERROR - 2023-08-24 20:56:39 --> Severity: Notice --> Undefined property: stdClass::$new_stats C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 247
+ERROR - 2023-08-24 20:56:39 --> Severity: Notice --> Undefined property: stdClass::$new_stats C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 247
+ERROR - 2023-08-24 20:56:39 --> Severity: Notice --> Undefined property: stdClass::$new_stats C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 247
+ERROR - 2023-08-24 20:56:39 --> Severity: Notice --> Undefined property: stdClass::$new_stats C:\xampp_74\htdocs\rcash\application\views\member\riwayat_pemesanan_smm\detail.php 247
+ERROR - 2023-08-24 16:04:38 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:15:54 --> 404 Page Not Found: Img/thumbs
+ERROR - 2023-08-24 16:15:54 --> 404 Page Not Found: Img/thumbs
+ERROR - 2023-08-24 16:15:54 --> 404 Page Not Found: Img/thumbs
+ERROR - 2023-08-24 16:15:54 --> 404 Page Not Found: Img/thumbs
+ERROR - 2023-08-24 16:15:59 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:18:15 --> 404 Page Not Found: Tiket/index
+ERROR - 2023-08-24 16:19:01 --> 404 Page Not Found: Tiket/index

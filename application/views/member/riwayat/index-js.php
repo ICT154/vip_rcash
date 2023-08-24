@@ -12,8 +12,9 @@
     }
 
     $(document).ready(function() {
-        refresh_token_csrf();
+        // refresh_token_csrf();
         var token_data = $("#<?php echo $this->security->get_csrf_token_name(); ?>").val();
+        // alert(token_data);
         var tabel = $('#table-riwayat-deposit').DataTable({
             "processing": true,
             "responsive": true,
@@ -28,6 +29,10 @@
             "ajax": {
                 "url": "<?= base_url('riwayat-deposit/table'); ?>",
                 "type": "POST",
+                "beforeSend": function(xhr) {
+                    refresh_token_csrf(); // Refresh CSRF token before each request
+                    xhr.setRequestHeader('<?= $this->security->get_csrf_token_name(); ?>', $("#csrf-token").val());
+                },
                 "data": {
                     "<?= $this->security->get_csrf_token_name(); ?>": token_data
                 }

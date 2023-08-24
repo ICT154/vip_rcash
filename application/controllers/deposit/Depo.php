@@ -171,8 +171,6 @@ class Depo extends CI_Controller
 
     function view_data_where()
     {
-
-
         $query  = "SELECT d.deposit_id, d.jumlah_didapat, pm.payment_method_name AS provider, d.tanggal_deposit, d.status, d.payment_method_id
         FROM deposits AS d
         JOIN paymentmethod AS pm ON d.payment_method_id = pm.payment_method_id";

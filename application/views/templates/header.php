@@ -48,6 +48,13 @@
     <link rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/notifications/sweetalert2/sweetalert2.bundle.css">
     <link rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/formplugins/select2/select2.bundle.css">
     <link rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/statistics/chartjs/chartjs.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+        * {
+            font-family: 'Fredoka', sans-serif;
+        }
+    </style>
 </head>
 <!-- BEGIN Body -->
 <!-- Possible Classes

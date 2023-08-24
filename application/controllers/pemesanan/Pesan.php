@@ -18,6 +18,96 @@ class Pesan extends CI_Controller
         $this->load->model('server/M_vip', 'vip');
         $this->load->model('server/M_Medan', 'mp');
         $this->load->model('M_datatables_v2', 'dt_v2');
+        $this->load->model('M_tabel2', 'tabel2');
+    }
+
+    function riwayat_smm_detail()
+    {
+        $id = htmlspecialchars($this->input->post('id_pesanan', true));
+        if ($idx = $this->GZL->dekrip($id)) {
+
+            $data = $this->mp->get_detail_pesanan($idx);
+            if ($data->num_rows() > 0) {
+                $data_history = $this->mp->get_detail_pesanan_history($idx);
+                $data = array('datax' => $data->row_array(), "data_history" => $data_history->result());
+                $this->load->view('member/riwayat_pemesanan_smm/detail', $data);
+            } else {
+                echo "Data Tidak Ditemukan !";
+            }
+        } else {
+            echo "Data Tidak Ditemukan !";
+        }
+    }
+
+    function riwayat_smm_table()
+    {
+        header('Content-Type: application/json');
+        $list = $this->tabel2->get_datatables("transaction", 'transaction_date', 'DESC');
+        $data = array();
+        $no = $this->input->post('start');
+
+
+        $user = $this->session->userdata('user');
+
+
+        foreach ($list as $rows) {
+            $no++;
+            $row = array();
+            $row[] = $no;
+            $row[] = $this->GZL->format_tanggal($rows->transaction_date);
+            $row[] = $rows->service;
+            $row[] = $rows->data;
+            $row[] = "Rp. " . $this->GZL->number_format($rows->price, 0, ",", ".");
+            $row[] =  $this->GZL->number_format($rows->quantity, 0, ",", ".");
+            if ($rows->status == "Pending") {
+                $row[] = '<span class="badge badge-warning">Pending</span>';
+            } elseif ($rows->status == "Processing") {
+                $row[] = '<span class="badge badge-info">Processing</span>';
+            } elseif ($rows->status == "Partial") {
+                $row[] = '<span class="badge badge-primary">Partial</span>';
+            } elseif ($rows->status == "Success") {
+                $row[] = '<span class="badge badge-success">Success</span>';
+            } elseif ($rows->status == "Error") {
+                $row[] = '<span class="badge badge-danger">Error</span>';
+            }
+
+            $msg_button = "
+                <button class='btn btn-xs btn-success' data-id='" . $this->GZL->enkrip($rows->transaction_id) . "' onclick='detail(this)'>Cek Detail</button>
+                <button class='btn btn-xs btn-primary' data-id='" . $this->GZL->enkrip($rows->transaction_id) . "'>Komplain Pesanan Ini</button>
+            ";
+            $row[] = $msg_button;
+
+            $data[] = $row;
+        }
+        $output = array(
+            "draw" => $this->input->post('draw'),
+            "recordsTotal" => $this->tabel2->count_all("transaction"),
+            "recordsFiltered" => $this->tabel2->count_filtered("transaction", 'transaction_date', 'DESC'),
+            "data" => $data,
+            "token" => $this->security->get_csrf_hash()
+        );
+        //output to json format
+        $this->output->set_output(json_encode($output));
+    }
+
+
+    function riwayat_pesanan()
+    {
+        $data = array(
+            'user' => $this->member->get_user_by_ses(),
+            'sidebar_one' => "RCASH",
+            'sidebar_two' => "Deposit",
+            'breadcrumb' => "Riwayat Pesanan SMM",
+            'icon_subheader' => "subheader-icon fas fa-clock-rotate-left",
+            'bc_1' => "Riwayat Pesanan SMM",
+            'bc_2' => "Riwayat Pesanan SMM Kamu Bakalan Muncul Disini",
+            'title' => "RCASH | RIWAYAT PEMESANAN SOSIAL MEDIA",
+        );
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('member/riwayat_pemesanan_smm/index');
+        $this->load->view('templates/footer');
+        $this->load->view('member/riwayat_pemesanan_smm/index-js');
     }
 
     function hitung_total_pesanan()

@@ -127,6 +127,19 @@ class M_gzl extends CI_Model
         // $this->tgl_indo($tanggal_2);
     }
 
+    function changeDateFormat_1($inputDate)
+    {
+        $timestamp = strtotime($inputDate);
+        return date("M d, Y ", $timestamp);
+    }
+    function changeDateFormat_2($inputDate)
+    {
+        $timestamp = strtotime($inputDate);
+        return date("H:i", $timestamp);
+    }
+
+
+
     function encode($text)
     {
         $ciphertext = $this->encryption->encrypt($text);

@@ -101,3 +101,9 @@ $route['hit-total-pesanan'] = 'pemesanan/pesan/hitung_total_pesanan';
 
 ///// MIGRASI DATA /////
 $route['_migrate_user'] = 'migrate_data/migrate/users';
+
+
+//// RIWAYAT PESANAN //////
+$route['riwayat-pesanan'] = 'pemesanan/pesan/riwayat_pesanan';
+$route['riwayat-pesanan/tabel'] = 'pemesanan/pesan/riwayat_smm_table';
+$route['riwayat-pesanan/detail'] = 'pemesanan/pesan/riwayat_smm_detail';

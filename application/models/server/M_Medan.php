@@ -20,6 +20,16 @@ class M_Medan extends CI_Model
         // $this->load->model('member/M_member', 'member');
     }
 
+    function get_detail_pesanan_history($id)
+    {
+        return $this->db->where("transaction_id", $id)->order_by("change_date", "desc")->get("transactionhistory");
+    }
+
+    function get_detail_pesanan($id)
+    {
+        return $this->db->where("transaction_id", $id)->get("transaction", 1);
+    }
+
     function insert_status_pesanan($data, $id)
     {
 

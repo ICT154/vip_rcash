@@ -101,7 +101,7 @@
         </a>
     </li> -->
     <li id="menu_akun" <?php
-                        if ($title == 'RCASH | RIWAYAT PEMESANAN') {
+                        if ($title == 'RCASH | RIWAYAT PEMESANAN SOSIAL MEDIA') {
                             echo "class='active open'";
                         } else {
                         } ?>>
@@ -115,7 +115,7 @@
                                             echo "class='active'";
                                         } else {
                                         } ?>>
-                <a href="<?= base_url("deposit-baru") ?>" title="riwayat_pemesanan_sosial_media" data-filter-tags="riwayat_pemesanan_sosial_media">
+                <a href="<?= base_url("riwayat-pesanan") ?>" title="riwayat_pemesanan_sosial_media" data-filter-tags="riwayat_pemesanan_sosial_media">
                     <span class="nav-link-text" data-i18n="nav.riwayat_pemesanan_sosial_media">Riwayat Pemesanan Sosial Media</span>
                 </a>
             </li>

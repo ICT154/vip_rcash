@@ -3,7 +3,7 @@
         <div class="p-3 bg-primary-300 rounded overflow-hidden position-relative text-white mb-g">
             <div class="">
                 <h3 class="display-4 d-block l-h-n m-0 fw-500">
-                    Rp. <?= number_format($user['saldo'], 2, ",", ".") ?>
+                    Rp. <?= number_format($user['saldo'], 0, ",", ".") ?>
                     <small class="m-0 l-h-n">Saldo SMM</small>
                 </h3>
             </div>
@@ -14,7 +14,7 @@
         <div class="p-3 bg-primary-300 rounded overflow-hidden position-relative text-white mb-g">
             <div class="">
                 <h3 class="display-4 d-block l-h-n m-0 fw-500">
-                    Rp. <?= number_format($user['saldo'], 2, ",", ".") ?>
+                    Rp. <?= number_format($user['saldo_ppob'], 0, ",", ".") ?>
                     <small class="m-0 l-h-n">Saldo PPOB</small>
                 </h3>
             </div>
@@ -26,7 +26,7 @@
             <div class="">
                 <h3 class="display-4 d-block l-h-n m-0 fw-500">
 
-                    Rp. <?= $this->gzl->number_format($tot_pesan_smm['price'], 2, ",", ".") ?>
+                    Rp. <?= $this->gzl->number_format($tot_pesan_smm['price'], 0, ",", ".") ?>
                     <small class="m-0 l-h-n">Total Pemesanan</small>
                 </h3>
             </div>
@@ -37,7 +37,7 @@
         <div class="p-3 bg-info-200 rounded overflow-hidden position-relative text-white mb-g">
             <div class="">
                 <h3 class="display-4 d-block l-h-n m-0 fw-500">
-                    Rp. <?= $this->gzl->number_format($tot_depo['jumlah_didapat'], 2, ",", ".") ?>
+                    Rp. <?= $this->gzl->number_format($tot_depo['jumlah_didapat'], 0, ",", ".") ?>
                     <small class="m-0 l-h-n">Total Deposit</small>
                 </h3>
             </div>

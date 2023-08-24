@@ -469,7 +469,10 @@ $config['csrf_token_name'] = 'csrf_tok_tok_en_en';
 $config['csrf_cookie_name'] = 'csrf_cok_cok_ie_ie';
 $config['csrf_expire'] = 7200;
 $config['csrf_regenerate'] = TRUE;
-$config['csrf_exclude_uris'] = array();
+$config['csrf_exclude_uris'] = array(
+    'riwayat-deposit/table',
+    'riwayat-pesanan/tabel'
+);
 
 /*
 |--------------------------------------------------------------------------
