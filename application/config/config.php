@@ -471,7 +471,8 @@ $config['csrf_expire'] = 7200;
 $config['csrf_regenerate'] = TRUE;
 $config['csrf_exclude_uris'] = array(
     'riwayat-deposit/table',
-    'riwayat-pesanan/tabel'
+    'riwayat-pesanan/tabel',
+    'data-tiket/tabel'
 );
 
 /*

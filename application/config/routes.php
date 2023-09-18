@@ -107,3 +107,10 @@ $route['_migrate_user'] = 'migrate_data/migrate/users';
 $route['riwayat-pesanan'] = 'pemesanan/pesan/riwayat_pesanan';
 $route['riwayat-pesanan/tabel'] = 'pemesanan/pesan/riwayat_smm_table';
 $route['riwayat-pesanan/detail'] = 'pemesanan/pesan/riwayat_smm_detail';
+
+
+//// TIKET //////////
+$route['tiket'] = 'pusatbantuan/tiket/index';
+$route['tiket-sv'] = 'pusatbantuan/tiket/tiket_sv';
+$route['data-tiket/tabel'] = 'pusatbantuan/tiket/data_tiket_table';
+$route['tiket/m/(:any)'] = 'pusatbantuan/tiket/tiket_detail/$1';

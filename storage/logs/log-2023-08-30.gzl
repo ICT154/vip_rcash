@@ -1,0 +1,6 @@
+ERROR - 2023-08-30 09:03:34 --> 404 Page Not Found: Img/svg
+ERROR - 2023-08-30 09:08:49 --> 404 Page Not Found: Img/svg
+ERROR - 2023-08-30 14:08:53 --> Severity: Notice --> Undefined index: verif C:\xampp_74\htdocs\rcash\application\controllers\Auth.php 287
+ERROR - 2023-08-30 09:09:01 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-30 15:03:51 --> Query error: Table 'db_rcash.tickets' doesn't exist - Invalid query: INSERT INTO `tickets` (`id_tickets`, `subjek`, `tipe`, `pesan`, `user_id`, `date_g`, `status`) VALUES ('#RTICKYSQ2NN', 'sss', 'DEPOSIT', '&lt;p&gt;ssssss&lt;img data-filename=&quot;Screenshot (53).png&quot; xss=removed&gt;&lt;/p&gt;', 'RUQML7H', '2023-08-30 15:03:51', '0')
+ERROR - 2023-08-30 10:07:35 --> 404 Page Not Found: member/Tiket/index

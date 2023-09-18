@@ -4,7 +4,7 @@
 <!-- BEGIN Page Footer -->
 <footer class="page-footer" role="contentinfo">
     <div class="d-flex align-items-center flex-1 text-muted">
-        <span class="hidden-md-down fw-700">2022 - <?= date("Y") ?> © RCASH by&nbsp; PT RADEN DIGITAL HUB</a></span>
+        <span class="hidden-md-down fw-700 ">2022 - <?= date("Y") ?> © RCASH by&nbsp; PT RADEN DIGITAL HUB</a></span>
     </div>
     <div>
         <ul class="list-table m-0">

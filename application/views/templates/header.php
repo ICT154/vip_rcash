@@ -49,10 +49,22 @@
     <link rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/formplugins/select2/select2.bundle.css">
     <link rel="stylesheet" media="screen, print" href="<?= base_url("assets/") ?>css/statistics/chartjs/chartjs.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
 
         * {
             font-family: 'Fredoka', sans-serif;
+        }
+
+        .hero-text-gradient {
+            --bg-size: 400%;
+            --color-one: rgb(37, 161, 244);
+            --color-two: rgb(249, 31, 169);
+
+            background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0 / var(--bg-size) 100%;
+            color: transparent !important;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: move-bg 24s infinite linear;
         }
     </style>
 </head>

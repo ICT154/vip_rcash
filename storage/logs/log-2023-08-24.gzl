@@ -47,3 +47,41 @@ ERROR - 2023-08-24 16:15:54 --> 404 Page Not Found: Img/thumbs
 ERROR - 2023-08-24 16:15:59 --> 404 Page Not Found: Img/demo
 ERROR - 2023-08-24 16:18:15 --> 404 Page Not Found: Tiket/index
 ERROR - 2023-08-24 16:19:01 --> 404 Page Not Found: Tiket/index
+ERROR - 2023-08-24 21:23:51 --> Severity: Notice --> Undefined property: Tiket::$member C:\xampp_74\htdocs\rcash\application\controllers\pusatbantuan\TIket.php 12
+ERROR - 2023-08-24 21:23:51 --> Severity: error --> Exception: Call to a member function get_user_by_ses() on null C:\xampp_74\htdocs\rcash\application\controllers\pusatbantuan\TIket.php 12
+ERROR - 2023-08-24 21:23:53 --> Severity: Notice --> Undefined property: Tiket::$member C:\xampp_74\htdocs\rcash\application\controllers\pusatbantuan\TIket.php 12
+ERROR - 2023-08-24 21:23:53 --> Severity: error --> Exception: Call to a member function get_user_by_ses() on null C:\xampp_74\htdocs\rcash\application\controllers\pusatbantuan\TIket.php 12
+ERROR - 2023-08-24 21:26:19 --> Severity: Notice --> Undefined variable: data_depo C:\xampp_74\htdocs\rcash\application\views\member\tiket\index.php 17
+ERROR - 2023-08-24 21:26:19 --> Severity: error --> Exception: Call to a member function num_rows() on null C:\xampp_74\htdocs\rcash\application\views\member\tiket\index.php 17
+ERROR - 2023-08-24 16:34:55 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:37:41 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:37:41 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:37:41 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:37:41 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:37:41 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:37:50 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:38:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:38:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:38:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:38:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:38:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:38:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:38:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:38:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:38:40 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:39:35 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:39:35 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:39:35 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:39:35 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:39:35 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:40:06 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:40:06 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:40:06 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:40:06 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:40:06 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:41:51 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:41:51 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:41:51 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:41:51 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:41:51 --> 404 Page Not Found: Img/demo
+ERROR - 2023-08-24 16:45:43 --> 404 Page Not Found: Img/logo.png

@@ -150,7 +150,7 @@
     </li>
     <li class="nav-title">Pusat Bantuan</li>
     <li id="dash" <?php
-                    if ($title == 'RCASH | TIKET') {
+                    if ($title == 'RCASH | DAFTAR TIKET') {
                         echo "class='active'";
                     } else {
                     } ?>>
