@@ -107,6 +107,8 @@ $route['_migrate_user'] = 'migrate_data/migrate/users';
 $route['riwayat-pesanan'] = 'pemesanan/pesan/riwayat_pesanan';
 $route['riwayat-pesanan/tabel'] = 'pemesanan/pesan/riwayat_smm_table';
 $route['riwayat-pesanan/detail'] = 'pemesanan/pesan/riwayat_smm_detail';
+$route['riwayat-pesanan/komplain'] = 'pemesanan/pesan/riwayat_smm_komplain';
+$route['komplain-smm'] = 'pemesanan/pesan/komplain_smm';
 
 
 //// TIKET //////////

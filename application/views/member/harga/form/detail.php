@@ -39,7 +39,7 @@
             </tr>
             <tr>
                 <td class="alert alert-warning"><strong>Last Update Harga</strong></td>
-                <td><?= $detail['date_registered'] ?></td>
+                <td><?= $this->GZL->format_tanggal($detail['date_registered']) ?></td>
             </tr>
         </tbody>
     </table>

@@ -87,6 +87,7 @@ class Tiket extends CI_Controller
             $no++;
             $row = array();
             $row[] = $no;
+            $row[] = $rows->id_tickets;
             $row[] = $this->GZL->format_tanggal($rows->date_g);
             $row[] = $this->GZL->format_tanggal($tanggal_pembaruan);
             $row[] = $rows->tipe;

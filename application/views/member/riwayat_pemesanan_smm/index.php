@@ -23,7 +23,7 @@
 <div id="panel-1" class="panel">
     <div class="panel-hdr">
         <h2>
-            Riwayat <span class="fw-300"><i>Deposit</i></span>
+            Riwayat <span class="fw-300"><i>Pemesanan</i></span>
         </h2>
         <div class="panel-toolbar">
             <button class="btn btn-panel waves-effect waves-themed" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>

@@ -135,6 +135,7 @@
                 <thead class="bg-warning-500">
                     <tr>
                         <th>NO.</th>
+                        <th>NOMOR TIKET</th>
                         <th>TANGGAL DIBUAT</th>
                         <th>TANGGAL PEMBARUAN</th>
                         <th>TIPE</th>
@@ -150,6 +151,7 @@
                 <tfoot class="thead-themed">
                     <tr>
                         <th>NO.</th>
+                        <th>NOMOR TIKET</th>
                         <th>TANGGAL DIBUAT</th>
                         <th>TANGGAL PEMBARUAN</th>
                         <th>TIPE</th>

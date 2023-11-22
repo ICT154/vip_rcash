@@ -83,6 +83,45 @@
           });
         }
       });
+
+      var x = $("#nominal_deposit").val();
+      $.ajax({
+        url: "<?= base_url("refresh-csrf-token") ?>",
+        type: "GET",
+        dataType: "json",
+        success: function(data) {
+          $.ajax({
+            url: "<?= base_url("hit-depo-bonus-rate") ?>",
+            type: "POST",
+            data: {
+              nominal: x,
+              mmetode_pembayaran: $("#metode_pembayaran").val(),
+              tipe_deposit: $("#tipe_deposit").val(),
+              <?php echo $this->security->get_csrf_token_name(); ?>: data.token
+            },
+            success: function(data) {
+              $("#saldo_diterima").val(data);
+              new AutoNumeric('#saldo_diterima', {
+                decimalPlaces: 0,
+                digitGroupSeparator: '.',
+                decimalCharacter: ',',
+                minimumValue: '0',
+                maximumValue: '9999999999'
+              });
+              refresh_token_csrf();
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+              Swal.fire({
+                title: "Gagal!",
+                text: "Terjadi kesalahan saat menghitung rate deposit !",
+                icon: "error",
+                showCancelButton: false,
+                confirmButtonText: "OK",
+              });
+            }
+          });
+        }
+      });
     });
 
 

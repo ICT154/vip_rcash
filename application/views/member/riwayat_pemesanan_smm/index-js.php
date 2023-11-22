@@ -25,6 +25,36 @@
 </div>
 
 
+
+
+<div class="modal fade show" id="mod_komplain" tabindex="-1" role="dialog" aria-modal="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Komplain Pesanan Ini</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fal fa-times"></i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="komplain_show_here"></div>
+                <div class="load_komplain text-center mb-3" id="load_komplain" style="display:none;">
+                    <div class="spinner-border text-success" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary waves-effect waves-themed" data-dismiss="modal">Close</button>
+                <button type="submit" id="btn-komplain" class="btn btn-primary waves-effect waves-themed">Kirim Komplain</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script>
     function refresh_token_csrf() {
         $.ajax({
@@ -90,6 +120,37 @@
         });
 
     });
+
+
+    function komplain(x) {
+        refresh_token_csrf();
+        var id_pesanan = $(x).data("id");
+        var token_data = $("#<?php echo $this->security->get_csrf_token_name(); ?>").val();
+        $("#mod_komplain").modal("show");
+        $("#komplain_show_here").hide();
+        $("#load_komplain").show();
+        $("#btn-komplain").attr("disabled", true);
+        $.ajax({
+            url: "<?= base_url("riwayat-pesanan/komplain") ?>",
+            type: "POST",
+            data: {
+                "id_pesanan": id_pesanan,
+                "<?= $this->security->get_csrf_token_name(); ?>": token_data
+            },
+            success: function(data) {
+                $("#komplain_show_here").html(data);
+                $("#komplain_show_here").show();
+                $("#load_komplain").hide();
+                $("#btn-komplain").attr("disabled", false);
+                refresh_token_csrf();
+            },
+            error: function(xhr, status, error) {
+                $("#komplain_show_here").html(error);
+                $("#komplain_show_here").show();
+                $("#load_komplain").hide();
+            }
+        });
+    }
 
 
     function detail(x) {

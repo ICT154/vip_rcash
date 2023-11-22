@@ -19,6 +19,62 @@ class Pesan extends CI_Controller
         $this->load->model('server/M_Medan', 'mp');
         $this->load->model('M_datatables_v2', 'dt_v2');
         $this->load->model('M_tabel2', 'tabel2');
+        $this->load->model('ticket/M_ticket', 'tiket');
+    }
+
+    function komplain_smm()
+    {
+        $id_pesanan = htmlspecialchars($this->input->post('id_pesanan', true));
+        $komplain_teks = $this->input->post('komplain_teks', true);
+
+        $cek_pesanan = $this->mp->get_detail_pesanan($this->GZL->dekrip($id_pesanan));
+        if ($cek_pesanan->num_rows() > 0) {
+            if ($komplain_teks != null or $komplain_teks != '') {
+                if ($this->tiket->komplain_smm($this->GZL->dekrip($id_pesanan), $komplain_teks)) {
+                    $this->M_log->show_msg("success", "KOMPLAIN BERHASIL DIBUAT !");
+                    $this->M_log->log_in("KOMPLAIN BERHASIL DIBUAT !", "Berhasil", "komplain_smm");
+                    redirect(base_url('riwayat-pesanan'));
+                } else {
+                    $this->M_log->show_msg("error", "GAGAL MEMBUAT KOMPLAIN !");
+                    $this->M_log->log_in("GAGAL MEMBUAT KOMPLAIN !", "Gagal", "komplain_smm");
+                    redirect(base_url('riwayat-pesanan'));
+                }
+            } else {
+                $this->M_log->show_msg("error", "KOMPLAIN TIDAK BOLEH KOSONG !");
+                $this->M_log->log_in("KOMPLAIN TIDAK BOLEH KOSONG !", "Gagal", "komplain_smm");
+                redirect(base_url('riwayat-pesanan'));
+            }
+        } else {
+            $this->M_log->show_msg("error", "PESANAN TIDAK DITEMUKAN !");
+            $this->M_log->log_in("PESANAN TIDAK DITEMUKAN !", "Gagal", "komplain_smm");
+            redirect(base_url('riwayat-pesanan'));
+        }
+    }
+
+
+    function riwayat_smm_komplain()
+    {
+        $id = htmlspecialchars($this->input->post('id_pesanan', true));
+        if ($idx = $this->GZL->dekrip($id)) {
+
+            $data = $this->mp->get_detail_pesanan($idx);
+            $cek_tiket = $this->tiket->cek_tiket($idx);
+            if ($data->num_rows() > 0) {
+                $data_history = $this->mp->get_detail_pesanan_history($idx);
+                if ($cek_tiket != false) {
+                    $data_tiket = $this->tiket->get_tiket_limit($idx);
+                    $data = array('datax' => $data->row_array(), "data_history" => $data_history->result(), "data_tiket" => $data_tiket);
+                } else {
+                    $data = array('datax' => $data->row_array(), "data_history" => $data_history->result());
+                }
+                $this->load->view('member/riwayat_pemesanan_smm/komplain/index', $data);
+            } else {
+                echo "Data Tidak Ditemukan !";
+            }
+        } else {
+            echo "Data Tidak Ditemukan !";
+        }
+        $this->load->view('member/riwayat_pemesanan_smm/komplain/form_komplain');
     }
 
     function riwayat_smm_detail()
@@ -73,7 +129,7 @@ class Pesan extends CI_Controller
 
             $msg_button = "
                 <button class='btn btn-xs btn-success' data-id='" . $this->GZL->enkrip($rows->transaction_id) . "' onclick='detail(this)'>Cek Detail</button>
-                <button class='btn btn-xs btn-primary' data-id='" . $this->GZL->enkrip($rows->transaction_id) . "'>Komplain Pesanan Ini</button>
+                <button class='btn btn-xs btn-primary' data-id='" . $this->GZL->enkrip($rows->transaction_id) . "' onclick='komplain(this)'>Komplain Pesanan Ini</button>
             ";
             $row[] = $msg_button;
 

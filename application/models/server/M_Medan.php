@@ -20,6 +20,28 @@ class M_Medan extends CI_Model
         // $this->load->model('member/M_member', 'member');
     }
 
+    function get_tiket($id)
+    {
+        $this->db->where('transaction_id', $id);
+        $query = $this->db->get('ticket', 1);
+        if ($query->num_rows() > 0) {
+            return $query->row_array();
+        } else {
+            return false;
+        }
+    }
+
+    function cek_tiket($id)
+    {
+        $this->db->where('transaction_id', $id);
+        $query = $this->db->get('ticket', 1);
+        if ($query->num_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     function get_detail_pesanan_history($id)
     {
         return $this->db->where("transaction_id", $id)->order_by("change_date", "desc")->get("transactionhistory");

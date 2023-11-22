@@ -48,13 +48,12 @@
             <div class="modal-body">
 
                 <?php if ($cek_bukti > 0) { ?>
-                    <div class="alert alert-success">
-                        <p>Terima Kasih, Bukti Transfer Anda Sudah Kami Terima, Silahkan Tunggu Konfirmasi Dari Kami</p>
+                    <div class="panel-tag">
+                        Terima Kasih, Bukti Transfer Anda Sudah Kami Terima, Silahkan Tunggu Konfirmasi Dari Kami
                     </div>
                 <?php } else { ?>
-
-                    <div class="alert alert-danger">
-                        <p>Silahkan Isi Form Ini Dengan Detail Transfer Anda Seperti Yang Sudah Dicontohkan</p>
+                    <div class="panel-tag bg-danger text-white" style="border-left: 3px solid #fd3995;">
+                        Silahkan Isi Form Ini Dengan Detail Transfer Anda Seperti Yang Sudah Dicontohkan
                     </div>
                 <?php } ?>
 
