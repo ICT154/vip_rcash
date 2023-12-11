@@ -116,3 +116,14 @@ $route['tiket'] = 'pusatbantuan/tiket/index';
 $route['tiket-sv'] = 'pusatbantuan/tiket/tiket_sv';
 $route['data-tiket/tabel'] = 'pusatbantuan/tiket/data_tiket_table';
 $route['tiket/m/(:any)'] = 'pusatbantuan/tiket/tiket_detail/$1';
+$route['tiket-reply-sv'] = 'pusatbantuan/tiket/tiket_reply_sv';
+
+
+////////// MONITORING ///////////
+$route['monitoring-layanan'] = "pusatbantuan/monitoring/index";
+$route['monitoring-layanan/tabel'] = "pusatbantuan/monitoring/tabel_monitoring";
+
+
+
+///////// PAGE LUAR ///////////////
+$route['term-of-service'] = 'page_luar/term_of_service';

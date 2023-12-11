@@ -23,6 +23,35 @@ class Tiket extends CI_Controller
         $this->load->model('M_tabel2', 'tabel2');
     }
 
+
+    function tiket_reply_sv()
+    {
+        $id_tiket = $this->GZL->dekrip($this->input->post('id_tickets'));
+        $pesan_tiket = $this->input->post('content');
+
+        if ($id_tiket == "" || $pesan_tiket == "") {
+            $this->M_log->show_msg("error",  "Gagal", "Data tidak boleh kosong !");
+            $this->M_log->log_in("Gagal", "Membuat tiket baru, data tidak boleh kosong !");
+        } else {
+            try {
+                if ($this->ticket->send_ticket_reply($id_tiket, $pesan_tiket)) {
+                    $this->M_log->show_msg("success",  "Berhasil Tiket berhasil dibuat !");
+                    $this->M_log->log_in("Berhasil", "Membuat tiket baru, berhasil !");
+
+                    redirect(base_url("tiket/m/" . $this->GZL->enkrip($id_tiket) . ""));
+                } else {
+                    $this->M_log->show_msg("error",  "Gagal Terjadi kesalahan !");
+                    $this->M_log->log_in("Gagal", "Membuat tiket baru, terjadi kesalahan !");
+                }
+            } catch (\Throwable $th) {
+                $this->M_log->show_msg("error",  "Gagal Terjadi kesalahan !");
+                $this->M_log->log_in("Gagal", "Membuat tiket baru, terjadi kesalahan !");
+            }
+        }
+
+        redirect('tiket/m/' . $this->GZL->enkrip($id_tiket) . '');
+    }
+
     function tiket_detail($id = '')
     {
 
@@ -39,9 +68,8 @@ class Tiket extends CI_Controller
             } else {
 
                 if (isset($data_tiket)) {
-                    // $this->db->set('status', '1');
-                    // $this->db->where('id_tickets', $id);
-                    // $this->db->update('ticket');
+
+                    $data_tiket_all_by_id = $this->ticket->get_tiket_result($data_tiket['id_tickets']);
 
                     $data = array(
                         'user' => $this->member->get_user_by_ses(),
@@ -54,6 +82,7 @@ class Tiket extends CI_Controller
                         'title' => "RCASH | DAFTAR TIKET",
                         'id' => $id,
                         'data_tiket' => $data_tiket,
+                        'data_tiket_all' => $data_tiket_all_by_id
                     );
 
                     $this->load->view('templates/header', $data);
@@ -73,7 +102,7 @@ class Tiket extends CI_Controller
     function data_tiket_table()
     {
         header('Content-Type: application/json');
-        $list = $this->tabel2->get_datatables("ticket", 'date_g', 'DESC');
+        $list = $this->ticket->get_datatables("ticket", 'date_g', 'DESC');
         $data = array();
         $no = $this->input->post('start');
 
@@ -84,12 +113,19 @@ class Tiket extends CI_Controller
         foreach ($list as $rows) {
 
             $tanggal_pembaruan = $this->ticket->get_last_tanggal($rows->id_tickets);
+
+            if ($tanggal_pembaruan != false) {
+                $tanggal_pembaruan = $this->GZL->format_tanggal($tanggal_pembaruan);
+            } else {
+                $tanggal_pembaruan = "-";
+            }
+
             $no++;
             $row = array();
             $row[] = $no;
             $row[] = $rows->id_tickets;
             $row[] = $this->GZL->format_tanggal($rows->date_g);
-            $row[] = $this->GZL->format_tanggal($tanggal_pembaruan);
+            $row[] = $tanggal_pembaruan;
             $row[] = $rows->tipe;
             $row[] = $rows->subjek;
             if ($rows->status == "0") {
@@ -110,8 +146,8 @@ class Tiket extends CI_Controller
 
         $output = array(
             "draw" => $this->input->post('draw'),
-            "recordsTotal" => $this->tabel2->count_all("transaction"),
-            "recordsFiltered" => $this->tabel2->count_filtered("transaction", 'transaction_date', 'DESC'),
+            "recordsTotal" => $this->ticket->count_all("ticket"),
+            "recordsFiltered" => $this->ticket->count_filtered("ticket", 'date_g', 'DESC'),
             "data" => $data,
             "token" => $this->security->get_csrf_hash()
         );

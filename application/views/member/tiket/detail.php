@@ -908,6 +908,7 @@
                 left: 0;
             }
         </style>
+
         <div class="card">
             <div class="card-body chat-body hide-scrollbar flex-1 h-100 pt-0" style="max-height: 345px;">
                 <div class="chat-body-inner" style="max-height: 430px; overflow: auto;">
@@ -915,142 +916,54 @@
                         <!-- <div class="message-divider">
                             <span class="text-muted">24 Ags 2023</span>
                         </div> -->
-                        <div class="message message-out">
 
-                            <a class="avatar avatar-responsive" data-bs-toggle="tooltip" href="javascript:;" data-bs-placement="left" data-bs-html="true" aria-label="<b class='text-success' style='letter-spacing:0.1em;'>[Anda]</b> Ahmad Ghozali" data-bs-original-title="<b class='text-success' style='letter-spacing:0.1em;'>[Anda]</b> Ahmad Ghozali">
-                                <img class="avatar-img" src="https://raja-sosmed.com/assets/images/male.jpg" alt="">
-                            </a>
-                            <div class="message-inner">
-                                <div class="message-body">
-                                    <div class="message-content">
-                                        <div class="message-text text-light pb-0" style="background-color:#3ec9d6;">
-                                            <?= $data_tiket['pesan'] ?>
+
+                        <?php foreach ($data_tiket_all as $key) {
+                            if ($key->is_admin == "Y") { ?>
+                                <div class="message">
+
+                                    <a class="avatar avatar-responsive" data-bs-toggle="tooltip" href="javascript:;" data-bs-placement="right" data-bs-html="true" aria-label="<b class='text-primary' style='letter-spacing:0.1em;'>[Admin]</b> Admin Raja Sosmed" data-bs-original-title="<b class='text-primary' style='letter-spacing:0.1em;'>[Admin]</b> Admin Raja Sosmed">
+                                        <img class="avatar-img" src="https://raja-sosmed.com/assets/images/male.jpg" alt="">
+                                    </a>
+                                    <div class="message-inner">
+                                        <div class="message-body">
+                                            <div class="message-content">
+                                                <div class="message-text text-white pb-0">
+                                                    <?= $key->pesan ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="message-footer">
+                                            <span class="extra-small text-muted">
+                                                <?= $this->GZL->format_tanggal($key->date_g) ?> </span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="message-footer">
-                                    <span class="extra-small text-muted">
-                                        22:13 </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="message-divider">
-                            <span class="text-muted">25 Ags 2023</span>
-                        </div> -->
-                        <div class="message">
+                            <?php } else { ?>
+                                <div class="message message-out">
 
-                            <a class="avatar avatar-responsive" data-bs-toggle="tooltip" href="javascript:;" data-bs-placement="right" data-bs-html="true" aria-label="<b class='text-primary' style='letter-spacing:0.1em;'>[Admin]</b> Admin Raja Sosmed" data-bs-original-title="<b class='text-primary' style='letter-spacing:0.1em;'>[Admin]</b> Admin Raja Sosmed">
-                                <img class="avatar-img" src="https://raja-sosmed.com/assets/images/male.jpg" alt="">
-                            </a>
-                            <div class="message-inner">
-                                <div class="message-body">
-                                    <div class="message-content">
-                                        <div class="message-text text-white pb-0">
-                                            <p>Silahkan masuk ke menu deposit kakak</p>
+                                    <a class="avatar avatar-responsive" data-bs-toggle="tooltip" href="javascript:;" data-bs-placement="left" data-bs-html="true" aria-label="<b class='text-success' style='letter-spacing:0.1em;'>[Anda]</b> Ahmad Ghozali" data-bs-original-title="<b class='text-success' style='letter-spacing:0.1em;'>[Anda]</b> Ahmad Ghozali">
+                                        <img class="avatar-img" src="https://raja-sosmed.com/assets/images/male.jpg" alt="">
+                                    </a>
+                                    <div class="message-inner">
+                                        <div class="message-body">
+                                            <div class="message-content">
+                                                <div class="message-text text-light pb-0" style="background-color:#3ec9d6;">
+                                                    <?= $key->pesan ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="message-footer">
+                                            <span class="extra-small text-muted">
+                                                <?= $this->GZL->format_tanggal($key->date_g) ?> </span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="message-footer">
-                                    <span class="extra-small text-muted">
-                                        17:48 </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="message">
+                            <?php }
+                            ?>
+                        <?php } ?>
 
-                            <a class="avatar avatar-responsive" data-bs-toggle="tooltip" href="javascript:;" data-bs-placement="right" data-bs-html="true" aria-label="<b class='text-primary' style='letter-spacing:0.1em;'>[Admin]</b> Admin Raja Sosmed" data-bs-original-title="<b class='text-primary' style='letter-spacing:0.1em;'>[Admin]</b> Admin Raja Sosmed">
-                                <img class="avatar-img" src="https://raja-sosmed.com/assets/images/male.jpg" alt="">
-                            </a>
-                            <div class="message-inner">
-                                <div class="message-body">
-                                    <div class="message-content">
-                                        <div class="message-text text-white pb-0">
-                                            <p>Silahkan masuk ke menu deposit kakak</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="message-footer">
-                                    <span class="extra-small text-muted">
-                                        17:48 </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="message">
 
-                            <a class="avatar avatar-responsive" data-bs-toggle="tooltip" href="javascript:;" data-bs-placement="right" data-bs-html="true" aria-label="<b class='text-primary' style='letter-spacing:0.1em;'>[Admin]</b> Admin Raja Sosmed" data-bs-original-title="<b class='text-primary' style='letter-spacing:0.1em;'>[Admin]</b> Admin Raja Sosmed">
-                                <img class="avatar-img" src="https://raja-sosmed.com/assets/images/male.jpg" alt="">
-                            </a>
-                            <div class="message-inner">
-                                <div class="message-body">
-                                    <div class="message-content">
-                                        <div class="message-text text-white pb-0">
-                                            <p>Silahkan masuk ke menu deposit kakak</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="message-footer">
-                                    <span class="extra-small text-muted">
-                                        17:48 </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="message">
-
-                            <a class="avatar avatar-responsive" data-bs-toggle="tooltip" href="javascript:;" data-bs-placement="right" data-bs-html="true" aria-label="<b class='text-primary' style='letter-spacing:0.1em;'>[Admin]</b> Admin Raja Sosmed" data-bs-original-title="<b class='text-primary' style='letter-spacing:0.1em;'>[Admin]</b> Admin Raja Sosmed">
-                                <img class="avatar-img" src="https://raja-sosmed.com/assets/images/male.jpg" alt="">
-                            </a>
-                            <div class="message-inner">
-                                <div class="message-body">
-                                    <div class="message-content">
-                                        <div class="message-text text-white pb-0">
-                                            <p>Silahkan masuk ke menu deposit kakak</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="message-footer">
-                                    <span class="extra-small text-muted">
-                                        17:48 </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="message">
-
-                            <a class="avatar avatar-responsive" data-bs-toggle="tooltip" href="javascript:;" data-bs-placement="right" data-bs-html="true" aria-label="<b class='text-primary' style='letter-spacing:0.1em;'>[Admin]</b> Admin Raja Sosmed" data-bs-original-title="<b class='text-primary' style='letter-spacing:0.1em;'>[Admin]</b> Admin Raja Sosmed">
-                                <img class="avatar-img" src="https://raja-sosmed.com/assets/images/male.jpg" alt="">
-                            </a>
-                            <div class="message-inner">
-                                <div class="message-body">
-                                    <div class="message-content">
-                                        <div class="message-text text-white pb-0">
-                                            <p>Silahkan masuk ke menu deposit kakak</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="message-footer">
-                                    <span class="extra-small text-muted">
-                                        17:48 </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="message">
-
-                            <a class="avatar avatar-responsive" data-bs-toggle="tooltip" href="javascript:;" data-bs-placement="right" data-bs-html="true" aria-label="<b class='text-primary' style='letter-spacing:0.1em;'>[Admin]</b> Admin Raja Sosmed" data-bs-original-title="<b class='text-primary' style='letter-spacing:0.1em;'>[Admin]</b> Admin Raja Sosmed">
-                                <img class="avatar-img" src="https://raja-sosmed.com/assets/images/male.jpg" alt="">
-                            </a>
-                            <div class="message-inner">
-                                <div class="message-body">
-                                    <div class="message-content">
-                                        <div class="message-text text-white pb-0">
-                                            <p>Silahkan masuk ke menu deposit kakak</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="message-footer">
-                                    <span class="extra-small text-muted">
-                                        17:48 </span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1062,15 +975,16 @@
                 <h4 class="mb-0"><i class="far fa-comments me-2"></i> &nbsp;Balas Tiket</h4>
             </div>
             <div class="card-body pb-3">
-                <form method="POST">
-                    <input type="hidden" name="csrf_token" value="9897083739bc5009a8b668127d36f665aec3edd8a1204d5b0e62076bd6a13ee7">
+                <form method="POST" action="<?= base_url("tiket-reply-sv") ?>">
+                    <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
+                    <input type="hidden" name="id_tickets" id="id_tickets" value="<?= $this->GZL->enkrip($id) ?>">
                     <div class="form-group">
                         <label class="form-label">Pesan <span class="text-danger">*</span></label>
-                        <textarea class="form-control" name="content" rows="4"></textarea>
+                        <textarea class="form-control" name="content" id="content" rows="4" required></textarea>
                     </div>
                     <div class="mb-0">
-                        <button type="submit" class="btn btn-primary float-end"><i class="fas fa-reply fs-6 me-2"></i>Kirim</button>
-                        <button type="reset" class="btn btn-danger float-end me-2"><i class="fas fa-sync fs-6 me-2"></i>Ulangi</button>
+                        <a class="btn btn-danger " href="<?= base_url("tiket") ?>"><i class="fas fa-rotate-left "></i> Kembali</a>
+                        <button type="submit" class="btn btn-success "><i class="fas fa-paper-plane "></i> Kirim</button>
                     </div>
                 </form>
             </div>

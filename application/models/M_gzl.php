@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * 
  */
 
-defined('BASEPATH') or exit('No direct script access allowed');
+
 
 class M_gzl extends CI_Model
 {

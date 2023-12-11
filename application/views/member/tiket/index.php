@@ -142,7 +142,6 @@
                         <th>SUBJEK</th>
                         <th>STATUS</th>
                         <th>AKSI</th>
-
                     </tr>
                 </thead>
                 <tbody>
