@@ -66,7 +66,7 @@ class Auth extends CI_Controller
                 $data = array(
                     'user_id' => $this->GZL->gen_code(5, "RU"),
                     'username' => htmlspecialchars($this->input->post('username_regist')),
-                    'password' => $this->M_gzl->encode($this->input->post('password_regist')),
+                    'password' => $this->M_gzl->enkrip($this->input->post('password_regist')),
                     'email' => htmlspecialchars($this->input->post('email_regist')),
                     'status' => "0",
                     // 'status_ket' => "Under Maintenance",
@@ -128,7 +128,7 @@ class Auth extends CI_Controller
                         $data = array(
                             'id_member' => "RMEM" . rand() . "PAY",
                             'username' => htmlspecialchars($this->input->post('username_regist')),
-                            'password' => $this->M_gzl->encode($this->input->post('password_regist')),
+                            'password' => $this->M_gzl->enkrip($this->input->post('password_regist')),
                             'email' => htmlspecialchars($this->input->post('email_regist')),
                             'status' => "0",
                             'status_ket' => "Under Maintenance",
@@ -271,7 +271,7 @@ class Auth extends CI_Controller
                 $data = $cek_usrname->row_array();
 
                 $pass = $this->input->post('password_login');
-                $pass_db = $this->M_gzl->decode($data['password']);
+                $pass_db = $this->M_gzl->dekrip($data['password']);
 
 
                 if ($pass == $pass_db) {

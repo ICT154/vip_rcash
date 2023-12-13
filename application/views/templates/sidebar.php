@@ -208,7 +208,7 @@
                                             echo "class='active'";
                                         } else {
                                         } ?>>
-                <a href="<?= base_url("dash/kelola_akun") ?>" title="Profil & Kelola Pengguna" data-filter-tags="pengaturan akun profil & kelola pengguna">
+                <a href="<?= base_url("kelola-akun") ?>" title="Profil & Kelola Pengguna" data-filter-tags="pengaturan akun profil & kelola pengguna">
                     <span class="nav-link-text" data-i18n="nav.pengaturan_akun_profile_kelola_pengguna">Profil & Kelola Pengguna</span>
                 </a>
             </li>

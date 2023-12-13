@@ -171,8 +171,15 @@
                             </a>
                         </div>
                     </div>
+                    <?php
+                    if ($user['profile_photo'] != null) {
+                        $foto = base_url("storage/uploads_photo_profile/") . $user['profile_photo'];
+                    } else {
+                        $foto =  base_url("assets/") . "img/demo/avatars/avatar-admin-lg.png";
+                    }
+                    ?>
                     <div class="info-card">
-                        <img src="<?= base_url("assets/") ?>img/demo/avatars/avatar-admin.png" class="profile-image rounded-circle" alt="<?= $user['nama_lengkap'] ?>">
+                        <img src="<?= $foto ?>" class="profile-image rounded-circle" alt="<?= $user['nama_lengkap'] ?>">
                         <div class="info-card-text">
                             <a href="#" class="d-flex align-items-center text-white">
                                 <span class="text-truncate text-truncate-sm d-inline-block">
@@ -478,8 +485,15 @@
                                             <ul class="notification">
                                                 <li class="unread">
                                                     <a href="#" class="d-flex align-items-center">
+                                                        <?php
+                                                        if ($user['profile_photo'] != null) {
+                                                            $foto = base_url("storage/uploads_photo_profile/") . $user['profile_photo'];
+                                                        } else {
+                                                            $foto =  base_url("assets/") . "img/demo/avatars/avatar-admin-lg.png";
+                                                        }
+                                                        ?>
                                                         <span class="status mr-2">
-                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('<?= base_url("assets/") ?>img/demo/avatars/avatar-c.png')"></span>
+                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('<?= $foto ?>')"></span>
                                                         </span>
                                                         <span class="d-flex flex-column flex-1 ml-1">
                                                             <span class="name">Melissa Ayre <span class="badge badge-primary fw-n position-absolute pos-top pos-right mt-1">INBOX</span></span>
@@ -695,7 +709,7 @@
                         <!-- app user menu -->
                         <div>
                             <a href="#" data-toggle="dropdown" title="drlantern@gotbootstrap.com" class="header-icon d-flex align-items-center justify-content-center ml-2">
-                                <img src="<?= base_url("assets/") ?>img/demo/avatars/avatar-admin.png" class="profile-image rounded-circle" alt="<?= $user['nama_lengkap'] ?>">
+                                <img src="<?= $foto ?>" class="profile-image rounded-circle" alt="<?= $user['nama_lengkap'] ?>">
                                 <!-- you can also add username next to the avatar with the codes below:
 									<span class="ml-1 mr-1 text-truncate text-truncate-header hidden-xs-down">Me</span>
 									<i class="ni ni-chevron-down hidden-xs-down"></i> -->
@@ -704,7 +718,7 @@
                                 <div class="dropdown-header bg-trans-gradient d-flex flex-row py-4 rounded-top">
                                     <div class="d-flex flex-row align-items-center mt-1 mb-1 color-white">
                                         <span class="mr-2">
-                                            <img src="<?= base_url("assets/") ?>img/demo/avatars/avatar-admin.png" class="rounded-circle profile-image" alt="<?= $user['nama_lengkap'] ?>">
+                                            <img src="<?= $foto ?>" class="rounded-circle profile-image" alt="<?= $user['nama_lengkap'] ?>">
                                         </span>
                                         <div class="info-card-text">
                                             <div class="fs-lg text-truncate text-truncate-lg"><?= $user['nama_lengkap'] ?></div>

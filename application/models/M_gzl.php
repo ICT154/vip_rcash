@@ -14,6 +14,17 @@ class M_gzl extends CI_Model
     {
     }
 
+    function formatAngkaRBJT($angka)
+    {
+        if ($angka >= 1000000) {
+            return number_format($angka / 1000000, 1) . 'JT';
+        } elseif ($angka >= 1000) {
+            return number_format($angka / 1000, 1) . 'RB';
+        } else {
+            return $angka;
+        }
+    }
+
     function calculateDepositBonus($deposit_amount, $bonus_percentage, $admin_fee_percentage)
     {
         /**

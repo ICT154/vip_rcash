@@ -472,7 +472,8 @@ $config['csrf_regenerate'] = TRUE;
 $config['csrf_exclude_uris'] = array(
     'riwayat-deposit/table',
     'riwayat-pesanan/tabel',
-    'data-tiket/tabel'
+    'data-tiket/tabel',
+    'monitoring-layanan/tabel',
 );
 
 /*

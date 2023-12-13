@@ -24,7 +24,7 @@
             // DataTables server-side processing mode
             "serverSide": true,
             // Initial no order.
-            "order": [],
+            // "order": [],
             // Load data from an Ajax source
             "ajax": {
                 "url": "<?php echo base_url("monitoring-layanan/tabel") ?>",
@@ -37,10 +37,10 @@
                 },
             },
             //Set column definition initialisation properties
-            "columnDefs": [{
-                "targets": [0],
-                "orderable": false
-            }],
+            // "columnDefs": [{
+            //     "targets": [0],
+            //     "orderable": false
+            // }],
         });
 
     });

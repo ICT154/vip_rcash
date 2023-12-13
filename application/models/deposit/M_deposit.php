@@ -14,6 +14,41 @@ class M_deposit extends CI_Model
         $this->load->model('M_log');
     }
 
+    function getTopTransactionUsers($tanggal_awal, $tanggal_akhir, $limit = 5)
+    {
+        $this->db->select('u.user_id, u.username, u.nama_lengkap, COUNT(t.transaction_id) as total_transactions, SUM(t.price) as total_price');
+        $this->db->from('transaction t');
+        $this->db->join('users u', 't.user_id = u.user_id');
+        $this->db->where('t.status', 'Success');
+        // $this->db->where('t.transaction_date >=', $tanggal_awal);
+        // $this->db->where('t.transaction_date <=', $tanggal_akhir);
+        $this->db->group_by('u.user_id');
+        $this->db->order_by('total_transactions', 'DESC');
+        $this->db->limit($limit);
+
+        $query = $this->db->get();
+
+        return $query->result();
+    }
+
+    function getTopDepositUsers($tanggal_awal, $tanggal_akhir)
+    {
+        $this->db->select('u.user_id, u.username, u.nama_lengkap, SUM(d.jumlah) as total_deposit');
+        $this->db->from('deposits d');
+        $this->db->join('users u', 'd.user_id = u.user_id');
+        $this->db->where('d.status', 'Success');
+        $this->db->where('d.tipe_deposit', "SMM");
+        // $this->db->where('d.tanggal_deposit >=', $tanggal_awal);
+        // $this->db->where('d.tanggal_deposit <=', $tanggal_akhir);
+        $this->db->group_by('u.user_id');
+        $this->db->order_by('total_deposit', 'DESC');
+        $this->db->limit(5);
+
+        $query = $this->db->get();
+
+        return $query->result();
+    }
+
     function calculateDepositBonus($deposit_amount, $bonus_percentage, $admin_fee_percentage)
     {
         /**
