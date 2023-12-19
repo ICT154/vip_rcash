@@ -58,7 +58,10 @@ $route['refresh-csrf-token'] = 'server/csrf/refresh_csrf_token';
 
 ////// MEMBER //////
 $route['dashboard'] = 'member/dashboard/dashboard';
+$route['landing'] = 'member/dashboard/landing';
 $route['logout'] = 'member/dashboard/logout';
+
+
 
 ////// DEPOSIT //////
 $route['deposit-baru'] = 'deposit/depo/deposit_baru';
@@ -89,6 +92,7 @@ $route['load_kategori'] = 'harga/harga/load_kategori';
 $route['get-harga'] = 'harga/harga/get_harga';
 $route['load-detail-prod'] = 'harga/harga/get_detail_layanan';
 $route['daftar-harga'] = 'harga/harga/list_harga';
+$route['daftar-harga-produk'] = 'harga/harga/list_harga_produk';
 $route['get-prepaid'] = 'harga/harga/service_list';
 
 ////// PEMESANAN //////
@@ -125,16 +129,5 @@ $route['monitoring-layanan/tabel'] = "pusatbantuan/monitoring/tabel_monitoring";
 
 
 
-//////////////// TOP USER  ////////////////////
-$route['top-user'] = 'top_user/top_user/index';
-
-
 ///////// PAGE LUAR ///////////////
 $route['term-of-service'] = 'page_luar/term_of_service';
-
-
-///////////////// SETTING AKUN  ////////////////////
-$route['kelola-akun'] = 'setting_akun/kelola_akun/index';
-$route['save-profile-edit'] = 'setting_akun/kelola_akun/save_profile_edit';
-$route['save-profile-edit-password'] = 'setting_akun/kelola_akun/save_profile_edit_password';
-$route['save-profile-edit-api-key'] = 'setting_akun/kelola_akun/save_profile_edit_api_key';
