@@ -141,3 +141,4 @@ $route['save-profile-edit-api-key'] = 'setting_akun/kelola_akun/save_profile_edi
 
 $route['save-profile-edit-api-key'] = 'dimas anjay mabar';
 $route['save-profile-edit-api-key'] = 'dimas anjay mabar lagi';
+$route['save-profile-edit-api-key'] = 'ngetes lagi kang';
