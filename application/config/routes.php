@@ -138,3 +138,5 @@ $route['kelola-akun'] = 'setting_akun/kelola_akun/index';
 $route['save-profile-edit'] = 'setting_akun/kelola_akun/save_profile_edit';
 $route['save-profile-edit-password'] = 'setting_akun/kelola_akun/save_profile_edit_password';
 $route['save-profile-edit-api-key'] = 'setting_akun/kelola_akun/save_profile_edit_api_key';
+
+$route['save-profile-edit-api-key'] = 'dimas anjay mabar';
