@@ -61,8 +61,6 @@ $route['dashboard'] = 'member/dashboard/dashboard';
 $route['landing'] = 'member/dashboard/landing';
 $route['logout'] = 'member/dashboard/logout';
 
-
-
 ////// DEPOSIT //////
 $route['deposit-baru'] = 'deposit/depo/deposit_baru';
 // $route['deposit-baru-sv'] = 'deposit/depo/deposit_baru_sv'; /// ini versi smm & ppob disatuin
