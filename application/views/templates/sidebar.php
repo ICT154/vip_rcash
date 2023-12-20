@@ -46,18 +46,39 @@
         </ul>
     </li>
 
-
-    <li id="dash" <?php
+    <li id="menu_akun" <?php
+                        if ($title == 'RCASH | DEPOSIT BARU' or $title == 'RCASH | DAFTAR HARGA') {
+                            echo "class='active open'";
+                        } else {
+                        } ?>>
+        <a href="#" title="daftar_harga" data-filter-tags="daftar_harga">
+            <i class="fas fa-list"></i>
+            <span class="nav-link-text" data-i18n="nav.deposit">Daftar Harga</span>
+        </a>
+        <ul>
+        <li id="sub_menu_profile" <?php
                     if ($title == 'RCASH | DAFTAR HARGA') {
                         echo "class='active'";
                     } else {
                     } ?>>
         <a href="<?= base_url('daftar-harga') ?>" title="daftar_harga" data-filter-tags="daftar_harga">
             <i class="fas fa-list" aria-hidden="true"></i>
-            <span class="nav-link-text" data-i18n="nav.daftar_harga">Daftar Harga</span>
+            <span class="nav-link-text" data-i18n="nav.daftar_harga">Daftar Harga SMM</span>
         </a>
     </li>
-
+    
+    <li id="sub_menu_profile" <?php
+                    if ($title == 'RCASH | DAFTAR HARGA PRODUK') {
+                        echo "class='active'";
+                    } else {
+                    } ?>>
+                <a href="<?= base_url("daftar-harga-produk") ?>" title="daftar_harga_produk" data-filter-tags="daftar_harga_produk">
+                <i class="fas fa-list" aria-hidden="true"></i>
+                    <span class="nav-link-text" data-i18n="nav.daftar_harga_produk">Daftar Harga Produk</span>
+                </a>
+            </li>
+        </ul>
+    </li>
 
 
     <li id="dash" <?php
@@ -208,7 +229,7 @@
                                             echo "class='active'";
                                         } else {
                                         } ?>>
-                <a href="<?= base_url("kelola-akun") ?>" title="Profil & Kelola Pengguna" data-filter-tags="pengaturan akun profil & kelola pengguna">
+                <a href="<?= base_url("dash/kelola_akun") ?>" title="Profil & Kelola Pengguna" data-filter-tags="pengaturan akun profil & kelola pengguna">
                     <span class="nav-link-text" data-i18n="nav.pengaturan_akun_profile_kelola_pengguna">Profil & Kelola Pengguna</span>
                 </a>
             </li>
