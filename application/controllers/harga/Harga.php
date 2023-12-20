@@ -119,7 +119,7 @@ class Harga extends CI_Controller
             }
         } else {
             echo "<tr><td colspan='5' class='text-center'>Terjadi kesalahan.</td><td class='text-center text-danger'><i class='far fa-times-circle'></i></td> </tr>";
-        } 
+        }
     }
 
     function list_harga()
@@ -137,6 +137,25 @@ class Harga extends CI_Controller
 
         $this->load->view('templates/header', $data);
         $this->load->view('member/harga/index_v2');
+        $this->load->view('templates/footer');
+        $this->load->view('member/harga/index-js_v2');
+    }
+
+    function list_harga_produk()
+    {
+        $data = array(
+            'user' => $this->member->get_user_by_ses(),
+            'sidebar_one' => "RCASH",
+            'sidebar_two' => "Daftar Harga Produk",
+            'breadcrumb' => "",
+            'icon_subheader' => "subheader-icon fal fa-list",
+            'bc_1' => "Daftar Harga",
+            'bc_2' => "Daftar Harga Layanan RCASH Tersedia Disini",
+            'title' => "RCASH | DAFTAR HARGA Produk",
+        );
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('member/harga/index_3');
         $this->load->view('templates/footer');
         $this->load->view('member/harga/index-js_v2');
     }
