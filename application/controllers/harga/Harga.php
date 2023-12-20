@@ -119,7 +119,7 @@ class Harga extends CI_Controller
             }
         } else {
             echo "<tr><td colspan='5' class='text-center'>Terjadi kesalahan.</td><td class='text-center text-danger'><i class='far fa-times-circle'></i></td> </tr>";
-        }
+        } 
     }
 
     function list_harga()
