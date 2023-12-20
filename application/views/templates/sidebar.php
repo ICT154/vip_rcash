@@ -55,8 +55,7 @@
             <i class="fas fa-list"></i>
             <span class="nav-link-text" data-i18n="nav.daftar-harga">DAFTAR HARGA</span>
         </a>
-
-
+        <ul>
     <li id="sub_menu_profile" <?php
                     if ($title == 'RCASH | DAFTAR HARGA') {
                         echo "class='active'";
