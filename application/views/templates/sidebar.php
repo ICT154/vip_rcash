@@ -53,20 +53,21 @@
                         } ?>>
         <a href="#" title="daftar_harga" data-filter-tags="daftar_harga">
             <i class="fas fa-list"></i>
-            <span class="nav-link-text" data-i18n="nav.deposit">Daftar Harga</span>
+            <span class="nav-link-text" data-i18n="nav.daftar-harga">DAFTAR HARGA</span>
         </a>
-        <ul>
-        <li id="sub_menu_profile" <?php
+
+
+    <li id="sub_menu_profile" <?php
                     if ($title == 'RCASH | DAFTAR HARGA') {
                         echo "class='active'";
                     } else {
                     } ?>>
-        <a href="<?= base_url('daftar-harga') ?>" title="daftar_harga" data-filter-tags="daftar_harga">
+        <a href="<?= base_url('daftar-harga') ?>" title="daftar_harga_smm" data-filter-tags="daftar_harga_smm">
             <i class="fas fa-list" aria-hidden="true"></i>
             <span class="nav-link-text" data-i18n="nav.daftar_harga">Daftar Harga SMM</span>
         </a>
     </li>
-    
+
     <li id="sub_menu_profile" <?php
                     if ($title == 'RCASH | DAFTAR HARGA PRODUK') {
                         echo "class='active'";
@@ -79,6 +80,7 @@
             </li>
         </ul>
     </li>
+
 
 
     <li id="dash" <?php
