@@ -161,4 +161,4 @@ class Harga extends CI_Controller
     }
 }
 
-/* End of file Harga.php */
+// /* End of file Harga.php */
