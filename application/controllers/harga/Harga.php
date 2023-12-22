@@ -159,6 +159,26 @@ class Harga extends CI_Controller
         $this->load->view('templates/footer');
         $this->load->view('member/harga/index-js_v2');
     }
+
+    function detail_produk()
+    {
+        $data = array(
+            'user' => $this->member->get_user_by_ses(),
+            'sidebar_one' => "RCASH",
+            'sidebar_two' => "Daftar Harga Produk",
+            'sidebar_three' => "Detail Produk",
+            'breadcrumb' => "",
+            'icon_subheader' => "subheader-icon fal fa-list",
+            'bc_1' => "Detail Produk",
+            'bc_2' => "Detail Produk dan Layanan RCASH Tersedia Disini",
+            'title' => "RCASH | Detail Produk",
+        );
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('member/harga/detail_produk');
+        $this->load->view('templates/footer');
+        $this->load->view('member/harga/index-js_v2');
+    }
 }
 
-// /* End of file Harga.php */
+/* End of file Harga.php */
