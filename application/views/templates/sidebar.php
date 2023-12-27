@@ -47,7 +47,7 @@
     </li>
 
     <li id="menu_akun" <?php
-                        if ($title == 'RCASH | DEPOSIT BARU' or $title == 'RCASH | DAFTAR HARGA') {
+                        if ($title == 'RCASH | DAFTAR HARGA PRODUK' or $title == 'RCASH | DAFTAR HARGA') {
                             echo "class='active open'";
                         } else {
                         } ?>>

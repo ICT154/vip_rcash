@@ -151,7 +151,7 @@ class Harga extends CI_Controller
             'icon_subheader' => "subheader-icon fal fa-list",
             'bc_1' => "Daftar Harga",
             'bc_2' => "Daftar Harga Layanan RCASH Tersedia Disini",
-            'title' => "RCASH | DAFTAR HARGA Produk",
+            'title' => "RCASH | DAFTAR HARGA PRODUK",
         );
 
         $this->load->view('templates/header', $data);
