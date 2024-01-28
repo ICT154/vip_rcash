@@ -76,12 +76,21 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	// 'username' => 'rcashme_root',
-	// 'password' => 'qQ3ElQX{v+Mu',
-	// 'database' => 'rcashme_radenpay',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'db_radenpay',
+
+	////////////// INI DATABASE ONLINE //////////////
+	'username' => 'niokydpq_raden',
+	'password' => 'pepayamadu88',
+	'database' => 'niokydpq_rcash',
+	////////////// INI DATABASE ONLINE //////////////
+
+
+	////////////// INI DATABASE LOCAL //////////////
+	// 'username' => 'root',
+	// 'password' => '',
+	// 'database' => 'db_radenpay',
+	////////////// INI DATABASE LOCAL //////////////
+
+
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -101,12 +110,22 @@ $db['default'] = array(
 $db['rcash'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	// 'username' => 'rcashme_root',
-	// 'password' => 'qQ3ElQX{v+Mu',
-	// 'database' => 'rcashme_radenpay',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'db_rcash',
+
+
+	////////////// INI DATABASE ONLINE //////////////
+	'username' => 'niokydpq_raden',
+	'password' => 'pepayamadu88',
+	'database' => 'niokydpq_rcash',
+	////////////// INI DATABASE ONLINE //////////////
+
+
+	////////////// INI DATABASE LOCAL //////////////
+	// 'username' => 'root',
+	// 'password' => '',
+	// 'database' => 'db_rcash',
+	////////////// INI DATABASE LOCAL //////////////
+
+
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

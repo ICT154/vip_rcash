@@ -49,6 +49,8 @@ class Dashboard extends CI_Controller
             // 'tot_trx_refund' => $this->member->get_count_trx_by_ses('Refund'),
             // 'tot_trx_cancel' => $this->member->get_count_trx_by_ses('Cancel'),
             'tot_trx_error' => $this->member->get_count_trx_by_ses('Error'),
+            'tot_trx_one_week' => $this->member->get_count_trx_by_ses_one_week(),
+            'get_pengumuman' => $this->member->get_pengumuman(),
         );
 
 

@@ -4,8 +4,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * 
  */
 
-
-
 class M_gzl extends CI_Model
 {
 
@@ -13,6 +11,18 @@ class M_gzl extends CI_Model
     function __construct()
     {
     }
+
+    function ubahFormatDateTime($dateTimeString)
+    {
+        // Membuat objek DateTime dari string masukan
+        $dateTime = new DateTime($dateTimeString);
+
+        // Mengubah format tanggal dan waktu
+        $formatTanggalWaktu = $dateTime->format('d M Y - H:i');
+
+        return $formatTanggalWaktu;
+    }
+
 
     function formatAngkaRBJT($angka)
     {

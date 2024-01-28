@@ -10,6 +10,18 @@ class M_member extends CI_Model
         $this->load->model('M_gzl', 'GZL');
     }
 
+
+    function get_pengumuman()
+    {
+        try {
+            $this->db->order_by('date_g', 'desc');
+            $this->db->limit(5);
+            return $this->db->get('announcement')->result_array();
+        } catch (\Throwable $th) {
+            return false;
+        }
+    }
+
     function tambah_trx_smm_fail($data_member, $total_harga, $data_layanan, $jumlah_pesanan, $target_pesanan, $id, $price, $note)
     {
         try {
@@ -143,6 +155,24 @@ class M_member extends CI_Model
             return true;
         } catch (\Throwable $th) {
             return false;
+        }
+    }
+
+    function get_count_trx_by_ses_one_week()
+    {
+        try {
+            $res = $this->get_user_by_ses();
+            $this->db->select('COUNT(*) as total');
+            $this->db->where('user_id', $res['user_id']);
+            $this->db->where('transaction_date >=', date("Y-m-d H:i:s", strtotime("-1 week")));
+            $data = $this->db->get('transaction')->row_array();
+            return $data['total'];
+        } catch (\Throwable $th) {
+            $this->session->unset_userdata(array('user' => ''));
+            $this->session->sess_destroy();
+            $this->M_log->show_msg("error", "Error System !");
+            $this->GZL->log_in("M_member", "get_count_trx_by_ses_one_week", $th->getMessage());
+            redirect(base_url());
         }
     }
 

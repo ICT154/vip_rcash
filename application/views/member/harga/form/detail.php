@@ -128,7 +128,7 @@
                 },
                 scales: {
                     xAxes: [{
-                        display: true,
+                        display: false,
                         scaleLabel: {
                             display: false,
                             labelString: '10 Perubahan Harga Terakhir'
