@@ -113,16 +113,16 @@ $db['rcash'] = array(
 
 
 	////////////// INI DATABASE ONLINE //////////////
-	'username' => 'niokydpq_raden',
-	'password' => 'pepayamadu88',
-	'database' => 'niokydpq_rcash',
+	// 'username' => 'niokydpq_raden',
+	// 'password' => 'pepayamadu88',
+	// 'database' => 'niokydpq_rcash',
 	////////////// INI DATABASE ONLINE //////////////
 
 
 	////////////// INI DATABASE LOCAL //////////////
-	// 'username' => 'root',
-	// 'password' => '',
-	// 'database' => 'db_rcash',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'db_rcash',
 	////////////// INI DATABASE LOCAL //////////////
 
 

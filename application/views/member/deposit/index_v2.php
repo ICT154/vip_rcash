@@ -79,7 +79,7 @@
                                     <select name="tipe_deposit" id="tipe_deposit" class="form-control">
                                         <option value="">-- Pilih Tipe Deposit --</option>
                                         <option value="<?= $this->gzl->enkrip("SMM") ?>">SMM </option>
-                                        <option value="<?= $this->gzl->enkrip("PPOB") ?>">PPOB </option>
+                                        <!-- <option value="<?= $this->gzl->enkrip("PPOB") ?>">PPOB </option> -->
                                     </select>
                                 </div>
                             </div>

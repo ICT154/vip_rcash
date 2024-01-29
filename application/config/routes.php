@@ -144,3 +144,7 @@ $route['save-profile-edit-api-key'] = 'setting_akun/kelola_akun/save_profile_edi
 $route['landing'] = 'member/dashboard/landing';
 $route['daftar-harga-produk'] = 'harga/harga/list_harga_produk';
 $route['detail-produk'] = 'harga/harga/detail_produk';
+
+
+// panel admin
+$route['panel-admin'] = 'admin/dashboard/dashboard_index';

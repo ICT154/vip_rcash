@@ -127,9 +127,14 @@ class Pesan extends CI_Controller
                 $row[] = '<span class="badge badge-danger">Error</span>';
             }
 
+            // $msg_button = "
+            //     <button class='btn btn-xs btn-success' data-id='" . $this->GZL->enkrip($rows->transaction_id) . "' onclick='detail(this)'>Cek Detail</button>
+            //     <button class='btn btn-xs btn-primary' data-id='" . $this->GZL->enkrip($rows->transaction_id) . "' onclick='komplain(this)'>Komplain Pesanan Ini</button>
+            // ";
+
             $msg_button = "
                 <button class='btn btn-xs btn-success' data-id='" . $this->GZL->enkrip($rows->transaction_id) . "' onclick='detail(this)'>Cek Detail</button>
-                <button class='btn btn-xs btn-primary' data-id='" . $this->GZL->enkrip($rows->transaction_id) . "' onclick='komplain(this)'>Komplain Pesanan Ini</button>
+                
             ";
             $row[] = $msg_button;
 

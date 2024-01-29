@@ -171,16 +171,16 @@
         </ul>
     </li>
     <li class="nav-title">Pusat Bantuan</li>
-    <li id="dash" <?php
-                    if ($title == 'RCASH | DAFTAR TIKET') {
-                        echo "class='active'";
-                    } else {
-                    } ?>>
+    <!-- <li id="dash" <?php
+                        if ($title == 'RCASH | DAFTAR TIKET') {
+                            echo "class='active'";
+                        } else {
+                        } ?>>
         <a href="<?= base_url('tiket') ?>" title="tiket" data-filter-tags="tiket">
             <i class="fas fa-ticket" aria-hidden="true"></i>
             <span class="nav-link-text" data-i18n="nav.tiket">Tiket</span>
         </a>
-    </li>
+    </li> -->
     <li id="dash" <?php
                     if ($title == 'RCASH | MONITORING LAYANAN') {
                         echo "class='active'";
@@ -201,18 +201,19 @@
             <span class="nav-link-text" data-i18n="nav.top-user">Pengguna Teratas</span>
         </a>
     </li>
-
-    <li class="nav-title">Menu Admin</li>
-    <li id="kelola_data" <?php
-                            if ($title == 'RCASH | KELOLA DATA') {
-                                echo "class='active'";
-                            } else {
-                            } ?>>
-        <a href="<?= base_url('dash_adm/kelola_data') ?>" title="kelola_data" data-filter-tags="kelola_data">
-            <i class="fas fa-database"></i>
-            <span class="nav-link-text" data-i18n="nav.kelola_data">Kelola Data</span>
-        </a>
-    </li>
+    <?php if ($user['acc_type'] == "admin") { ?>
+        <li class="nav-title">Menu Admin</li>
+        <li id="kelola_data" <?php
+                                if ($title == 'RCASH | DASHBOARD ADMIN') {
+                                    echo "class='active'";
+                                } else {
+                                } ?>>
+            <a href="<?= base_url('panel-admin') ?>" title="kelola_data" data-filter-tags="kelola_data">
+                <i class="fas fa-dashboard"></i>
+                <span class="nav-link-text" data-i18n="nav.kelola_data">Dashboard Admin</span>
+            </a>
+        </li>
+    <?php } ?>
 
     <li class="nav-title">Pengaturan & Lainnya</li>
     <li id="menu_akun" <?php
